@@ -23,6 +23,12 @@ Open Drupal login page http://localhost:8066/user/login
 - **User**: admin
 - **Pass**: admin
 
+## Distributions list
+- [Link to docker image](#)
+- [Link to docker image](#)
+- [Link to docker image](#)
+- [Link to docker image](#)
+
 ## License
 
 [GNU GPLV2](LICENSE)
