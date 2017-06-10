@@ -20,8 +20,8 @@ docker run -d -p 8066:80 --name {DISTRIBUTION_NAME} drupal-distros/{DISTRIBUTION
 
 Open Drupal login page http://localhost:8066/user/login
 
-User: admin
-Pass: admin
+- **User**: admin
+- **Pass**: admin
 
 ## License
 
