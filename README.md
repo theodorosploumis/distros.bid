@@ -22,3 +22,7 @@ Open Drupal login page http://localhost:8066/user/login
 
 User: admin
 Pass: admin
+
+## License
+
+[GNU GPLV2](LICENSE)
