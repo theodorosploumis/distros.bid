@@ -1,5 +1,5 @@
 # drupal-docker-distros
-Showcasing Drupal distributions with Docker.
+Showcase Drupal distributions with Docker.
 
 A list of Docker containers running several popular [Drupal 8.x distributions](https://www.drupal.org/project/project_distribution) within LAMP.
 
