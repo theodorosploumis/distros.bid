@@ -36,13 +36,13 @@ Open Adminer page at http://localhost:8066/adminer.php
 
 ## Distributions available
 
-See the docker tags at [hub.docker.com/r/drupal8/distros/tags/](https://hub.docker.com/r/drupal8/distros/tags/)
+See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docker.com/r/drupal8/distros/tags/).
 
-| Name | Dockerfile | tag | version |
+| Name | Dockerfile | Tag | Version |
 |---|---|---|---|
-| Base | [images/base](images/base/dockerfile) | base | - |
-| [Drupal](https://www.drupal.org/project/drupal) | [images/drupal](images/drupal/dockerfile) | drupal | 8.4.0 |
-| [Lightning](https://www.drupal.org/project/lightning) | [images/lightning](images/lightning/dockerfile) | lightning | 8.x-2.2.0 |
+| Base | [images/base](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/base/Dockerfile/) | base | - |
+| [Drupal](https://www.drupal.org/project/drupal) | [images/drupal](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal/Dockerfile/) | drupal | 8.4.0 |
+| [Lightning](https://www.drupal.org/project/lightning) | [images/lightning](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/lightning/Dockerfile/) | lightning | 8.x-2.2.0 |
 
 ## License
 
