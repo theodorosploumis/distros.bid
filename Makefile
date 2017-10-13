@@ -3,20 +3,18 @@ build: build-master
 test: test-master
 
 build-base:
-	docker build -t drupal-distros/base:base base
+	docker pull nickistre/ubuntu-lamp:14.04
+	docker build -t drupal-distros/base:latest base
 
 build-master: build-base
-	docker build -t composer/composer:master master
-	docker build -t composer/composer:master-alpine master/alpine
-	docker build -t composer/composer:master-php5 master/php5
-	docker build -t composer/composer:master-php5-alpine master/php5-alpine
+	docker build -t drupal-distros/base:latest images/base
+	docker build -t drupal-distros/drupal:latst images/drupal
+	docker build -t drupal-distros/lightning:latest images/lightning
 
 test-master:
-	@echo -n "master\t\t\t"
-	@docker run composer/composer:master --version --no-ansi
-	@echo -n "master-alpine\t\t"
-	@docker run composer/composer:master-alpine --version --no-ansi
-	@echo -n "master-php5\t\t"
-	@docker run composer/composer:master-php5 --version --no-ansi
-	@echo -n "master-php5-alpine\t"
-	@docker run composer/composer:master-php5-alpine --version --no-ansi
+	@echo -n "base\t\t"
+	@docker run drupal-distros/base:latest --version --no-ansi
+	@echo -n "drupal\t\t"
+	@docker run drupal-distros/drupal:latest --version --no-ansi
+	@echo -n "lightning\t\t"
+	@docker run drupal-distros/lightning:latest --version --no-ansi

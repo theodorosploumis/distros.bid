@@ -1,5 +1,5 @@
 # drupal-docker-distros
-Showcase Drupal distributions with Docker.
+Showcase of Drupal distributions with Docker.
 
 A list of Docker containers running several popular [Drupal 8.x distributions](https://www.drupal.org/project/project_distribution) within LAMP.
 
@@ -11,6 +11,7 @@ A list of Docker containers running several popular [Drupal 8.x distributions](h
 - composer
 - drush
 - wget, curl, vim
+- adminer
 
 ## Usage
 
@@ -23,11 +24,15 @@ Open Drupal login page http://localhost:8066/user/login
 - **User**: admin
 - **Pass**: admin
 
-## Distributions list
-- [Link to docker image](#)
-- [Link to docker image](#)
-- [Link to docker image](#)
-- [Link to docker image](#)
+Open Adminer page at http://localhost:8066/adminer.php
+
+- **DB user**: drupal
+- **DB name**: drupal
+- **DB password**: drupal
+
+## Distributions available
+- [Drupal](#)
+- [Lightning](#)
 
 ## License
 

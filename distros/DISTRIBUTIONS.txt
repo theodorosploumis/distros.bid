@@ -1,1 +1,4 @@
-# A list of distro names
+# A list of distro names within their profiles
+
+drupal:standard
+lightning:lightning
