@@ -16,7 +16,7 @@ A list of Docker containers running several popular [Drupal 8.x distributions](h
 ## Usage
 
 ```
-docker run -d -p 8066:80 --name {DISTRIBUTION_NAME} drupal-distros/{DISTRIBUTION_NAME}
+docker run -d -p 8066:80 --name {DISTRIBUTION_NAME} drupal8/distros:{DISTRIBUTION_NAME}
 ```
 
 Open Drupal login page http://localhost:8066/user/login
@@ -30,7 +30,9 @@ Open Adminer page at http://localhost:8066/adminer.php
 - **DB name**: drupal
 - **DB password**: drupal
 
-## Distributions available
+## Distributions available tags
+
+- [Base](#)
 - [Drupal](#)
 - [Lightning](#)
 

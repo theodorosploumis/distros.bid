@@ -1,4 +1,4 @@
-FROM drupal-distros/base:latest
+FROM drupal8/distros:base
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
