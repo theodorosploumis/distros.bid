@@ -5,7 +5,7 @@
 service mysql start && \
 service apache2 start && \
 cd /var/www/html && \
-drush site-install -y ${NEWDISTRO} \
+drush site-install -y ${PROFILE} \
       --site-name="Distribution ${NEWDISTRO} with Docker" \
       --db-url=mysql://drupal:drupal@localhost/drupal \
       --site-mail=admin@example.com \
@@ -17,5 +17,5 @@ drush site-install -y ${NEWDISTRO} \
 service mysql start && \
 drush config-set system.site name "Drupal version: $(drush pmi --fields=Version system | sed 's/\ Version   :  //g') - Installation profile: ${NEWDISTRO}" -y
 
-# Assign all public files to www-data and assign UID
+# Assign all site files to www-data
 chown -R www-data:www-data /var/www/html

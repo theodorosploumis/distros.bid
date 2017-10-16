@@ -2,14 +2,11 @@ FROM drupal8/distros:base
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="lightning"
-    # RELEASE="2.2.0"
+ENV NEWDISTRO="lightning" \
+    PROFILE="lightning"
 
 # Download distro (8.x) on html folder
-RUN wget -q https://github.com/acquia/lightning/releases/download/2.2.0/lightning-8.x-2.20.tar.gz && \
-    tar xvf lightning-8.x-2.20.tar.gz -C /var/www/ && \
-    rm -r /var/www/html && \
-    mv /var/www/lightning-8.x-2.20 /var/www/html
+RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
 
 # Prepare installation and install
 RUN bash /var/www/prepare-install.sh

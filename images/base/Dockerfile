@@ -1,26 +1,36 @@
 FROM nickistre/ubuntu-lamp:14.04
+# FROM tutum/lamp:latest
 # FROM fauria/lamp
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
+# DEBIAN_FRONTEND=noninteractive \
 ENV DRUSH="8.1.12" \
     COMPOSER="1.4.2"
 
 # Packages
-# RUN apt-get update && \
-#     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-#     git
-#   && rm -r /var/lib/apt/lists/*
+RUN apt-get -y update && \
+    apt-get install -y software-properties-common && \
+    add-apt-repository ppa:ondrej/php && \
+    apt-get -y update && \
+    apt-get install -y git
+
+RUN apt-get install -y --force-yes \
+    php5.6 php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml php5.6-curl
+
+RUN a2dismod php5 && \
+    a2enmod php5.6
 
 # Install Adminer
 RUN mkdir /usr/share/adminer && \
-    wget "http://www.adminer.org/latest.php" -O /usr/share/adminer/latest.php && \
+    wget -q "http://www.adminer.org/latest.php" -O /usr/share/adminer/latest.php && \
     ln -s /usr/share/adminer/latest.php /usr/share/adminer/adminer.php && \
     echo "Alias /adminer.php /usr/share/adminer/adminer.php" | sudo tee /etc/apache2/conf-available/adminer.conf && \
     a2enconf adminer.conf
 
 # Clear apt-get lists
-RUN rm -r /var/lib/apt/lists/*
+RUN apt-get clean && \
+    rm -rf /var/lib/apt/lists/archive.*
 
 # Create database, user and password, all as "drupal"
 RUN service mysql start && \
