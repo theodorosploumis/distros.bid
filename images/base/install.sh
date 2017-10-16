@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Install a Drupal site with Drush
 
-PROJECT_PATH="/var/www/html"
-
 # Install site
 service mysql start && \
 service apache2 start && \
