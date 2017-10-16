@@ -66,6 +66,7 @@ RUN rm -r /var/www/html/*
 
 # Prepare installation
 COPY prepare-install.sh /var/www/
+COPY install.sh /var/www/
 
 # Create user www-data and assign UID
 RUN usermod -u 1000 www-data

@@ -2,14 +2,14 @@ FROM drupal8/distros:base
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="lightning"
-    # RELEASE="2.2.0"
+ENV NEWDISTRO="varbase"
+    # RELEASE="2.9"
 
 # Download distro (8.x) on html folder
-RUN wget -q https://github.com/acquia/lightning/releases/download/2.2.0/lightning-8.x-2.20.tar.gz && \
-    tar xvf lightning-8.x-2.20.tar.gz -C /var/www/ && \
+RUN wget -q https://ftp.drupal.org/files/projects/varbase-8.x-4.10-core.tar.gz && \
+    tar xvf varbase-8.x-4.10-core.tar.gz -C /var/www/ && \
     rm -r /var/www/html && \
-    mv /var/www/lightning-8.x-2.20 /var/www/html
+    mv /var/www/varbase-8.x-4.10 /var/www/html
 
 # Prepare installation and install
 RUN bash /var/www/prepare-install.sh

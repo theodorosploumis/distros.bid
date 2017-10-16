@@ -43,6 +43,8 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | Base | [images/base](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/base/Dockerfile/) | base | - |
 | [Drupal](https://www.drupal.org/project/drupal) | [images/drupal](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal/Dockerfile/) | drupal | 8.4.0 |
 | [Lightning](https://www.drupal.org/project/lightning) | [images/lightning](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/lightning/Dockerfile/) | lightning | 2.2.0 |
+| [Thunder](https://www.drupal.org/project/thunder) | [images/thunder](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/thunder/Dockerfile/) | thunder | 2.9 |
+| [Varbase](https://www.drupal.org/project/varbase) | [images/varbase](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/varbase/Dockerfile/) | varbase | 4.10 |
 
 ## License
 

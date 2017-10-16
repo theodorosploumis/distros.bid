@@ -1,5 +1,5 @@
 ## Build the base image
 
 ```
-docker build -t drupal-distros/base .
+docker build -t drupal8/distros:base .
 ```
