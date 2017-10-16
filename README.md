@@ -20,7 +20,8 @@ Currently only 1 version is supported for each distribution and there no
 version specific tags (eg there is "drupal" but not "drupal-8.4.0" tag).
 
 ```
-docker run -d -p 8066:80 --name {DISTRIBUTION_NAME} drupal8/distros:{DISTRIBUTION_NAME}
+# Lat's try lightning distribution
+docker run -d -p 8066:80 --name lightning drupal8/distros:lightning
 ```
 
 Open Drupal login page http://localhost:8066/user/login
