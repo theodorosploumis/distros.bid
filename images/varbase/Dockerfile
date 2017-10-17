@@ -15,14 +15,14 @@ RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
 
+RUN sed -i 's/2000000/'"0"'/g' /var/www/html/sites/default/default.services.yml
+
 RUN rm -f /var/www/html/composer.lock /var/www/html/composer.json && \
     cp /var/www/html/profiles/${NEWDISTRO}/composer.json /var/www/html/composer.json
 
 # Install dependencies
 RUN COMPOSER=composer.json composer install --no-dev
 RUN COMPOSER=composer.json composer clear-cache
-
-RUN sed -i 's/2000000/'"0"'/g' /var/www/html/sites/default/default.services.yml
 
 # Download ace library
 # RUN wget -q https://github.com/ajaxorg/ace-builds/archive/v1.2.8.tar.gz && \
