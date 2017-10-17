@@ -48,8 +48,8 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | [Drupal](https://www.drupal.org/project/drupal) | [images/drupal](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal/Dockerfile/) | drupal | 8.4.0 |
 | [Druppio](https://www.drupal.org/project/druppio_small_business_distribution) | [images/druppio_small_business_distribution](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/druppio_small_business_distribution/Dockerfile/) | druppio | 1.14 |
 | [Lightning](https://www.drupal.org/project/lightning) | [images/lightning](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/lightning/Dockerfile/) | lightning | 2.2.0 |
-| [Open Door](https://www.drupal.org/project/open_door) | [images/open_door](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/open_door/Dockerfile/) | opendoor | 1.0-beta2 |
 | [OpenChurch](https://www.drupal.org/project/openchurch) | [images/openchurch](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openchurch/Dockerfile/) | openchurch | 2.0-rc11 |
+| [Open Door](https://www.drupal.org/project/open_door) | [images/open_door](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/open_door/Dockerfile/) | opendoor | 1.0-beta2 |
 | [OpenRestaurant](https://www.drupal.org/project/openrestaurant) | [images/openrestaurant](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openrestaurant/Dockerfile/) | openrestaurant | 1.0-beta2 |
 | [Open Social](https://www.drupal.org/project/social) | [images/social](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/social/Dockerfile/) | social | 1.5 |
 | [Panopoly](https://www.drupal.org/project/panopoly) | [images/panopoly](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/panopoly/Dockerfile/) | panopoly | 2.0-alpha7 |
