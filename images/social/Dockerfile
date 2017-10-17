@@ -12,17 +12,16 @@ ENV NEWDISTRO="social" \
 #     mv /var/www/social-8.x-1.5 /var/www/html
 
 # COMPOSER=composer.json composer create-project goalgorilla/social_template:dev-master /var/www/html --no-interaction && \
-RUN drush dl social -y --destination=/var/www --drupal-project-rename=html
+RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
 
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
 
 RUN rm -f /var/www/html/composer.lock /var/www/html/composer.json && \
-    cp /var/www/html/profiles/social/composer.json /var/www/html/composer.json
+    cp /var/www/html/profiles/${NEWDISTRO}/composer.json /var/www/html/composer.json
 
 # Install dependencies
-RUN COMPOSER=composer.json && \
-    composer install && \
+RUN COMPOSER=composer.json composer --quiet install && \
     composer clear-cache
 
 # Install Drupal
