@@ -1,4 +1,4 @@
-# drupal-docker-distros
+# Drupal docker distributions
 Showcase of Drupal distributions with Docker.
 
 A list of Docker containers running several popular [Drupal 8.x distributions](https://www.drupal.org/project/project_distribution) within LAMP stack.
@@ -20,7 +20,7 @@ Currently only 1 version is supported for each distribution and there no
 version specific tags (eg there is "drupal" but not "drupal-8.4.0" tag).
 
 ```
-# Lat's try lightning distribution
+# Let's try lightning distribution
 docker run -d -p 8066:80 --name lightning drupal8/distros:lightning
 ```
 
@@ -31,7 +31,7 @@ Open Drupal login page http://localhost:8066/user/login
 
 Open Adminer page at http://localhost:8066/adminer.php
 
-- **DB user**: drupal
+- **DB username**: drupal
 - **DB name**: drupal
 - **DB password**: drupal
 
