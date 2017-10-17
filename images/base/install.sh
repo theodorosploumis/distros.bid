@@ -4,7 +4,6 @@
 # Install site
 service mysql start && \
 service apache2 start && \
-cd /var/www/html && \
 drush site-install -y ${PROFILE} \
       --site-name="Distribution ${NEWDISTRO} with Docker" \
       --db-url=mysql://drupal:drupal@localhost/drupal \

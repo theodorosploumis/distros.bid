@@ -56,7 +56,7 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | [Presto](https://www.drupal.org/project/presto) | [images/presto](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/presto/Dockerfile/) | presto | 2.0-beta3 |
 | [Thunder](https://www.drupal.org/project/thunder) | [images/thunder](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/thunder/Dockerfile/) | thunder | 2.9 |
 | [Varbase](https://www.drupal.org/project/varbase) | [images/varbase](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/varbase/Dockerfile/) | varbase | 4.10 |
-| [Vardoc](https://www.drupal.org/project/vardoc) | [images/vardoc](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/vardoc/Dockerfile/) | vardoc | 8.1.0-beta2 |
+| [Vardoc](https://www.drupal.org/project/vardoc) | [images/vardoc](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/vardoc/Dockerfile/) | vardoc | 1.0-beta2 |
 
 ## License
 
