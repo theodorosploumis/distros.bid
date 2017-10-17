@@ -20,15 +20,15 @@ RUN sed -i 's/2000000/'"0"'/g' /var/www/html/sites/default/default.services.yml
 RUN rm -f /var/www/html/composer.lock /var/www/html/composer.json && \
     cp /var/www/html/profiles/${NEWDISTRO}/composer.json /var/www/html/composer.json
 
+# Download ace library
+RUN wget -q https://github.com/ajaxorg/ace-builds/archive/v1.2.8.tar.gz && \
+    tar xvf v1.2.8.tar.gz -C /var/www/html/libraries && \
+    rm /var/www/html/v1.2.8.tar.gz && \
+    mv /var/www/html/libraries/ace-builds-1.2.8 /var/www/html/libraries/ace
+
 # Install dependencies
 RUN COMPOSER=composer.json composer install --no-dev
 RUN COMPOSER=composer.json composer clear-cache
-
-# Download ace library
-# RUN wget -q https://github.com/ajaxorg/ace-builds/archive/v1.2.8.tar.gz && \
-#     tar xvf v1.2.8.tar.gz -C /var/www/html/libraries && \
-#     rm /var/www/html/v1.2.8.tar.gz && \
-#     mv /var/www/html/libraries/ace-builds-1.2.8 /var/www/html/libraries/ace
 
 # Install Drupal
 RUN bash /var/www/install.sh
