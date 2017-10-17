@@ -16,7 +16,7 @@ RUN apt-get -y update && \
     apt-get install -y git
 
 RUN apt-get install -y --force-yes \
-    php5.6 php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml php5.6-curl
+    php5.6 php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml php5.6-curl php5.6-gd
 
 RUN a2dismod php5 && \
     a2enmod php5.6
