@@ -15,7 +15,7 @@ RUN rm -f /var/www/html/composer.lock /var/www/html/composer.json && \
     cp /var/www/html/profiles/${NEWDISTRO}/composer.json /var/www/html/composer.json
 
 # Install dependencies
-RUN COMPOSER=composer.json composer install
+RUN COMPOSER=composer.json composer install --no-dev
 RUN COMPOSER=composer.json composer clear-cache
 
 RUN sed -i 's/2000000/'"0"'/g' /var/www/html/sites/default/default.services.yml

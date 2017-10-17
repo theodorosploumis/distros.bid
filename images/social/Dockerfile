@@ -21,7 +21,7 @@ RUN rm -f /var/www/html/composer.lock /var/www/html/composer.json && \
     cp /var/www/html/profiles/${NEWDISTRO}/composer.json /var/www/html/composer.json
 
 # Install dependencies
-RUN COMPOSER=composer.json composer install
+RUN COMPOSER=composer.json composer install --no-dev
 RUN COMPOSER=composer.json composer clear-cache
 
 # Install Drupal
