@@ -14,7 +14,7 @@ RUN rm -rf /var/www/html && \
     mv /var/www/${NEWDISTRO} /var/www/html
 
 RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/html"'/g' /etc/apache2/sites-available/000-default.conf && \
-    service apache2 restart
+    service apache2 reload
 
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
