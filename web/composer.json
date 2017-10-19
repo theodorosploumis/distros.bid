@@ -1,0 +1,15 @@
+{
+    "name": "tpl/php-docker-ui",
+    "description": "A UI for Docker with php",
+    "type": "project",
+    "require": {
+        "docker-php/docker-php": "^1.24"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TheodorosPloumis",
+            "email": "me@theodorosploumis.com"
+        }
+    ]
+}

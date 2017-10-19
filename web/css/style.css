@@ -1,0 +1,44 @@
+body {
+  background: #eaeaea;
+  font-family: monospace;
+}
+
+.wrapper {
+  padding: 20px 80px;
+  margin: 0 auto;
+  max-width: 1260px;
+}
+
+h1 {
+  font-size: 26px;
+  text-align: center;
+  margin: 40px 20px 0;
+}
+
+.starters {
+  padding: 0;
+  margin: 0;
+}
+
+.starters li {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  float: left;
+  background: #fff;
+}
+
+.link {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 200px;
+}
+
+p {
+  margin: 5px;
+}
