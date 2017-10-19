@@ -13,8 +13,7 @@ RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDIST
 RUN rm -rf /var/www/html && \
     mv /var/www/${NEWDISTRO} /var/www/html
 
-RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/docroot"'/g' /etc/apache2/sites-available/000-default.conf && \
-    service apache2 reload
+RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/docroot"'/g' /etc/apache2/sites-available/000-default.conf
 
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
