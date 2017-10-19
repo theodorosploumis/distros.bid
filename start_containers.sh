@@ -9,5 +9,5 @@ do
 
   echo "Starting container for distro" $DISTRO on port $PORT;
   docker run -d -p $PORT:80 drupal8/distros:$DISTRO;
-  google-chrome localhost:$PORT;
+  google-chrome "http://localhost:$PORT";
 done
