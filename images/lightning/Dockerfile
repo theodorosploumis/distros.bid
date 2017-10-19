@@ -22,7 +22,7 @@ RUN bash /var/www/prepare-install.sh
 RUN sed -i 's/2000000/'"0"'/g' /var/www/html/docroot/sites/default/default.services.yml
 
 # Install Drupal
-WORKDIR /var/www/html/docroot
+WORKDIR ${DOCROOT}
 RUN bash /var/www/install.sh
 
 VOLUME  ["/var/lib/mysql", "/var/www/html", "/var/www/config"]
