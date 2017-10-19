@@ -11,11 +11,11 @@ RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
 
-# Install extra libraries
-RUN wget -q https://github.com/sachinchoolur/lightGallery/archive/1.6.3.tar.gz && \
-    tar -xzf 1.6.3.tar.gz -C libraries/ && \
-    rm -f 1.6.3.tar.gz && \
-    mv libraries/lightGallery-1.6.3 libraries/lightgallery
+# # Install extra libraries
+# RUN wget -q https://github.com/sachinchoolur/lightGallery/archive/1.6.3.tar.gz && \
+#     tar -xzf 1.6.3.tar.gz -C libraries/ && \
+#     rm -f 1.6.3.tar.gz && \
+#     mv libraries/lightGallery-1.6.3 libraries/lightgallery
 
 # Install distro
 RUN bash /var/www/install.sh

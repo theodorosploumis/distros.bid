@@ -6,8 +6,8 @@ if [[ -z ${DOCROOT} ]]
     DOCROOT="/var/www/html";
 fi
 
-# Create setting.php file
-echo -e ">> Create setting.php file"
+# Create settings.php file
+echo -e ">> Create settings.php file"
 cp ${DOCROOT}/sites/default/default.settings.php ${DOCROOT}/sites/default/settings.php
 chmod 777 ${DOCROOT}/sites/default/settings.php
 
@@ -19,15 +19,10 @@ echo "ini_set('max_execution_time', '1200');" >> ${DOCROOT}/sites/default/settin
 echo "\$settings['file_private_path'] = '${DOCROOT}/sites/default/private-files';" >> ${DOCROOT}/sites/default/settings.php
 
 # Create public files folder
-echo -e ">> Create public and private files folders"
+echo -e ">> Create public, private files and libraries folders"
 if [[ -z ${DOCROOT}/sites/default/files ]]
   then
     mkdir ${DOCROOT}/sites/default/files;
-fi
-
-if [[ -z ${DOCROOT}/libraries ]]
-  then
-    mkdir ${DOCROOT}/libraries;
 fi
 
 if [[ -z ${DOCROOT}/libraries ]]
