@@ -3,28 +3,24 @@ FROM drupal8/distros:base
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 ENV NEWDISTRO="social" \
-    PROFILE="social"
+    PROFILE="social" \
+    DOCROOT="/var/www/html/html" \
+    PACKAGE="goalgorilla/social_template:dev-master"
 
-# Download distro (8.x) on html folder
-# RUN wget -q https://ftp.drupal.org/files/projects/social-8.x-1.5-core.tar.gz && \
-#     tar xvf social-8.x-1.5-core.tar.gz -C /var/www/ && \
-#     rm -r /var/www/html && \
-#     mv /var/www/social-8.x-1.5 /var/www/html
+RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
+    --quiet --no-ansi --no-dev --no-interaction --no-progress
 
-# COMPOSER=composer.json composer create-project goalgorilla/social_template:dev-master /var/www/html --no-interaction && \
-RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
+RUN rm -rf /var/www/html && \
+    mv /var/www/${NEWDISTRO} /var/www/html
+
+RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/html"'/g' /etc/apache2/sites-available/000-default.conf && \
+    service apache2 restart
 
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
 
-RUN rm -f /var/www/html/composer.lock /var/www/html/composer.json && \
-    cp /var/www/html/profiles/${NEWDISTRO}/composer.json /var/www/html/composer.json
-
-# Install dependencies
-RUN COMPOSER=composer.json composer install --no-dev
-RUN COMPOSER=composer.json composer clear-cache
-
 # Install Drupal
+WORKDIR ${DOCROOT}
 RUN bash /var/www/install.sh
 
 VOLUME  ["/var/lib/mysql", "/var/www/html", "/var/www/config"]
