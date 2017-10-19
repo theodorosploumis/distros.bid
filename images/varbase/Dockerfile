@@ -15,7 +15,7 @@ RUN rm -rf /var/www/html && \
 
 RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/docroot"'/g' /etc/apache2/sites-available/000-default.conf && \
     sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/docroot"'/g' /etc/apache2/sites-enabled/000-default.conf && \
-    service apache2 reload
+    service apache2 restart
 
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
