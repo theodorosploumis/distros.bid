@@ -21,6 +21,6 @@ RUN bash /var/www/prepare-install.sh
 RUN bash /var/www/install.sh
 
 # Update mismatched entities
-RUN drush entup -y
+# RUN drush entup -y
 
 VOLUME  ["/var/lib/mysql", "/var/www/html", "/var/www/config"]
