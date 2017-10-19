@@ -7,7 +7,7 @@ ENV NEWDISTRO="bear" \
     DOCROOT="/var/www/html/docroot"
 
 
-RUN COMPOSER=composer.json composer composer create-project zivtech/bear-project:8.2.x-dev /var/www/${NEWDISTRO} \
+RUN COMPOSER=composer.json composer create-project zivtech/bear-project:8.2.x-dev /var/www/${NEWDISTRO} \
     --quiet --no-ansi --no-dev --no-interaction --no-progress
 
 RUN rm -rf /var/www/html && \
