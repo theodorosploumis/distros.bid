@@ -4,10 +4,10 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 ENV NEWDISTRO="bear" \
     PROFILE="bear" \
-    DOCROOT="/var/www/html/docroot"
+    DOCROOT="/var/www/html/docroot" \
+    PACKAGE="zivtech/bear-project:8.2.x-dev"
 
-
-RUN COMPOSER=composer.json composer create-project zivtech/bear-project:8.2.x-dev /var/www/${NEWDISTRO} \
+RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
     --quiet --no-ansi --no-dev --no-interaction --no-progress
 
 RUN rm -rf /var/www/html && \
