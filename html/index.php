@@ -1,7 +1,7 @@
 <?php
 
-include_once __DIR__ . '/settings.php';
-require __DIR__ . '/randomGenerator.php';
+require_once __DIR__ . '/settings.php';
+require_once __DIR__ . '/randomGenerator.php';
 
 $images = [
   "agov",
@@ -71,6 +71,7 @@ $images = [
 <footer>
     <p>
         Created by <a href="https://www.theodorosploumis.com/en">TheodorosPloumis</a>
+        | Hosted on <a href="https://m.do.co/c/1123d0854c8f">DigitalOcean</a>
     </p>
     <p>
         <a href="https://www.drupal.org">Drupal</a> is a

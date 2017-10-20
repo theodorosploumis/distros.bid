@@ -37,7 +37,7 @@ docker run -d -p ${PORTAINERPORT}:9000 -v /var/run/docker.sock:/var/run/docker.s
 
 # Install php packages
 cd /var/www/distros/html && \
-COMPOSER=composer.json composer install --quiet --no-ansi --no-dev --no-interaction --no-progress
+COMPOSER=composer.json composer install --quiet --no-dev --no-interaction --no-progress
 
 # Create virtualhost sudbomain
 mkdir -p /var/www/${SUBDOMAIN}
