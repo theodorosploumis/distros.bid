@@ -41,8 +41,8 @@ COMPOSER=composer.json composer install --quiet --no-ansi --no-dev --no-interact
 
 # Create virtualhost sudbomain
 mkdir -p /var/www/${SUBDOMAIN}
-cp yes | cp -f /var/distros/scripts/000-default.conf /etc/apache2/sites-available/000-default.conf
-cp yes | cp -f /var/distros/scripts/"${SUBDOMAIN}".conf /etc/apache2/sites-available/"${SUBDOMAIN}".conf
+yes | cp -f /var/www/distros/scripts/000-default.conf /etc/apache2/sites-available/000-default.conf
+yes | cp -f /var/www/distros/scripts/"${SUBDOMAIN}".conf /etc/apache2/sites-available/"${SUBDOMAIN}".conf
 service apache2 reload
 
 # Install DogitalOcean monitoring
