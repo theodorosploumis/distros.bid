@@ -1,5 +1,6 @@
 <?php
 
+include_once __DIR__ . '/settings.php';
 require __DIR__ . '/randomGenerator.php';
 
 $images = [
@@ -35,10 +36,15 @@ $images = [
 <section class="wrapper">
 
     <p class="info">
-        <b>Drupal username:</b>admin<br>
-        <b>Drupal password:</b>admin<br>
+        <b>Drupal Admin</b><br>
+        <br>
+        <br>
+        <b>username:</b>admin<br>
+        <b>password:</b>admin<br>
     </p>
     <p class="info">
+        <b>Adminer</b> (/adminer.php)<br>
+        <br>
         <b>DB name:</b>drupal<br>
         <b>DB password:</b>drupal<br>
         <b>DB username:</b>drupal<br>
@@ -47,9 +53,9 @@ $images = [
     <ul class="starters">
       <?php
       foreach ($images as $image) {
-        print '<li><a target="_blank" class="link-' . $image . ' link"
-        href="/containers?distro=' . $image . '&id=' . randomGenerator() . '">'
-          . $image . '</a></li>';
+        print '<li><a target="_blank" class="link-' . $image . ' .
+        link" href="/container.php?distro=' . $image . '&id=' .
+          randomGenerator($subdomainLength) . '">' . $image . '</a></li>';
       }
       ?>
     </ul>

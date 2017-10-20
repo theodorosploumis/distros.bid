@@ -1,0 +1,19 @@
+# Remove all stopped containers
+function docker-rm-stopped() {
+  echo -n "Removing stopped containers...\n"
+  docker rm -v $(docker ps -a -q -f status=exited)
+}
+
+# Stop and remove ALL containers!
+function docker-rma() {
+  echo -n "Stopping all containers..."
+  docker stop $(docker ps -aq)
+  echo -n "Removing all containers..."
+  docker rm $(docker ps -aq)
+}
+
+# /bin/bash into a docker container
+function docker-bash() {
+  echo -n "/bin/bash into container $@\n"
+  docker exec -it "$@" /bin/bash
+}

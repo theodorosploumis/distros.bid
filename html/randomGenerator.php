@@ -6,7 +6,7 @@
  * @param string $keyspace
  * @return string
  */
-function randomGenerator($length = '20', $keyspace = '0123456789abcdefghijklmnopqrstuvwxyz') {
+function randomGenerator($length = '20', $keyspace = 'abcdefghijklmnopqrstuvwxyz') {
   
   $str = '';
   $max = mb_strlen($keyspace, '8bit') - 1;

@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # Pull all docker images of this repo
 
-cat tags.txt | while read line
+DIR="$(dirname $0)"
+
+cat $DIR/../tags.txt | while read line
 do
   ID=$(echo "$line" | cut -c1-2)
   DISTRO=$(echo $line | sed -r 's/^.{3}//')

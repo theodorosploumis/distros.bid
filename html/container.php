@@ -1,94 +1,63 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../randomGenerator.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require __DIR__ . '/vendor/autoload.php';
+include_once __DIR__ . '/settings.php';
 
 use Docker\Docker;
 use Docker\API\Model\ContainerConfig;
 use Docker\API\Model\HostConfig;
-use Docker\API\Model\PortBinding;
+//use Docker\API\Model\PortBinding;
 
-// Docker hub image
-$docker_image = "drupal8/distros";
-
-// Set the host ip
-// Do not use the "http://" prefix
-$hostIp = "0.0.0.0";
-
-// Set you main domain here for the subdomains to be created
-// For local development this can be "localhost"
-// Do not use the "http://" prefix
-$domain = "distros.loc";
-
-// If server is not live (not 1) to not create a random port and a subdomain
-$serverEnv = 1;
-
-if ($serverEnv) {
-  $port = "80";
-}
-else {
-  $port = randomGenerator(4, "3456789");
-}
-
+// Initialize Docker()
 $docker = new Docker();
 $containerManager = $docker->getContainerManager();
 
-//$proxy = $containerManager->find("proxy");
-//if (!isset($proxy)) {
-//  echo "Nginx proxy is not running.";
-//  die;
-//}
-//var_dump($proxy);
-//die;
+// Create nginx-proxy if not enabled
+if (!$containerManager->find("proxy")) {
+  echo "Nginx proxy is not running. Please try later.";
+  die;
+}
 
 // Get variables from url
 if (isset($_GET['distro'])) {
   $distro = $_GET['distro'];
+  $distro = preg_replace('/[^a-z]/', '', $distro);
+  $selected_image = $docker_image . ":" . $distro;
 } else {
   echo "<h1>Error: Distro is not defined.</h1>";
-  die;
+  header("HTTP/1.0 404 Not Found");
+  die('Error: Distro is not defined.');
 }
 
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
-} else {
-  echo "<h1>Error: ID is not defined.</h1>";
-  die;
-}
-
-// Set subdomain
-if ($serverEnv) {
+  $id = preg_replace('/[^a-z]/', '', $id);
+  // Set subdomain
   $subdomain = $id . "." . $domain;
 } else {
-  $subdomain = $domain;
+  echo "<h1>Error: ID is not defined.</h1>";
+  header("HTTP/1.0 404 Not Found");
+  die('Error: ID is not defined.');
 }
 
 // Create new HostConfig
 $hostConfig = new HostConfig();
 
-// Set container volumes
-//$volume = "/var/www/" . $id;
-//$docker_volumes = [
-//  $volume . "/mysql:/var/lib/mysql",
-//  $volume . "/html:/var/www/html"
-//];
-//
-//if (!file_exists($volume)) {
-//  mkdir($volume, 0700);
-//}
-//$hostConfig->setBinds($docker_volumes);
-
-// Set exposed ports
+// Set exposed ports - Not used
+/**
 $mapPorts = new \ArrayObject();
 $hostPortBinding = new PortBinding();
 $hostPortBinding->setHostPort($port);
 $hostPortBinding->setHostIp($hostIp);
 $mapPorts['80/tcp'] = [$hostPortBinding];
 $hostConfig->setPortBindings($mapPorts);
+*/
 
 // New container config
-$selected_image = $docker_image . ":" . $distro;
-
 $containerConfig = new ContainerConfig();
 
 // Set docker image
@@ -104,13 +73,15 @@ $containerConfig->setEnv([
 
 // Create container
 $containerConfig->setHostConfig($hostConfig);
-$container = $containerManager->create($containerConfig);
+$container = $containerManager->create($containerConfig,
+  ['name' => $subdomain ]
+);
 $containerId = $container->getId();
 
 // Start container
 $containerManager->start($container->getId());
 
-echo "Rederecting to new subdomain " . $subdomain . ":" . $port;
+echo "Rederecting to subdomain " . $subdomain . ":" . $port;
 
 //// Log container
 //$response = $containerManager->logs($containerId, [
