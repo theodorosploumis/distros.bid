@@ -58,9 +58,7 @@ $images = [
 
 <footer>
     <p>
-        <a href="https://github.com/theodorosploumis/drupal-docker-distros">
-            Source code</a> | Created by
-        <a href="https://www.theodorosploumis.com/en">TheodorosPloumis</a>
+        Created by <a href="https://www.theodorosploumis.com/en">TheodorosPloumis</a>
     </p>
     <p>
         <a href="https://www.drupal.org">Drupal</a> is a
