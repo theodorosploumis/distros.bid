@@ -1,25 +1,6 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
-
-use Docker\Docker;
-
-$docker = new Docker();
-
-$containers = $docker->getContainerManager()->findAll();
-
-//var_dump($containers);
-//die;
-
-function randomStr($length = '20', $keyspace = '0123456789abcdefghijklmnopqrstuvwxyz')
-{
-  $str = '';
-  $max = mb_strlen($keyspace, '8bit') - 1;
-  for ($i = 0; $i < $length; ++$i) {
-    $str .= $keyspace[random_int(0, $max)];
-  }
-  return $str;
-}
+require __DIR__ . '/randomGenerator.php';
 
 $images = [
   "agov",
@@ -44,29 +25,49 @@ $images = [
 <html>
 
 <head>
-  <title>Try Drupal 8.x Distributions</title>
-  <link rel="stylesheet" href="css/style.css">
+    <title>Try Drupal 8.x Distributions</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <h1>Try Drupal 8.x Distributions</h1>
+<h1>Try Drupal 8.x Distributions</h1>
 
-  <section class="wrapper">
-    <p>
-      <b>Drupal username:</b>admin<br>
-      <b>Drupal password:</b>admin<br>
+<section class="wrapper">
+
+    <p class="info">
+        <b>Drupal username:</b>admin<br>
+        <b>Drupal password:</b>admin<br>
     </p>
-    
+    <p class="info">
+        <b>DB name:</b>drupal<br>
+        <b>DB password:</b>drupal<br>
+        <b>DB username:</b>drupal<br>
+    </p>
+
     <ul class="starters">
       <?php
-        foreach ($images as $image) {
-          print '<li><a class="link-'.$image.' link" href="/containers?distro=' . $image .
-            '&id='. randomStr() . '">' . $image . '</a></li>';
-        }
+      foreach ($images as $image) {
+        print '<li><a target="_blank" class="link-' . $image . ' link"
+        href="/containers?distro=' . $image . '&id=' . randomGenerator() . '">'
+          . $image . '</a></li>';
+      }
       ?>
     </ul>
-    
-  </section>
+
+</section>
+
+<footer>
+    <p>
+        <a href="https://github.com/theodorosploumis/drupal-docker-distros">
+            Source code</a> | Created by
+        <a href="https://www.theodorosploumis.com/en">TheodorosPloumis</a>
+    </p>
+    <p>
+        <a href="https://www.drupal.org">Drupal</a> is a
+        <a href="http://drupal.com/trademark">registered trademark</a> of
+        <a href="http://buytaert.net">Dries Buytaert</a>.</p>
+</footer>
+
 </body>
 
 </html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/web/vendor/nikic/php-parser/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/web/vendor/jane" isTestSource="false" packagePrefix="Joli" />
+      <sourceFolder url="file://$MODULE_DIR$/web/vendor/docker-php/docker-php" isTestSource="false" packagePrefix="Docker" />
+      <sourceFolder url="file://$MODULE_DIR$/web/vendor/doctrine/inflector/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/vendor/nikic/php-parser/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/vendor/psr/log" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/vendor/doctrine/inflector/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/web/vendor/docker-php/docker-php/src" isTestSource="false" packagePrefix="Docker" />
+      <sourceFolder url="file://$MODULE_DIR$/web/vendor" isTestSource="false" packagePrefix="Joli" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
