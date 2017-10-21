@@ -18,6 +18,17 @@ function docker-bash() {
   docker exec -it "$@" /bin/bash
 }
 
+# Remove '<none>' images
+function docker-rm-none() {
+  echo -n "Removing <none> images...\n"
+  docker rmi $(docker images | grep '<none>' | awk '{print $3}')
+}
+
+# Remove all volumes
+function docker-rm-volumes() {
+  docker volume ls -qf dangling=true | xargs -r docker volume rm
+}
+
 # Pull all docker images
 function docker-pull-all() {
   bash /var/www/distros/scripts/pull-images.sh
