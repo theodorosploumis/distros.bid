@@ -23,7 +23,6 @@ if (isset($_GET['distro'])) {
   $distro = preg_replace('/[^a-z]/', '', $distro);
   $selected_image = $docker_image . ":" . $distro;
 } else {
-  echo "<h1>Error: Distro is not defined.</h1>";
   header("HTTP/1.0 404 Not Found");
   die('Error: Distro is not defined.');
 }
@@ -33,8 +32,8 @@ if (isset($_GET['id'])) {
   $id = preg_replace('/[^a-z]/', '', $id);
   // Set subdomain
   $subdomain = $id . "." . $domain;
+  $redirect = "http://" . $subdomain . ":" . $port;
 } else {
-  echo "<h1>Error: ID is not defined.</h1>";
   header("HTTP/1.0 404 Not Found");
   die('Error: ID is not defined.');
 }
@@ -65,6 +64,10 @@ $container = $containerManager->create($containerConfig,
 // Start container
 $containerManager->start($container->getId());
 
+echo "<html><head><title>Preparing your site...</title><style>
+.load {width:400px;height:300px;margin:0 auto;}</style></head>
+<body><div class='load'><img src='loading.gif'></div></body>
+</html>";
+
 // Redirect to the Docker container ui
-sleep(5);
-header('Location: ' . "http://" . $subdomain . ":" . $port, true, $permanent ? 301 : 302);
+header('Refresh:4; url=' . $redirect);
