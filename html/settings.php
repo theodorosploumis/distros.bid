@@ -28,3 +28,5 @@ if ($debug) {
   error_reporting(E_ALL);
 }
 
+// Google Analytics code
+$google_analytics_code = "UA-6649652-60";

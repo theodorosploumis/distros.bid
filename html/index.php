@@ -34,7 +34,15 @@ $images = [
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="20x20" href="favicon.png">
-    <link>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_code; ?>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', <?php echo $google_analytics_code; ?>);
+    </script>
+
 </head>
 
 <body>
