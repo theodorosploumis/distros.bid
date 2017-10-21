@@ -5,6 +5,7 @@ DOMAIN="distros.bid"
 SUBDOMAIN="drupal.distros.bid"
 NGINXPORT="8055"
 PORTAINERPORT="9988"
+RANCHERPORT="9989"
 
 # Generic software
 apt-get -qqy update
@@ -25,7 +26,7 @@ curl https://releases.rancher.com/install-docker/17.06.sh | sh
 
 # Start nginx-proxy on port $NGINXPORT
 docker run -d -p ${NGINXPORT}:80 --name proxy \
- -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
+       -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
 
 # Add www-data to group docker
 usermod -aG docker www-data
@@ -33,7 +34,11 @@ usermod -aG docker www-data
 # Start Portainer dashboard
 docker volume create portainer_data
 docker run -d -p ${PORTAINERPORT}:9000 -v /var/run/docker.sock:/var/run/docker.sock \
- -v portainer_data:/data portainer/portainer
+       -v portainer_data:/data portainer/portainer
+
+# Start rancher dashboard
+docker run -d --name rancher_server --restart=unless-stopped \
+       -p ${RANCHERPORT}:8080 rancher/server:stable
 
 # Install php packages
 cd /var/www/distros/html && \
