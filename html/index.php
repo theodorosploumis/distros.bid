@@ -32,6 +32,7 @@ $images = [
     <title>Try Drupal 8.x Distributions</title>
     
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="20x20" href="favicon.png">
     <link>
 </head>

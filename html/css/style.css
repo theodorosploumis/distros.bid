@@ -1,6 +1,7 @@
 body {
   background: #eaeaea;
-  font-family: monospace, Arial, sans-serif;
+  /*font-family: "Courier New", Courier, monospace;*/
+  font-family: "Cutive Mono" ,"Courier New", Courier, monospace;
 }
 
 .wrapper {
