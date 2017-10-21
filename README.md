@@ -2,7 +2,7 @@
 Showcase of Drupal distributions with Docker.
 
 
-> Test it live at [distros.bid](http://distros.bid).
+> Test it live at [distros.bid](http://distros.bid/?utm_source=github&utm_medium=browser&utm_campaign=github_repo).
 
 A list of Docker containers running several popular [Drupal 8.x distributions](https://www.drupal.org/project/project_distribution) within LAMP stack.
 
