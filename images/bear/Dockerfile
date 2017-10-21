@@ -18,8 +18,11 @@ RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/docroot"'/g' /etc/apache2/sit
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
 
+# Remove $config_directories as they cause issues
+RUN sed -i '/^\$config_directories/d' ${DOCROOT}/sites/default/settings.php
+
 # Install Drupal
 WORKDIR /var/www/html/docroot
 RUN bash /var/www/install.sh
 
-VOLUME  ["/var/lib/mysql", "/var/www/html", "/var/www/config"]
+VOLUME  ["/var/lib/mysql", "/var/www/html"]
