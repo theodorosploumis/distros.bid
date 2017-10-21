@@ -1,6 +1,9 @@
 # Drupal docker distributions
 Showcase of Drupal distributions with Docker.
 
+
+> Test it live at [distros.bid](http://distros.bid).
+
 A list of Docker containers running several popular [Drupal 8.x distributions](https://www.drupal.org/project/project_distribution) within LAMP stack.
 
 ## Software per docker image

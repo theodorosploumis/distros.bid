@@ -37,7 +37,7 @@ $images = [
 </head>
 
 <body>
-<h1>Try Drupal 8.x Distributions</h1>
+<h1>Try Drupal 8.x Distributions<sup>beta</sup></h1>
 
 <section class="wrapper">
 

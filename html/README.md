@@ -13,4 +13,4 @@ subdomain "drupal.distros.bid".
 
  - Tested with Debian 9.2 x64.
  - Needs at least 2GB of RAM
- - Docker images need at least 18GB space
+ - Docker images need at least 20GB space

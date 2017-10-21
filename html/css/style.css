@@ -1,6 +1,6 @@
 body {
   background: #eaeaea;
-  font-family: monospace;
+  font-family: monospace, Arial, sans-serif;
 }
 
 .wrapper {
@@ -14,6 +14,7 @@ h1 {
   font-size: 26px;
   text-align: center;
   margin: 40px 20px 0;
+  position: relative;
 }
 
 .starters {
@@ -55,4 +56,15 @@ footer {
   padding-top: 10px;
   border-top: 1px solid #fff;
   text-align: center;
+}
+
+sup {
+  font-weight: normal;
+  letter-spacing: -1px;
+  font-size: 14px;
+  position: absolute;
+  top: -5px;
+  background: #fff;
+  padding: 2px;
+  border-radius: 4px;
 }
