@@ -78,9 +78,9 @@ fi
 
 # Start Admiral dashboard
 if [ "${INSTALL_ADMIRAL}" -eq "1" ]; then
-docker run -d -p ${ADMIRALPORT}:8282 \
-       --name admiral vmware/admiral \
-       --log-driver=json-file --log-opt max-size=500M --log-opt max-file=10
+  docker run -d -p ${ADMIRALPORT}:8282 \
+         --name admiral vmware/admiral \
+         --log-driver=json-file --log-opt max-size=500M --log-opt max-file=10
 fi
 
 # Install php packages
