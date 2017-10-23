@@ -8,16 +8,19 @@ A list of Docker containers running several popular [Drupal 8.x distributions](h
 
 ## Software per docker image
 
-- adminer
-- apache2
-- composer
-- curl
-- drush
-- mysql 5.5
-- php 5.6
-- supervisord
-- vim
-- wget
+| Software | Version |
+| :---  |:--- |
+| adminer | 4.3.1 |
+| apache2 | 2.4.18 |
+| composer | 1.4.2 |
+| curl | |
+| drush | 8.1.12 |
+| git | 2.7.4 |
+| mysql | 5.7.20 |
+| php | 7.0 |
+| supervisord | 3.2.0 |
+| vim | 7.4 |
+| wget | 1.17.1 |
 
 
 ## Usage

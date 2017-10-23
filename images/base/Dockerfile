@@ -13,6 +13,7 @@ RUN apt-get update
 # Install software
 RUN apt-get -y install \
     apache2 \
+    curl \
     vim \
     git \
     bash-completion \
