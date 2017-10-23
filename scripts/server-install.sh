@@ -10,12 +10,16 @@ INSTALL_RANCHER=0
 INSTALL_PORTAINER=1
 INSTALL_CADVISOR=0
 INSTALL_ADMIRAL=0
+INSTALL_ELK=0
 
 # Monitoring system ports from 9988 - 9989
 PORTAINERPORT="9988"
 RANCHERPORT="9989"
 CADVISORPORT="9990"
 ADMIRALPORT="9991"
+ELKPORT1="9200"
+ELKPORT2="9201"
+ELKPORT3="9202"
 
 # Generic software
 apt-get -qqy update
@@ -34,10 +38,16 @@ git clone https://github.com/theodorosploumis/drupal-docker-distros.git /var/www
 # curl https://get.docker.com | sh
 curl https://releases.rancher.com/install-docker/17.06.sh | sh
 
+# Docker-compose
+curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` \
+-o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
 # Start nginx-proxy on port $NGINXPORT
-docker run -d -p ${NGINXPORT}:80 \
-       --name proxy \
-       --restart=unless-stopped \
+docker run -d \
+       -p ${NGINXPORT}:80 \
+       --name=proxy \
+       --restart=always \
        -v /var/run/docker.sock:/tmp/docker.sock:ro \
        jwilder/nginx-proxy
 
@@ -46,25 +56,29 @@ usermod -aG docker www-data
 
 # Start Portainer dashboard
 if [ "${INSTALL_PORTAINER}" -eq "1" ]; then
-docker volume create portainer_data
-docker run -d -p ${PORTAINERPORT}:9000 \
-       -v /var/run/docker.sock:/var/run/docker.sock \
-       -v portainer_data:/data \
-       --name=portainer \
-       portainer/portainer
+  docker volume create portainer_data
+  docker run -d \
+         --restart=always \
+         -p ${PORTAINERPORT}:9000 \
+         -v /var/run/docker.sock:/var/run/docker.sock \
+         -v portainer_data:/data \
+         --name=portainer \
+         portainer/portainer
 fi
 
 # Start rancher dashboard
 if [ "${INSTALL_RANCHER}" -eq "1" ]; then
-docker run -d --name=rancher_server \
-       --restart=unless-stopped \
-       -p ${RANCHERPORT}:8080 \
-       rancher/server:stable
+  docker run -d \
+         -p ${RANCHERPORT}:8080 \
+         --name=rancher_server \
+         --restart=unless-stopped \
+         rancher/server:stable
 fi
 
 # Start cAdvisor dashboard
 if [ "${INSTALL_CADVISOR}" -eq "1" ]; then
    docker run \
+          --restart=always \
           --volume=/:/rootfs:ro \
           --volume=/var/run:/var/run:rw \
           --volume=/sys:/sys:ro \
@@ -78,9 +92,24 @@ fi
 
 # Start Admiral dashboard
 if [ "${INSTALL_ADMIRAL}" -eq "1" ]; then
-  docker run -d -p ${ADMIRALPORT}:8282 \
-         --name admiral vmware/admiral \
-         --log-driver=json-file --log-opt max-size=500M --log-opt max-file=10
+  docker run -d \
+         -p ${ADMIRALPORT}:8282 \
+         --restart=always \
+         --name=admiral \
+         --log-driver=json-file --log-opt max-size=500M --log-opt max-file=10 \
+         vmware/admiral
+fi
+
+# Start ELK dashboard
+# Notice that ELK stack needs at least an additional 2GB RAM!
+if [ "${INSTALL_ELK}" -eq "1" ]; then
+  docker run -d \
+         --name=elk \
+         --restart=always \
+         -p ${ELKPORT2}:9200 \
+         -p ${ELKPORT1}:5601 \
+         -p ${ELKPORT3}:5044 \
+         sebp/elk:563
 fi
 
 # Install php packages

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Prepare a Drupal site for installation
 
-if [[ -z ${DOCROOT} ]]
+if [ -z ${DOCROOT} ]
   then
     DOCROOT="/var/www/html";
 fi
@@ -20,12 +20,12 @@ echo "\$settings['file_private_path'] = '${DOCROOT}/sites/default/private-files'
 
 # Create public files folder
 echo -e ">> Create public, private files and libraries folders"
-if [[ -z ${DOCROOT}/sites/default/files ]]
+if [ -d ${DOCROOT}/sites/default/files ]
   then
-    mkdir ${DOCROOT}/sites/default/files;
+    mkdir -p ${DOCROOT}/sites/default/files;
 fi
 
-if [[ -z ${DOCROOT}/libraries ]]
+if [ -d ${DOCROOT}/libraries ]
   then
     mkdir ${DOCROOT}/libraries;
 fi

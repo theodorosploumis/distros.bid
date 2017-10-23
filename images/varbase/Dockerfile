@@ -8,7 +8,7 @@ ENV NEWDISTRO="varbase" \
     PACKAGE="vardot/varbase-project:^8.4.10"
 
 RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
-    --quiet --no-ansi --no-dev --no-interaction --no-progress
+    --no-dev --no-interaction --quiet --no-ansi --no-progress
 
 RUN rm -rf /var/www/html && \
     mv /var/www/${NEWDISTRO} /var/www/html
