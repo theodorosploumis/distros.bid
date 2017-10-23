@@ -4,15 +4,18 @@
 
 DOMAIN="distros.bid"
 SUBDOMAIN="drupal.distros.bid"
-
-INSTALL_RANCHER=1
-INSTALL_PORTAINER=0
-INSTALL_CADVISOR=0
-
 NGINXPORT="8055"
+
+INSTALL_RANCHER=0
+INSTALL_PORTAINER=1
+INSTALL_CADVISOR=0
+INSTALL_ADMIRAL=0
+
+# Monitoring system ports from 9988 - 9989
 PORTAINERPORT="9988"
 RANCHERPORT="9989"
 CADVISORPORT="9990"
+ADMIRALPORT="9991"
 
 # Generic software
 apt-get -qqy update
@@ -71,6 +74,13 @@ if [ "${INSTALL_CADVISOR}" -eq "1" ]; then
           --detach=true \
           --name=cadvisor \
           google/cadvisor:latest
+fi
+
+# Start Admiral dashboard
+if [ "${INSTALL_ADMIRAL}" -eq "1" ]; then
+docker run -d -p ${ADMIRALPORT}:8282 \
+       --name admiral vmware/admiral \
+       --log-driver=json-file --log-opt max-size=500M --log-opt max-file=10
 fi
 
 # Install php packages
