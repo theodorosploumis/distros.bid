@@ -6,6 +6,7 @@ DOMAIN="distros.bid"
 SUBDOMAIN="drupal.distros.bid"
 NGINXPORT="8055"
 
+INSTALL_LETSENCYPT=0
 INSTALL_RANCHER=0
 INSTALL_PORTAINER=1
 INSTALL_CADVISOR=0
@@ -27,8 +28,10 @@ apt-get install -y git wget vim zip apache2 php7.0 php7.0-mbstring \
         python-certbot-apache
 
 # Install Let's Encrypt
-certbot -y --apache -d ${DOMAIN} -c me@theodorosploumis.com
-certbot renew --dry-run
+if [ "${INSTALL_LETSENCYPT}" -eq "1" ]; then
+  certbot -y --apache -d ${DOMAIN} -c me@theodorosploumis.com
+  certbot renew --dry-run
+fi
 
 # Composer
 wget -q https://github.com/composer/composer/releases/download/1.4.2/composer.phar
