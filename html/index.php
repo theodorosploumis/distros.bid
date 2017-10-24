@@ -26,7 +26,7 @@ $images8 = [
 ];
 
 $images7 = [
-  "commerce_kickstart",
+  "commerce kickstart",
   "openatrium"
 ];
 
