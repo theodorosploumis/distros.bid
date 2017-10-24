@@ -2,8 +2,8 @@ FROM drupal8/distros:base
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="commerce_kickstart" \
-    PROFILE="commerce_kickstart-7.x-2.50"
+ENV NEWDISTRO="commerce_kickstart-7.x-2.50" \
+    PROFILE="commerce_kickstart"
 
 # Download distro on html folder
 RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
