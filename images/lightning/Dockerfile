@@ -1,4 +1,4 @@
-FROM drupal8/distros:base
+FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
@@ -25,5 +25,3 @@ RUN sed -i 's/2000000/'"0"'/g' /var/www/html/docroot/sites/default/default.servi
 # Install Drupal
 WORKDIR ${DOCROOT}
 RUN bash /var/www/install.sh
-
-VOLUME  ["/var/lib/mysql", "/var/www/html", "/var/www/config"]

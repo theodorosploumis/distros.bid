@@ -1,4 +1,4 @@
-FROM drupal8/distros:base
+FROM drupal8/distros
 # FROM fauria/lamp
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
@@ -14,5 +14,3 @@ RUN bash /var/www/prepare-install.sh
 
 # Install Drupal
 RUN bash /var/www/install.sh
-
-VOLUME  ["/var/lib/mysql", "/var/www/html", "/var/www/config"]
