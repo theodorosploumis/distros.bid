@@ -3,7 +3,7 @@ FROM drupal8/distros:base
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 ENV NEWDISTRO="openatrium" \
-    PROFILE="openatrium"
+    PROFILE="openatrium-7.x-2.618"
 
 # Download distro on html folder
 RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
