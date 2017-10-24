@@ -10,6 +10,8 @@ ENV NEWDISTRO="bear" \
 RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
     --quiet --no-ansi --no-dev --no-interaction --no-progress
 
+RUN composer clear-cache
+
 RUN rm -rf /var/www/html && \
     mv /var/www/${NEWDISTRO} /var/www/html
 

@@ -10,6 +10,8 @@ ENV NEWDISTRO="varbase" \
 RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
     --no-dev --no-interaction --quiet --no-ansi --no-progress
 
+RUN composer clear-cache
+
 RUN rm -rf /var/www/html && \
     mv /var/www/${NEWDISTRO} /var/www/html
 
