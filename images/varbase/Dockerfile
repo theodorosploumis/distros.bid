@@ -18,8 +18,6 @@ RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/docroot"'/g' /etc/apache2/sit
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
 
-RUN sed -i 's/2000000/'"0"'/g' /var/www/html/docroot/sites/default/default.services.yml
-
 # Install Drupal
 WORKDIR ${DOCROOT}
 RUN bash /var/www/install.sh
