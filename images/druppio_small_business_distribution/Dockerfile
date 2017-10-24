@@ -17,9 +17,6 @@ RUN bash /var/www/prepare-install.sh
 #     rm -f 1.6.3.tar.gz && \
 #     mv libraries/lightGallery-1.6.3 libraries/lightgallery
 
-# Alter php settings
-RUN sed -i 's/;always_populate_raw_post_data/'"always_populate_raw_post_data"'/g' /etc/php/5.6/cli/php.ini
-
 # Install distro
 RUN bash /var/www/install.sh
 
