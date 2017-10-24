@@ -23,7 +23,12 @@ ELKPORT3="9202"
 
 # Generic software
 apt-get -qqy update
-apt-get install -y --force-yes git wget vim zip apache2 php7.0 php7.0-mbstring
+apt-get install -y git wget vim zip apache2 php7.0 php7.0-mbstring \
+        python-certbot-apache
+
+# Install Let's Encrypt
+certbot -y --apache -d ${DOMAIN} -c me@theodorosploumis.com
+certbot renew --dry-run
 
 # Composer
 wget -q https://github.com/composer/composer/releases/download/1.4.2/composer.phar

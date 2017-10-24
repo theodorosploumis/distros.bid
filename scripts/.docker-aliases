@@ -36,3 +36,6 @@ function docker-pull-all() {
 
 # Update git repo
 alias git-update="cd /var/www/distros && git pull"
+
+# Docker stats
+alias docker-stats="docker ps -q | xargs  docker stats --no-stream"
