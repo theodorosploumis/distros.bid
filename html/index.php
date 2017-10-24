@@ -3,7 +3,11 @@
 require_once __DIR__ . '/settings.php';
 require_once __DIR__ . '/randomGenerator.php';
 
-$images = [
+$images7 = [
+
+];
+
+$images8 = [
   "agov",
   "bear",
   "brainstorm",
@@ -29,7 +33,7 @@ $images = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <title>Try Drupal 8.x Distributions</title>
+    <title>Try Drupal Distributions</title>
     
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
@@ -46,7 +50,7 @@ $images = [
 </head>
 
 <body>
-<h1>Try Drupal 8.x Distributions<sup>beta</sup></h1>
+<h1>Try Drupal Distributions<sup>beta</sup></h1>
 
 <section class="wrapper">
 
@@ -65,9 +69,21 @@ $images = [
         <b>DB username:</b>drupal<br>
     </p>
 
+    <h2>8.x version</h2>
     <ul class="starters">
       <?php
-      foreach ($images as $image) {
+      foreach ($images8 as $image) {
+        print '<li><a target="_blank" class="link-' . $image . ' .
+        link" href="/container.php?distro=' . $image . '&id=' .
+          randomGenerator($subdomainLength) . '">' . $image . '</a></li>';
+      }
+      ?>
+    </ul>
+
+    <h2>7.x version</h2>
+    <ul class="starters">
+      <?php
+      foreach ($images7 as $image) {
         print '<li><a target="_blank" class="link-' . $image . ' .
         link" href="/container.php?distro=' . $image . '&id=' .
           randomGenerator($subdomainLength) . '">' . $image . '</a></li>';
