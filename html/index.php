@@ -25,6 +25,11 @@ $images8 = [
   "vardoc"
 ];
 
+$images7 = [
+  "commerce_kickstart",
+  "openatrium"
+];
+
 ?>
 
 <html>
@@ -32,9 +37,9 @@ $images8 = [
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <title>Try Drupal Distributions</title>
-    
+
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="20x20" href="favicon.png">
