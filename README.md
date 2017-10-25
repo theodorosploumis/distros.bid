@@ -14,7 +14,7 @@ Go to [distros.bid](http://distros.bid/?utm_source=github&utm_medium=browser&utm
 
 See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docker.com/r/drupal8/distros/tags/).
 
-| Name | Dockerfile | Tag | Version |
+| Name | Dockerfile | Docker Tag | Drupal project version |
 |:---  |:---        |:--- |     ---:|
 | Latest | [images/latest](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/latest/Dockerfile/) | latest | - |
 | [aGov](https://www.drupal.org/project/agov) | [images/agov](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/agov/Dockerfile/) | agov | 8.x-1.3 |
