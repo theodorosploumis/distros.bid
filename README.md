@@ -1,56 +1,13 @@
 # Drupal docker distributions
 Showcase of Drupal distributions with Docker.
 
+[![Docker Stars](https://img.shields.io/docker/stars/drupal8/distros.svg)]() [![Docker Build Status](https://img.shields.io/docker/build/drupal8/distros.svg)](https://hub.docker.com/r/drupal8/distros/builds/) [![https://img.shields.io/badge/Drupal-project-blue.svg]()] [![license](https://img.shields.io/github/license/theodorosploumis/drupal-docker-distros.svg)]()
+
 > Test it live at [distros.bid](http://distros.bid/?utm_source=github&utm_medium=browser&utm_campaign=github_repo).
 
 A list of Docker containers running several popular [Drupal 8.x distributions](https://www.drupal.org/project/project_distribution) within LAMP stack.
 
-## Software per docker image
-
-| Software | Version |
-| :---  |:--- |
-| adminer | 4.3.1 |
-| apache2 | 2.4.18 |
-| composer | 1.4.2 |
-| curl | 7.47.0 |
-| drush | 8.1.12 |
-| git | 2.7.4 |
-| mysql | 5.7.20 |
-| php | 7.0 |
-| supervisord | 3.2.0 |
-| vim | 7.4 |
-| wget | 1.17.1 |
-
-
-## Usage
-
-Each Drupal distribution refers to a specific docker image tag.
-Currently only 1 version is supported for each distribution and there no
-version specific tags (eg there is "drupal" but not "drupal-8.4.0" tag). Notice that most images are of 1-1.5GB size so be patient while pulling.
-
-
-```
-# Let's try lightning distribution
-
-docker run -d -p 8066:80 --name lightning drupal8/distros:lightning
-
-```
-
-
-Open Drupal login page http://localhost:8066/user/login
-
-- **User**: admin
-- **Pass**: admin
-
-Open Adminer page at http://localhost:8066/adminer.php
-
-- **DB username**: drupal
-- **DB name**: drupal
-- **DB password**: drupal
-
 ## Distributions available
-
-[![Docker Build Status](https://img.shields.io/docker/build/drupal8/distros.svg)](https://hub.docker.com/r/drupal8/distros/builds/)
 
 See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docker.com/r/drupal8/distros/tags/).
 
@@ -81,6 +38,48 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | [Varbase](https://www.drupal.org/project/varbase) | [images/varbase](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/varbase/Dockerfile/) | varbase | 8.x-4.10 |
 | [Vardoc](https://www.drupal.org/project/vardoc) | [images/vardoc](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/vardoc/Dockerfile/) | vardoc | 8.x-1.0-beta2 |
 | [Zircon](https://www.drupal.org/project/zircon_profile) | [images/zircon_profile](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/zircon_profile/Dockerfile/) | zircon | 8.x-1.0-beta3 |
+
+## Software per docker image
+
+| Software | Version |
+| :---  |:--- |
+| adminer | 4.3.1 |
+| apache2 | 2.4.18 |
+| composer | 1.4.2 |
+| curl | 7.47.0 |
+| drush | 8.1.12 |
+| git | 2.7.4 |
+| mysql | 5.7.20 |
+| php | 7.0 |
+| supervisord | 3.2.0 |
+| vim | 7.4 |
+| wget | 1.17.1 |
+
+## Usage
+
+Each Drupal distribution refers to a specific docker image tag.
+Currently only 1 version is supported for each distribution and there no
+version specific tags (eg there is "drupal" but not "drupal-8.4.0" tag). Notice that most images are of 1-1.5GB size so be patient while pulling.
+
+
+```
+# Let's try lightning distribution
+
+docker run -d -p 8066:80 --name lightning drupal8/distros:lightning
+
+```
+
+
+Open Drupal login page http://localhost:8066/user/login
+
+- **User**: admin
+- **Pass**: admin
+
+Open Adminer page at http://localhost:8066/adminer.php
+
+- **DB username**: drupal
+- **DB name**: drupal
+- **DB password**: drupal
 
 ## License
 
