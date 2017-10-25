@@ -82,7 +82,8 @@ RUN chown -R www-data:www-data /var/www/config
 # Clear html folder
 RUN rm -r /var/www/html/*
 
-# Prepare installation
+# Enrtypoint script
+RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
