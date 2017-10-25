@@ -26,6 +26,8 @@ $images8 = [
 
 $images7 = [
   "commercekickstart" => "commerce kickstart",
+  "commons" => "Drupal Commons",
+  "govcms" => "govCMS",
   "openatrium" => "openatrium"
 ];
 
