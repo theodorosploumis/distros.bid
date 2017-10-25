@@ -57,10 +57,11 @@ RUN service mysql start && \
     mysql -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
     mysql -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
 
-# Enable mod_rewrite
+# Apache2 settings
 RUN echo '<Directory "/var/www/html">' >> /etc/apache2/apache2.conf && \
     echo 'AllowOverride All' >> /etc/apache2/apache2.conf && \
-    echo '</Directory>' >> /etc/apache2/apache2.conf
+    echo '</Directory>' >> /etc/apache2/apache2.conf && \
+    echo "ServerName localhost" | tee /etc/apache2/conf-available/servername.conf
 
 # Install Composer
 RUN wget -q https://github.com/composer/composer/releases/download/${COMPOSER}/composer.phar && \
