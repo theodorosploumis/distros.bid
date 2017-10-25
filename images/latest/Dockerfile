@@ -20,7 +20,7 @@ RUN apt-get -y install \
     bash-completion \
     unzip \
     mysql-client mysql-server
-    
+
 RUN apt-get -y install \
     php7.0 \
     php7.0-cli \
@@ -39,12 +39,12 @@ RUN apt-get -y install \
 # Enable php mods
 RUN phpenmod pdo_mysql && \
     a2enmod rewrite actions proxy_fcgi setenvif
-    
+
 # Clear apt-get lists
 RUN apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/archive.*
-    
+
 # Install Adminer
 RUN mkdir /usr/share/adminer && \
     wget -q "http://www.adminer.org/latest.php" -O /usr/share/adminer/latest.php && \
@@ -73,7 +73,7 @@ RUN wget -q https://github.com/drush-ops/drush/releases/download/${DRUSH}/drush.
     chmod +x drush.phar && \
     mv drush.phar /usr/local/bin/drush && \
     drush --version
-    
+
 # Create sync folder
 RUN mkdir -p /var/www/config/sync
 RUN chown -R www-data:www-data /var/www/config
@@ -91,5 +91,7 @@ COPY . /var/www/
 RUN usermod -u 1000 www-data
 
 WORKDIR /var/www/html
+
 EXPOSE 80
+
 ENTRYPOINT ["/entrypoint.sh"]
