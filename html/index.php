@@ -25,10 +25,12 @@ $images8 = [
 ];
 
 $images7 = [
+  "cod" => "Conference Organizing Distribution",
   "commercekickstart" => "Commerce Kickstart",
   "commons" => "Drupal Commons",
   "govcms" => "govCMS",
-  "openatrium" => "Open Atrium"
+  "openatrium" => "Open Atrium",
+  "openoutreach" => "Open Outreach"
 ];
 
 ?>
