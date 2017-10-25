@@ -47,14 +47,13 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | Software | Version |
 | :---  |:--- |
 | adminer | 4.3.1 |
-| apache2 | 2.4.18 |
+| **apache2** | 2.4.18 |
 | composer | 1.4.2 |
 | curl | 7.47.0 |
-| drush | 8.1.12 |
+| **drush** | 8.1.12 |
 | git | 2.7.4 |
-| mysql | 5.7.20 |
-| php | 7.0 |
-| supervisord | 3.2.0 |
+| **mysql** | 5.7.20 |
+| **php** | 7.0 |
 | vim | 7.4 |
 | wget | 1.17.1 |
 
