@@ -1,13 +1,14 @@
 # Drupal docker distributions
-Showcase of Drupal distributions with Docker.
 
 [![Docker Stars](https://img.shields.io/docker/stars/drupal8/distros.svg)]() [![Docker Build Status](https://img.shields.io/docker/build/drupal8/distros.svg)](https://hub.docker.com/r/drupal8/distros/builds/) [![Drupal](https://img.shields.io/badge/Drupal-project-green.svg)](https://www.drupal.org/)
+
+## About
+
+A list of Docker containers running several popular [Drupal 8.x and 7.x distributions](https://www.drupal.org/project/project_distribution) within LAMP stack.
 
 ## Try online
 
 Go to [distros.bid](http://distros.bid/?utm_source=github&utm_medium=browser&utm_campaign=github_repo).
-
-A list of Docker containers running several popular [Drupal 8.x distributions](https://www.drupal.org/project/project_distribution) within LAMP stack.
 
 ## Distributions available
 
