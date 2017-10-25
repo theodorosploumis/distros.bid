@@ -1,7 +1,6 @@
 # Drupal docker distributions
 Showcase of Drupal distributions with Docker.
 
-
 > Test it live at [distros.bid](http://distros.bid/?utm_source=github&utm_medium=browser&utm_campaign=github_repo).
 
 A list of Docker containers running several popular [Drupal 8.x distributions](https://www.drupal.org/project/project_distribution) within LAMP stack.
@@ -50,6 +49,8 @@ Open Adminer page at http://localhost:8066/adminer.php
 - **DB password**: drupal
 
 ## Distributions available
+
+[![Docker Build Status](https://img.shields.io/docker/build/drupal8/distros.svg)](https://hub.docker.com/r/drupal8/distros/builds/)
 
 See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docker.com/r/drupal8/distros/tags/).
 
