@@ -4,31 +4,31 @@ require_once __DIR__ . '/settings.php';
 require_once __DIR__ . '/randomGenerator.php';
 
 $images8 = [
-  "agov" => "agov",
-  "bear" => "bear",
-  "brainstorm" => "brainstorm",
-  "drupal" => "drupal",
-  "druppio" => "druppio",
-  "lightning" => "lightning",
-  "multipurposecorporate" => "multipurpose corporate",
-  "opendoor" => "opendoor",
-  "openchurch" => "openchurch",
-  "openrestaurant" => "openrestaurant",
-  "panopoly" => "panopoly",
-  "presto" => "presto",
-  "seeds" => "seeds",
-  "social" => "social",
-  "thunder" => "thunder",
-  "varbase" => "varbase",
-  "vardoc" => "vardoc",
-  "zircon" => "zircon"
+  "agov" => "aGov",
+  "bear" => "Bear",
+  "brainstorm" => "Brainstorm",
+  "drupal" => "Drupal (core)",
+  "druppio" => "Druppio",
+  "lightning" => "Lightning",
+  "multipurposecorporate" => "Multipurpose Corporate Profile",
+  "opendoor" => "Open door",
+  "openchurch" => "OpenChurch",
+  "openrestaurant" => "Open Restaurant",
+  "panopoly" => "Panopoly",
+  "presto" => "Presto",
+  "seeds" => "Seeds",
+  "social" => "Open Social",
+  "thunder" => "Thunder",
+  "varbase" => "Varbase",
+  "vardoc" => "Vardoc",
+  "zircon" => "Zircon"
 ];
 
 $images7 = [
-  "commercekickstart" => "commerce kickstart",
+  "commercekickstart" => "Commerce Kickstart",
   "commons" => "Drupal Commons",
   "govcms" => "govCMS",
-  "openatrium" => "openatrium"
+  "openatrium" => "Open Atrium"
 ];
 
 ?>
