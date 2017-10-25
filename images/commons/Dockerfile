@@ -2,7 +2,7 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="commons" \
+ENV NEWDISTRO="commons-7.x-3.46" \
     PROFILE="commons"
 
 # Download distro (8.x) on html folder
