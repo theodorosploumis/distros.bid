@@ -8,26 +8,26 @@ $images7 = [
 ];
 
 $images8 = [
-  "agov",
-  "bear",
-  "brainstorm",
-  "drupal",
-  "druppio",
-  "lightning",
-  "opendoor",
-  "openchurch",
-  "openrestaurant",
-  "panopoly",
-  "presto",
-  "social",
-  "thunder",
-  "varbase",
-  "vardoc"
+  "agov" => "agov",
+  "bear" => "bear",
+  "brainstorm" => "brainstorm",
+  "drupal" => "drupal",
+  "druppio" => "druppio",
+  "lightning" => "lightning",
+  "opendoor" => "opendoor",
+  "openchurch" => "openchurch",
+  "openrestaurant" => "openrestaurant",
+  "panopoly" => "panopoly",
+  "presto" => "presto",
+  "social" => "social",
+  "thunder" => "thunder",
+  "varbase" => "varbase",
+  "vardoc" => "vardoc"
 ];
 
 $images7 = [
-  "commerce_kickstart",
-  "openatrium"
+  "commerce_kickstart" => "commerce kickstart",
+  "openatrium" => "openatrium"
 ];
 
 ?>
@@ -77,10 +77,10 @@ $images7 = [
     <h2>8.x version</h2>
     <ul class="starters">
       <?php
-      foreach ($images8 as $image) {
+      foreach ($images8 as $image => $name) {
         print '<li><a target="_blank" class="link-' . $image . ' .
         link" href="/container.php?distro=' . $image . '&id=' .
-          randomGenerator($subdomainLength) . '">' . $image . '</a></li>';
+          randomGenerator($subdomainLength) . '">' . $name . '</a></li>';
       }
       ?>
     </ul>
@@ -88,10 +88,10 @@ $images7 = [
     <h2>7.x version</h2>
     <ul class="starters">
       <?php
-      foreach ($images7 as $image) {
+      foreach ($images7 as $image => $name) {
         print '<li><a target="_blank" class="link-' . $image . ' .
         link" href="/container.php?distro=' . $image . '&id=' .
-          randomGenerator($subdomainLength) . '">' . $image . '</a></li>';
+          randomGenerator($subdomainLength) . '">' . $name . '</a></li>';
       }
       ?>
     </ul>
