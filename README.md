@@ -1,9 +1,11 @@
 # Drupal docker distributions
 Showcase of Drupal distributions with Docker.
 
-[![Docker Stars](https://img.shields.io/docker/stars/drupal8/distros.svg)]() [![Docker Build Status](https://img.shields.io/docker/build/drupal8/distros.svg)](https://hub.docker.com/r/drupal8/distros/builds/) [![Drupal](https://img.shields.io/badge/Drupal-project-blue.svg)]() [![license](https://img.shields.io/github/license/theodorosploumis/drupal-docker-distros.svg)]()
+[![Docker Stars](https://img.shields.io/docker/stars/drupal8/distros.svg)]() [![Docker Build Status](https://img.shields.io/docker/build/drupal8/distros.svg)](https://hub.docker.com/r/drupal8/distros/builds/) [![Drupal](https://img.shields.io/badge/Drupal-project-green.svg)](https://www.drupal.org/)
 
-> Test it live at [distros.bid](http://distros.bid/?utm_source=github&utm_medium=browser&utm_campaign=github_repo).
+## Try online
+
+Go to [distros.bid](http://distros.bid/?utm_source=github&utm_medium=browser&utm_campaign=github_repo).
 
 A list of Docker containers running several popular [Drupal 8.x distributions](https://www.drupal.org/project/project_distribution) within LAMP stack.
 
@@ -83,4 +85,5 @@ Open Adminer page at http://localhost:8066/adminer.php
 
 ## License
 
-[GNU GPLV2](LICENSE)
+[![license](https://img.shields.io/github/license/theodorosploumis/drupal-docker-distros.svg)](LICENSE)
+
