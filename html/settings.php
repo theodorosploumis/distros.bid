@@ -30,3 +30,6 @@ if ($debug) {
 
 // Google Analytics code
 $google_analytics_code = "UA-6649652-60";
+
+// Sharethis property
+$sharethis = "59f0e5ab58ca400012955854";

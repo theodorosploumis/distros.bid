@@ -55,6 +55,8 @@ $images7 = [
       gtag('config', '<?php echo $google_analytics_code; ?>');
     </script>
 
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=<?php echo $sharethis ?>&product=sticky-share-buttons' async='async'></script>
+
 </head>
 
 <body>
