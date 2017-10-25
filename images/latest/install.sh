@@ -15,6 +15,7 @@ drush site-install -y ${PROFILE} \
 # Change site name
 service mysql start && \
 drush config-set system.site name "Drupal version: $(drush pmi --fields=Version system | sed 's/\ Version   :  //g') - Installation profile: ${NEWDISTRO}" -y
+drush variable-set site_name "Drupal version: $(drush pmi --fields=Version system | sed 's/\ Version   :  //g') - Installation profile: ${NEWDISTRO}" -y
 
 # Assign all site files to www-data
 chown -R www-data:www-data /var/www/html

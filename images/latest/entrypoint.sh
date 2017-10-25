@@ -1,29 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-function start_all() {
-  # Start services
-  /etc/init.d/mysql start
-  /etc/init.d/apache2 start
+#/etc/init.d/mysql start
+#/etc/init.d/apache2 start
 
-  # Expose a bash script for interactive mode
-  /bin/bash
+/usr/sbin/apache2ctl start
+/usr/bin/mysqld_safe
 
-  tail -f /dev/null
-}
-
-function reload_all() {
-  echo "Reloading..."
-  /etc/init.d/mysql restart
-  /etc/init.d/apache2 restart
-}
-
-function stop_all() {
-  echo "Shutting down..."
-  /etc/init.d/mysql stop
-  /etc/init.d/apache2 stop
-}
-
-trap stop_all EXIT
-trap reload_all SIGHUP
-
-start_all
+tail -f /dev/null
