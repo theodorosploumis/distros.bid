@@ -20,7 +20,7 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | [aGov](https://www.drupal.org/project/agov) | [images/agov](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/agov/Dockerfile/) | agov | 8.x-1.3 |
 | [Bear](https://www.drupal.org/project/bear) | [images/bear](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/bear/Dockerfile/) | bear | 8.x-2.0-alpha3 |
 | [Brainstorm](https://www.drupal.org/project/brainstorm_profile) | [images/brainstorm_profile](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/brainstorm_profile/Dockerfile/) | brainstorm | 8.x-1.0-beta2 |
-| [Conference Organizing Distribution](https://www.drupal.org/project/cod) | [images/cod](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/cod/Dockerfile/) | cod | 7.x-2.0-rc3 |
+| [Conference Organizing](https://www.drupal.org/project/cod) | [images/cod](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/cod/Dockerfile/) | cod | 7.x-2.0-rc3 |
 | [Commerce Kickstart](https://www.drupal.org/project/commerce_kickstart) | [images/commerce_kickstart](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commerce_kickstart/Dockerfile/) | commercekickstart | 7.x-2.50 |
 | [Drupal](https://www.drupal.org/project/drupal) | [images/drupal](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal/Dockerfile/) | drupal | 8.4.0 |
 | [Drupal Commons](https://www.drupal.org/project/commons) | [images/commons](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commons/Dockerfile/) | commons | 7.x-3.46 |
