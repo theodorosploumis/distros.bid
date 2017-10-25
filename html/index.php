@@ -10,7 +10,7 @@ $images8 = [
   "drupal" => "drupal",
   "druppio" => "druppio",
   "lightning" => "lightning",
-  "multipurposecorporate" => "multipurpose corporate profile",
+  "multipurposecorporate" => "multipurpose corporate",
   "opendoor" => "opendoor",
   "openchurch" => "openchurch",
   "openrestaurant" => "openrestaurant",
@@ -21,7 +21,7 @@ $images8 = [
   "thunder" => "thunder",
   "varbase" => "varbase",
   "vardoc" => "vardoc",
-  "zircon" => "zircon profile"
+  "zircon" => "zircon"
 ];
 
 $images7 = [
