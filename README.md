@@ -54,7 +54,7 @@ Open Adminer page at http://localhost:8066/adminer.php
 See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docker.com/r/drupal8/distros/tags/).
 
 | Name | Dockerfile | Tag | Version |
-|:---  |"---        |:--- |     ---:|
+|:---  |:---        |:--- |     ---:|
 | Latest | [images/latest](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/latest/Dockerfile/) | latest | - |
 | [aGov](https://www.drupal.org/project/agov) | [images/agov](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/agov/Dockerfile/) | agov | 8.x-1.3 |
 | [Bear](https://www.drupal.org/project/bear) | [images/bear](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/bear/Dockerfile/) | bear | 8.x-2.0-alpha3 |
