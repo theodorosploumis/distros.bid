@@ -3,10 +3,6 @@
 require_once __DIR__ . '/settings.php';
 require_once __DIR__ . '/randomGenerator.php';
 
-$images7 = [
-
-];
-
 $images8 = [
   "agov" => "agov",
   "bear" => "bear",
@@ -14,19 +10,22 @@ $images8 = [
   "drupal" => "drupal",
   "druppio" => "druppio",
   "lightning" => "lightning",
+  "multipurposecorporate" => "multipurpose corporate profile",
   "opendoor" => "opendoor",
   "openchurch" => "openchurch",
   "openrestaurant" => "openrestaurant",
   "panopoly" => "panopoly",
   "presto" => "presto",
+  "seeds" => "seeds",
   "social" => "social",
   "thunder" => "thunder",
   "varbase" => "varbase",
-  "vardoc" => "vardoc"
+  "vardoc" => "vardoc",
+  "zircon" => "zircon profile"
 ];
 
 $images7 = [
-  "commerce_kickstart" => "commerce kickstart",
+  "commercekickstart" => "commerce kickstart",
   "openatrium" => "openatrium"
 ];
 

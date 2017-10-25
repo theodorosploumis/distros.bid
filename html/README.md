@@ -8,9 +8,8 @@ sh /tmp/server-install.sh
 
 ```
 
-This will install the Web UI on a server with main domain "distros.bid" and container 
-subdomain "drupal.distros.bid".
+This will install the Web UI on a server with main domain "distros.bid" and container subdomain "drupal.distros.bid".
 
  - Tested with Debian 9.2 x64.
- - Needs at least 2GB of RAM
- - Docker images need at least 20GB space
+ - Needs at least 8GB of RAM
+ - Docker images need at least 40GB space

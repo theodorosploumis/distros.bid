@@ -1,2 +1,2 @@
-01 commerce_kickstart
+01 commercekickstart
 02 openatrium
