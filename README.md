@@ -14,7 +14,7 @@ Go to [distros.bid](http://distros.bid/?utm_source=github&utm_medium=browser&utm
 
 See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docker.com/r/drupal8/distros/tags/).
 
-| Name | Dockerfile | Docker Tag | Drupal project version |
+| Name | Dockerfile | Tag | Drupal version |
 |:---  |:---        |:--- |     ---:|
 | Latest | [images/latest](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/latest/Dockerfile/) | latest | - |
 | [aGov](https://www.drupal.org/project/agov) | [images/agov](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/agov/Dockerfile/) | agov | 8.x-1.3 |
@@ -24,10 +24,10 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | [Commerce Kickstart](https://www.drupal.org/project/commerce_kickstart) | [images/commerce_kickstart](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commerce_kickstart/Dockerfile/) | commercekickstart | 7.x-2.50 |
 | [Drupal](https://www.drupal.org/project/drupal) | [images/drupal](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal/Dockerfile/) | drupal | 8.4.0 |
 | [Drupal Commons](https://www.drupal.org/project/commons) | [images/commons](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commons/Dockerfile/) | commons | 7.x-3.46 |
-| [Druppio](https://www.drupal.org/project/druppio_small_business_distribution) | [images/druppio_small_business_distribution](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/druppio_small_business_distribution/Dockerfile/) | druppio | 8.x-1.14 |
+| [Druppio](https://www.drupal.org/project/druppio_small_business_distribution) | [images/druppio_...](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/druppio_small_business_distribution/Dockerfile/) | druppio | 8.x-1.14 |
 | [govCMS](https://www.drupal.org/project/govcms) | [images/govcms](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/govcms/Dockerfile/) | govcms | 7.x-2.14 |
 | [Lightning](https://www.drupal.org/project/lightning) | [images/lightning](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/lightning/Dockerfile/) | lightning | 8.x-2.2.0 |
-| [Multipurpose Corporate](https://www.drupal.org/project/multipurpose_corporate_profile) | [images/multipurpose_corporate_profile](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/multipurpose_corporate_profile/Dockerfile/) | multipurposecorporate | 8.x-1.0-beta4 |
+| [Multipurpose Corporate](https://www.drupal.org/project/multipurpose_corporate_profile) | [images/multipurpose_...](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/multipurpose_corporate_profile/Dockerfile/) | multipurposecorporate | 8.x-1.0-beta4 |
 | [OpenAtrium](https://www.drupal.org/project/openatrium) | [images/openatrium](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openatrium/Dockerfile/) | openatrium | 7.x-2.618 |
 | [OpenChurch](https://www.drupal.org/project/openchurch) | [images/openchurch](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openchurch/Dockerfile/) | openchurch | 8.x-2.0-rc11 |
 | [Open Door](https://www.drupal.org/project/open_door) | [images/open_door](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/open_door/Dockerfile/) | opendoor | 8.x-1.0-beta2 |
