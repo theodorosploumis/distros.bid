@@ -13,7 +13,7 @@ A list of Docker containers running several popular [Drupal 8.x distributions](h
 | adminer | 4.3.1 |
 | apache2 | 2.4.18 |
 | composer | 1.4.2 |
-| curl | |
+| curl | 7.47.0 |
 | drush | 8.1.12 |
 | git | 2.7.4 |
 | mysql | 5.7.20 |
