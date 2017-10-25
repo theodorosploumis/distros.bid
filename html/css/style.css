@@ -17,6 +17,41 @@ h1 {
   position: relative;
 }
 
+h2 {
+  clear: left;
+  margin: 10px 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+sup {
+  font-weight: normal;
+  letter-spacing: -1px;
+  font-size: 14px;
+  position: absolute;
+  top: -5px;
+  background: #fff;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+
+.info {
+  margin: 5px;
+  float: left;
+  border: 1px solid #c1c0c0;
+  padding: 5px;
+  background: #fff;
+}
+
+footer {
+  clear: both;
+  overflow: hidden;
+  padding-top: 10px;
+  border-top: 1px solid #fff;
+  text-align: center;
+}
+
 .starters {
   padding: 0;
   margin: 0;
@@ -42,38 +77,5 @@ h1 {
   vertical-align: middle;
   height: 200px;
   width: 200px;
-}
-
-.info {
-  margin: 5px;
-  float: left;
-  border: 1px solid #c1c0c0;
-  padding: 5px;
-  background: #fff;
-}
-
-footer {
-  clear: both;
-  overflow: hidden;
-  padding-top: 10px;
-  border-top: 1px solid #fff;
-  text-align: center;
-}
-
-sup {
-  font-weight: normal;
-  letter-spacing: -1px;
-  font-size: 14px;
-  position: absolute;
-  top: -5px;
-  background: #fff;
-  padding: 2px;
-  border-radius: 4px;
-}
-
-h2 {
-  clear: left;
-  margin: 10px 0;
-  padding: 20px 0;
-  text-align: center;
+  padding: 0 20px;
 }
