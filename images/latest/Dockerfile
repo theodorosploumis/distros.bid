@@ -7,21 +7,15 @@ ENV DEBIAN_FRONTEND=noninteractive \
     DRUSH="8.1.12" \
     COMPOSER="1.4.2"
 
-# Update sources
-RUN apt-get update
-
 # Install software
-RUN apt-get -y install \
+RUN apt-get update && \
+    apt-get -y install \
     apache2 \
     curl \
     wget \
-    vim \
     git \
-    bash-completion \
     unzip \
-    mysql-client mysql-server
-
-RUN apt-get -y install \
+    mysql-server \
     php7.0 \
     php7.0-cli \
     php7.0-curl \
@@ -34,16 +28,14 @@ RUN apt-get -y install \
     php7.0-mysql \
     php7.0-mcrypt \
     php7.0-zip \
-    libapache2-mod-php7.0
+    libapache2-mod-php7.0 && \
+    apt-get clean && \
+    apt-get autoremove && \
+    rm -rf /var/lib/apt/lists/archive.*
 
 # Enable php mods
 RUN phpenmod pdo_mysql && \
     a2enmod rewrite actions proxy_fcgi setenvif
-
-# Clear apt-get lists
-RUN apt-get clean && \
-    apt-get autoremove && \
-    rm -rf /var/lib/apt/lists/archive.*
 
 # Install Adminer
 RUN mkdir /usr/share/adminer && \
@@ -66,31 +58,28 @@ RUN echo '<Directory "/var/www/html">' >> /etc/apache2/apache2.conf && \
 # Install Composer
 RUN wget -q https://github.com/composer/composer/releases/download/${COMPOSER}/composer.phar && \
     chmod +x composer.phar && \
-    mv composer.phar /usr/local/bin/composer && \
-    composer --version
+    mv composer.phar /usr/local/bin/composer
 
 # Install Drush
 RUN wget -q https://github.com/drush-ops/drush/releases/download/${DRUSH}/drush.phar && \
     chmod +x drush.phar && \
-    mv drush.phar /usr/local/bin/drush && \
-    drush --version
+    mv drush.phar /usr/local/bin/drush
+
+# Create user www-data and assign UID
+RUN usermod -u 1000 www-data
 
 # Create sync folder
-RUN mkdir -p /var/www/config/sync
-RUN chown -R www-data:www-data /var/www/config
+RUN mkdir -p /var/www/config/sync && \
+    chown -R www-data:www-data /var/www/config
 
 # Clear html folder
 RUN rm -r /var/www/html/*
 
 # Enrtypoint script
-RUN chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
-COPY entrypoint.sh /
-RUN chmod +x /entrypoint.sh
+RUN cp entrypoint.sh / && \
+    chmod +x /entrypoint.sh
 
 COPY . /var/www/
-
-# Create user www-data and assign UID
-RUN usermod -u 1000 www-data
 
 WORKDIR /var/www/html
 
