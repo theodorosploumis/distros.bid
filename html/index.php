@@ -7,6 +7,7 @@ $images8 = [
   "agov" => "aGov",
   "bear" => "Bear",
   "brainstorm" => "Brainstorm",
+  "df" => "Demo Framework",
   "drupal" => "Drupal (core)",
   "druppio" => "Druppio",
   "lightning" => "Lightning",
@@ -20,8 +21,7 @@ $images8 = [
   "social" => "Open Social",
   "thunder" => "Thunder",
   "varbase" => "Varbase",
-  "vardoc" => "Vardoc",
-  "zircon" => "Zircon"
+  "vardoc" => "Vardoc"
 ];
 
 $images7 = [
