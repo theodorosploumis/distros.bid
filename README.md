@@ -41,7 +41,6 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | [Thunder](https://www.drupal.org/project/thunder) | [images/thunder](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/thunder/Dockerfile/) | thunder | 8.x-2.9 |
 | [Varbase](https://www.drupal.org/project/varbase) | [images/varbase](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/varbase/Dockerfile/) | varbase | 8.x-4.10 |
 | [Vardoc](https://www.drupal.org/project/vardoc) | [images/vardoc](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/vardoc/Dockerfile/) | vardoc | 8.x-1.0-beta2 |
-| [Zircon](https://www.drupal.org/project/zircon_profile) | [images/zircon_profile](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/zircon_profile/Dockerfile/) | zircon | 8.x-1.0-beta3 |
 
 ## Software per docker image
 
@@ -55,7 +54,7 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | git | 2.7.4 |
 | **mysql** | 5.7.20 |
 | **php** | 7.0 |
-| vim | 7.4 |
+| vi | 7.4 |
 | wget | 1.17.1 |
 
 ## Usage

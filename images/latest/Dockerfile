@@ -14,6 +14,7 @@ RUN apt-get update && \
     curl \
     wget \
     git \
+    vim-tiny \
     unzip \
     mysql-server \
     php7.0 \
@@ -76,8 +77,8 @@ RUN mkdir -p /var/www/config/sync && \
 RUN rm -r /var/www/html/*
 
 # Enrtypoint script
-RUN cp entrypoint.sh / && \
-    chmod +x /entrypoint.sh
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 
 COPY . /var/www/
 
