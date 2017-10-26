@@ -70,4 +70,4 @@ echo "<html><head><title>Preparing your site...</title><style>
 </html>";
 
 // Redirect to the Docker container ui
-header('Refresh:4; url=' . $redirect);
+header('Refresh:10; url=' . $redirect);
