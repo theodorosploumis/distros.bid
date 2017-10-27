@@ -22,6 +22,9 @@ ELKPORT1="9200"
 ELKPORT2="9201"
 ELKPORT3="9202"
 
+# Change timezone manually
+dpkg-reconfigure tzdata
+
 # Generic software
 apt-get -qqy update
 apt-get install -y git wget vim zip apache2 php7.0 php7.0-mbstring \
