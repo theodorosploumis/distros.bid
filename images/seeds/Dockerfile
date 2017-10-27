@@ -4,7 +4,7 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 ENV NEWDISTRO="seeds" \
     PROFILE="seeds" \
-    DOCROOT="/var/www/html/html" \
+    DOCROOT="/var/www/html/public_html" \
     PACKAGE="sprintive/seeds-project:^8.4.0"
 
 RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
@@ -15,7 +15,7 @@ RUN composer clear-cache
 RUN rm -rf /var/www/html && \
     mv /var/www/${NEWDISTRO} /var/www/html
 
-RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/html"'/g' /etc/apache2/sites-available/000-default.conf
+RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/public_html"'/g' /etc/apache2/sites-available/000-default.conf
 
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
