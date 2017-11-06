@@ -6,6 +6,8 @@ require_once __DIR__ . '/settings.php';
 use Docker\Docker;
 use Docker\API\Model\ContainerConfig;
 use Docker\API\Model\HostConfig;
+use Docker\API\Model\ResourceUpdate;
+use Docker\API\Model\RestartPolicy;
 
 // Initialize Docker()
 $docker = new Docker();
@@ -54,6 +56,14 @@ $containerConfig->setHostname($id);
 $containerConfig->setEnv([
   "VIRTUAL_HOST=".$subdomain
 ]);
+
+// Set restart policy
+$restartPolicy = new restartPolicy();
+$restartConfig = $restartPolicy->setName('always')->setMaximumRetryCount(10);
+$hostConfig->setRestartPolicy($restartConfig);
+
+// Set container resources
+$hostConfig->setMemory(262144);
 
 // Create container
 $containerConfig->setHostConfig($hostConfig);
