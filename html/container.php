@@ -38,6 +38,7 @@ if (isset($_GET['id'])) {
     if (exec("docker inspect -f '{{.State.Running}}' " . $subdomain) == true) {
         echo "This site is already running. Redirecting...";
         header('Refresh:1; url=' . $redirect);
+        exit();
     }
 
 } else {
