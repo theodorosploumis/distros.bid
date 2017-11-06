@@ -40,6 +40,14 @@ if (isset($_GET['id'])) {
   die('Error: ID is not defined.');
 }
 
+/**
+ * @TODO
+ *
+ * HostConfig does not work.
+ * The issue is the Docker engine version needs to be 1.24
+ * See this: https://github.com/docker-php/docker-php/issues/249#issuecomment-320155328
+ *
+ */
 // Create new HostConfig
 $hostConfig = new HostConfig();
 
@@ -58,9 +66,9 @@ $containerConfig->setEnv([
 ]);
 
 // Set restart policy
-$restartPolicy = new restartPolicy();
-$restartPolicy->setName('always')->setMaximumRetryCount(10);
-$hostConfig->setRestartPolicy($restartPolicy);
+//$restartPolicy = new restartPolicy();
+//$restartPolicy->setName('always')->setMaximumRetryCount(10);
+//$hostConfig->setRestartPolicy($restartPolicy);
 
 // Set container resources
 //$hostConfig->setMemory(262144);
