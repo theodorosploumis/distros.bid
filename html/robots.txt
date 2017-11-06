@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /
+
+User-Agent: Googlebot
+Allow: /index.php
+
+User-Agent: Googlebot-Mobile
+Allow: /index.php
