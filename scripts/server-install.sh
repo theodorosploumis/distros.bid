@@ -46,8 +46,9 @@ rm -rf /var/www/html
 git clone https://github.com/theodorosploumis/drupal-docker-distros.git /var/www/distros/
 
 # Docker. Notice that we do not install latest Docker to support Rancher
+# as also as Docker-php sdk.
 # curl https://get.docker.com | sh
-curl https://releases.rancher.com/install-docker/17.06.sh | sh
+curl https://releases.rancher.com/install-docker/1.12.sh | sh
 
 # Docker-compose
 curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` \
@@ -56,7 +57,7 @@ chmod +x /usr/local/bin/docker-compose
 
 # Start nginx-proxy on port $NGINXPORT
 docker run -d \
-       -p ${NGINXPORT}:80 \
+       -p ${NGINXPORT:-8055}:80 \
        --name=proxy \
        --restart=always \
        -v /var/run/docker.sock:/tmp/docker.sock:ro \
@@ -70,7 +71,7 @@ if [ "${INSTALL_PORTAINER}" -eq "1" ]; then
   docker volume create portainer_data
   docker run -d \
          --restart=always \
-         -p ${PORTAINERPORT}:9000 \
+         -p ${PORTAINERPORT:-9988}:9000 \
          -v /var/run/docker.sock:/var/run/docker.sock \
          -v portainer_data:/data \
          --name=portainer \

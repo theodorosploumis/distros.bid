@@ -6,7 +6,6 @@ require_once __DIR__ . '/settings.php';
 use Docker\Docker;
 use Docker\API\Model\ContainerConfig;
 use Docker\API\Model\HostConfig;
-use Docker\API\Model\ResourceUpdate;
 use Docker\API\Model\RestartPolicy;
 
 // Initialize Docker()
@@ -43,8 +42,7 @@ if (isset($_GET['id'])) {
 /**
  * @TODO
  *
- * HostConfig does not work.
- * The issue is the Docker engine version needs to be 1.24
+ * HostConfig needs Docker engine version to be 1.24
  * See this: https://github.com/docker-php/docker-php/issues/249#issuecomment-320155328
  *
  */
@@ -66,12 +64,12 @@ $containerConfig->setEnv([
 ]);
 
 // Set restart policy
-//$restartPolicy = new restartPolicy();
-//$restartPolicy->setName('always')->setMaximumRetryCount(10);
-//$hostConfig->setRestartPolicy($restartPolicy);
+$restartPolicy = new restartPolicy();
+$restartPolicy->setName('always')->setMaximumRetryCount(10);
+$hostConfig->setRestartPolicy($restartPolicy);
 
 // Set container resources
-//$hostConfig->setMemory(262144);
+$hostConfig->setMemory(262144);
 
 // Create container
 $containerConfig->setHostConfig($hostConfig);
@@ -82,10 +80,12 @@ $container = $containerManager->create($containerConfig,
 // Start container
 $containerManager->start($container->getId());
 
-echo "<html><head><title>Preparing your site...</title><style>
-.load {width:400px;height:300px;margin:0 auto;}</style></head>
-<body><div class='load'><img src='loading.gif'></div></body>
-</html>";
+$text = "";
+$text .= "<html><head><title>Preparing your site...</title>";
+$text .= "<style>.load {width:400px;height:300px;margin:0 auto;}</style>";
+$text .= "</head><body><div class='load'><img src='loading.gif'></div></body></html>";
+
+print $text;
 
 // Redirect to the Docker container ui
 header('Refresh:14; url=' . $redirect);
