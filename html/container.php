@@ -64,12 +64,12 @@ $containerConfig->setEnv([
 ]);
 
 // Set restart policy
-$restartPolicy = new restartPolicy();
-$restartPolicy->setName('always')->setMaximumRetryCount(10);
-$hostConfig->setRestartPolicy($restartPolicy);
+//$restartPolicy = new restartPolicy();
+//$restartPolicy->setName('always')->setMaximumRetryCount(10);
+//$hostConfig->setRestartPolicy($restartPolicy);
 
 // Set container resources
-$hostConfig->setMemory(262144);
+//$hostConfig->setMemory(262144);
 
 // Create container
 $containerConfig->setHostConfig($hostConfig);
