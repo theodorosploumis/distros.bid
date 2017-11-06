@@ -41,11 +41,7 @@ $name = " --name " . $subdomain . " ";
 $run = "docker run " . $name . $memory . $restart . $env . $selected_image;
 
 // Run container
-exec($run, $output);
-
-if (is_array($output)) {
-    var_dump($output);
-}
+exec($run);
 
 $text = "";
 $text .= "<html><head><title>Preparing your site...</title>";
