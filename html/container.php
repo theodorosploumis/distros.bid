@@ -6,7 +6,8 @@ require_once __DIR__ . '/settings.php';
 use Docker\Docker;
 use Docker\API\Model\ContainerConfig;
 use Docker\API\Model\HostConfig;
-use Docker\API\Model\RestartPolicy;
+
+//use Docker\API\Model\RestartPolicy;
 
 // Initialize Docker()
 $docker = new Docker();
@@ -14,29 +15,35 @@ $containerManager = $docker->getContainerManager();
 
 // Create nginx-proxy if not enabled
 if (!$containerManager->find("proxy")) {
-  echo "Nginx proxy is not running. Please try later.";
-  die;
+    echo "Nginx proxy is not running. Please try later.";
+    die;
 }
 
 // Get variables from url
 if (isset($_GET['distro'])) {
-  $distro = $_GET['distro'];
-  $distro = preg_replace('/[^a-z]/', '', $distro);
-  $selected_image = $docker_image . ":" . $distro;
+    $distro = $_GET['distro'];
+    $distro = preg_replace('/[^a-z]/', '', $distro);
+    $selected_image = $docker_image . ":" . $distro;
 } else {
-  header("HTTP/1.0 404 Not Found");
-  die('Error: Distro is not defined.');
+    header("HTTP/1.0 404 Not Found");
+    die('Error: Distro is not defined.');
 }
 
 if (isset($_GET['id'])) {
-  $id = $_GET['id'];
-  $id = preg_replace('/[^a-z]/', '', $id);
-  // Set subdomain
-  $subdomain = $id . "." . $domain;
-  $redirect = "http://" . $subdomain . ":" . $port;
+    $id = $_GET['id'];
+    $id = preg_replace('/[^a-z]/', '', $id);
+    // Set subdomain
+    $subdomain = $id . "." . $domain;
+    $redirect = "http://" . $subdomain . ":" . $port;
+
+    if ($containerManager->find($id)) {
+        echo "This site is already running. Redirecting...";
+        header('Refresh:14; url=' . $redirect);
+    }
+
 } else {
-  header("HTTP/1.0 404 Not Found");
-  die('Error: ID is not defined.');
+    header("HTTP/1.0 404 Not Found");
+    die('Error: ID is not defined.');
 }
 
 /**
@@ -59,9 +66,7 @@ $containerConfig->setImage($selected_image);
 $containerConfig->setHostname($id);
 
 // Set env used on proxy
-$containerConfig->setEnv([
-  "VIRTUAL_HOST=".$subdomain
-]);
+$containerConfig->setEnv(["VIRTUAL_HOST=" . $subdomain]);
 
 // Set restart policy
 //$restartPolicy = new restartPolicy();
@@ -73,9 +78,7 @@ $containerConfig->setEnv([
 
 // Create container
 $containerConfig->setHostConfig($hostConfig);
-$container = $containerManager->create($containerConfig,
-  ['name' => $subdomain ]
-);
+$container = $containerManager->create($containerConfig, ['name' => $subdomain]);
 
 // Start container
 $containerManager->start($container->getId());
