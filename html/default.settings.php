@@ -12,7 +12,7 @@ $subdomainLength = "10";
 // Set you main domain here for the subdomains to be created
 // For local development this can be "localhost"
 // Do not use the "http://" prefix
-$domain = "example.com";
+$domain = "subdomain.example.com";
 
 //$port = randomGenerator(4, "3456789");
 

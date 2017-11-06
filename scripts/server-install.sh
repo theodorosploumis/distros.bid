@@ -23,7 +23,7 @@ ELKPORT2="9201"
 ELKPORT3="9202"
 
 # Change timezone manually
-dpkg-reconfigure tzdata
+#dpkg-reconfigure tzdata
 
 # Generic software
 apt-get -qqy update
