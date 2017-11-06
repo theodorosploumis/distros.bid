@@ -6,7 +6,6 @@ require_once __DIR__ . '/settings.php';
 use Docker\Docker;
 use Docker\API\Model\ContainerConfig;
 use Docker\API\Model\HostConfig;
-
 //use Docker\API\Model\RestartPolicy;
 
 // Initialize Docker()
@@ -78,7 +77,16 @@ $containerConfig->setEnv(["VIRTUAL_HOST=" . $subdomain]);
 
 // Create container
 $containerConfig->setHostConfig($hostConfig);
-$container = $containerManager->create($containerConfig, ['name' => $subdomain]);
+
+try {
+
+    $container = $containerManager->create($containerConfig, ['name' => $subdomain]);
+
+} catch(Exception $exception) {
+
+    echo $exception->getResponse()->getBody()->getContents();
+
+}
 
 // Start container
 $containerManager->start($container->getId());
