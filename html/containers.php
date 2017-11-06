@@ -19,10 +19,10 @@ if (isset($_GET['id'])) {
     $subdomain = $id . "." . $domain;
     $redirect = "http://" . $subdomain . ":" . $port;
 
-    if ($containerManager->find($id)) {
-        echo "This site is already running. Redirecting...";
-        header('Refresh:14; url=' . $redirect);
-    }
+//    if ($containerManager->find($id)) {
+//        echo "This site is already running. Redirecting...";
+//        header('Refresh:14; url=' . $redirect);
+//    }
 
 } else {
     header("HTTP/1.0 404 Not Found");
