@@ -35,10 +35,10 @@ if (isset($_GET['id'])) {
     $subdomain = $id . "." . $domain;
     $redirect = "http://" . $subdomain . ":" . $port;
 
-//    if ($containerManager->find($id)) {
-//        echo "This site is already running. Redirecting...";
-//        header('Refresh:14; url=' . $redirect);
-//    }
+    if (exec("docker inspect -f '{{.State.Running}}' " . $subdomain) == true) {
+        echo "This site is already running. Redirecting...";
+        header('Refresh:1; url=' . $redirect);
+    }
 
 } else {
     header("HTTP/1.0 404 Not Found");
@@ -79,17 +79,12 @@ $containerConfig->setEnv(["VIRTUAL_HOST=" . $subdomain]);
 $containerConfig->setHostConfig($hostConfig);
 
 try {
-
     $container = $containerManager->create($containerConfig, ['name' => $subdomain]);
-
+    // Start container
+    $containerManager->start($container->getId());
 } catch(Exception $exception) {
-
     echo $exception->getResponse()->getBody()->getContents();
-
 }
-
-// Start container
-$containerManager->start($container->getId());
 
 $text = "";
 $text .= "<html><head><title>Preparing your site...</title>";
@@ -99,4 +94,4 @@ $text .= "</head><body><div class='load'><img src='loading.gif'></div></body></h
 print $text;
 
 // Redirect to the Docker container ui
-header('Refresh:14; url=' . $redirect);
+header('Refresh:10; url=' . $redirect);

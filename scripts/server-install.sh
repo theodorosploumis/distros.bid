@@ -45,6 +45,10 @@ mv composer.phar /usr/local/bin/composer
 rm -rf /var/www/html
 git clone https://github.com/theodorosploumis/drupal-docker-distros.git /var/www/distros/
 
+# Prepare site
+cp /var/www/distros/html/default.settings.php /var/www/distros/html/settings.php
+chmod 444 /var/www/distros/html/settings.php
+
 # Docker. Notice that we do not install latest Docker to support Rancher
 # as also as Docker-php sdk.
 # curl https://get.docker.com | sh

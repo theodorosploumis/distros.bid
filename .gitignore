@@ -1,3 +1,4 @@
 # Ignore
 .idea
 /html/vendor
+html/settings.php

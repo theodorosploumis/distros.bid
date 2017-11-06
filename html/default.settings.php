@@ -12,7 +12,7 @@ $subdomainLength = "10";
 // Set you main domain here for the subdomains to be created
 // For local development this can be "localhost"
 // Do not use the "http://" prefix
-$domain = "drupal.distros.bid";
+$domain = "example.com";
 
 //$port = randomGenerator(4, "3456789");
 
@@ -29,7 +29,7 @@ if ($debug) {
 }
 
 // Google Analytics code
-$google_analytics_code = "UA-6649652-60";
+$google_analytics_code = "";
 
 // Sharethis property
-$sharethis = "59f0e5ab58ca400012955854";
+$sharethis = "";
