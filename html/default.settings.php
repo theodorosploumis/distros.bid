@@ -33,3 +33,5 @@ $google_analytics_code = "";
 
 // Sharethis property
 $sharethis = "";
+
+$adsense = "";

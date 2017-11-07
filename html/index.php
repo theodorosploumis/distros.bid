@@ -24,16 +24,9 @@ require_once __DIR__ . '/distributions.php';
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="20x20" href="favicon.png">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_code; ?>"></script>
-    <script>
-        window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date()); gtag('config', '<?php echo $google_analytics_code; ?>');
-    </script>
-
-    <script type='text/javascript'
-            src='//platform-api.sharethis.com/js/sharethis.js#property=<?php echo $sharethis ?>&product=sticky-share-buttons'
-            async='async'>
-    </script>
+    <?php print googleAnalytics($google_analytics_code); ?>
+    <?php print googleAnalytics($sharethis); ?>
+    <?php print googleAdsense($adsense); ?>
 
 </head>
 
@@ -71,13 +64,10 @@ require_once __DIR__ . '/distributions.php';
 
 <footer>
     <p>
-        Created by <a href="https://www.theodorosploumis.com/en">TheodorosPloumis</a>
-        | Hosted on <a href="https://m.do.co/c/1123d0854c8f">DigitalOcean</a>
+        <?php print footerMessage(); ?>
     </p>
     <p>
-        <a href="https://www.drupal.org">Drupal</a> is a
-        <a href="http://drupal.com/trademark">registered trademark</a> of
-        <a href="http://buytaert.net">Dries Buytaert</a>.
+        <?php print drupalMessage(); ?>
     </p>
 </footer>
 

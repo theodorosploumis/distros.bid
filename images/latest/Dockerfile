@@ -81,8 +81,8 @@ RUN rm -r /var/www/html/*
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
-# MySQL settings
-COPY my.cnf /root/.my.cnf
+# MySQL settings/root/.my.cnf
+#COPY my.cnf /root/.my.cnf
 
 # Copy several scrips
 COPY install.sh prepare-install.sh /var/www/
