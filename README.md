@@ -23,7 +23,7 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | [Conference Organizing](https://www.drupal.org/project/cod) | [images/cod](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/cod/Dockerfile/) | cod | 7.x-2.0-rc3 |
 | [Commerce Kickstart](https://www.drupal.org/project/commerce_kickstart) | [images/commerce_kickstart](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commerce_kickstart/Dockerfile/) | commercekickstart | 7.x-2.50 |
 | [Demo Framework](https://www.drupal.org/project/df) | [images/df](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/df/Dockerfile/) | df | 8.2.0-rc |
-| [Drupal](https://www.drupal.org/project/drupal) | [images/drupal](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal/Dockerfile/) | drupal | 8.4.0 |
+| [Drupal](https://www.drupal.org/project/drupal) | [images/drupal](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal/Dockerfile/) | drupal | 8.4.2 |
 | [Drupal Commons](https://www.drupal.org/project/commons) | [images/commons](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commons/Dockerfile/) | commons | 7.x-3.46 |
 | [Druppio](https://www.drupal.org/project/druppio_small_business_distribution) | [images/druppio_...](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/druppio_small_business_distribution/Dockerfile/) | druppio | 8.x-1.14 |
 | [govCMS](https://www.drupal.org/project/govcms) | [images/govcms](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/govcms/Dockerfile/) | govcms | 7.x-2.14 |
@@ -85,6 +85,4 @@ Open Adminer page at http://localhost:8066/adminer.php
 
 ## License
 
-[![license](https://img.shields.io/github/license/theodorosploumis/drupal-docker-distros.svg)](LICENSE)
-
-``````
+[![license](https://img.shields.io/github/license/theodorosploumis/drupal-docker-distros.svg)](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/LICENSE)
