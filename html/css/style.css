@@ -61,7 +61,7 @@ footer {
 .starters li {
   display: inline-block;
   width: 200px;
-  height: 200px;
+  height: 234px;
   margin: 5px;
   float: left;
   background: #fff;
@@ -78,4 +78,20 @@ footer {
   height: 200px;
   width: 200px;
   padding: 0 20px;
+}
+
+.project-url {
+  background: #6060c3;
+  color: #fff;
+  height: 30px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 30px;
+  border-top: 4px solid #000;
+}
+
+.project-url a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
 }

@@ -7,37 +7,8 @@ if (file_exists(__DIR__ . '/settings.php')) {
     exit();
 }
 
-require_once __DIR__ . '/randomGenerator.php';
-
-$images8 = [
-    "agov" => "aGov",
-    "bear" => "Bear",
-    "brainstorm" => "Brainstorm",
-    "df" => "Demo Framework",
-    "drupal" => "Drupal (core)",
-    "druppio" => "Druppio",
-    "lightning" => "Lightning",
-    "multipurposecorporate" => "Multipurpose Corporate Profile",
-    "opendoor" => "Open door",
-    "openchurch" => "OpenChurch",
-    "openrestaurant" => "Open Restaurant",
-    "panopoly" => "Panopoly",
-    "presto" => "Presto",
-    "seeds" => "Seeds",
-    "social" => "Open Social",
-    "thunder" => "Thunder",
-    "varbase" => "Varbase",
-    "vardoc" => "Vardoc"
-];
-
-$images7 = [
-    "cod" => "Conference Organizing Distribution",
-    "commercekickstart" => "Commerce Kickstart",
-    "commons" => "Drupal Commons",
-    "govcms" => "govCMS",
-    "openatrium" => "Open Atrium",
-    "openoutreach" => "Open Outreach"
-];
+require_once __DIR__ . '/functions.php';
+require_once __DIR__ . '/distributions.php';
 
 ?>
 
@@ -88,22 +59,12 @@ $images7 = [
 
     <h2>8.x version</h2>
     <ul class="starters">
-        <?php
-        foreach ($images8 as $image => $name) {
-            print '<li><a class="link-' . $image . ' .
-        link" href="/container.php?distro=' . $image . '&id=' . randomGenerator($subdomainLength) . '">' . $name . '</a></li>';
-        }
-        ?>
+        <?php showDistros($images8, $subdomainLength); ?>
     </ul>
 
     <h2>7.x version</h2>
     <ul class="starters">
-        <?php
-        foreach ($images7 as $image => $name) {
-            print '<li><a class="link-' . $image . ' .
-        link" href="/container.php?distro=' . $image . '&id=' . randomGenerator($subdomainLength) . '">' . $name . '</a></li>';
-        }
-        ?>
+        <?php showDistros($images7, $subdomainLength); ?>
     </ul>
 
 </section>
