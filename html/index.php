@@ -25,7 +25,7 @@ require_once __DIR__ . '/distributions.php';
     <link rel="icon" type="image/png" sizes="20x20" href="favicon.png">
 
     <?php print googleAnalytics($google_analytics_code); ?>
-    <?php print googleAnalytics($sharethis); ?>
+    <?php print shareThis($sharethis); ?>
     <?php print googleAdsense($adsense); ?>
 
 </head>
