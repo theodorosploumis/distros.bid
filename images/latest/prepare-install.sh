@@ -20,12 +20,12 @@ echo "\$settings['file_private_path'] = '${DOCROOT}/sites/default/private-files'
 
 # Create public files folder
 echo -e ">> Create public, private files and libraries folders"
-if [ -d ${DOCROOT}/sites/default/files ]
+if [ ! -d ${DOCROOT}/sites/default/files ]
   then
     mkdir -p ${DOCROOT}/sites/default/files;
 fi
 
-if [ -d ${DOCROOT}/libraries ]
+if [ ! -d ${DOCROOT}/libraries ]
   then
     mkdir ${DOCROOT}/libraries;
 fi

@@ -1,11 +1,43 @@
 <?php
 
-require_once __DIR__ . '/settings.php';
+if (file_exists(__DIR__ . '/settings.php')) {
+    require_once __DIR__ . '/settings.php';
+} else {
+    print "Setting file does not exist. Please copy default.settings.php to settings.php.";
+    exit();
+}
+
 require_once __DIR__ . '/randomGenerator.php';
 
-$images8 = ["agov" => "aGov", "bear" => "Bear", "brainstorm" => "Brainstorm", "df" => "Demo Framework", "drupal" => "Drupal (core)", "druppio" => "Druppio", "lightning" => "Lightning", "multipurposecorporate" => "Multipurpose Corporate Profile", "opendoor" => "Open door", "openchurch" => "OpenChurch", "openrestaurant" => "Open Restaurant", "panopoly" => "Panopoly", "presto" => "Presto", "seeds" => "Seeds", "social" => "Open Social", "thunder" => "Thunder", "varbase" => "Varbase", "vardoc" => "Vardoc"];
+$images8 = [
+    "agov" => "aGov",
+    "bear" => "Bear",
+    "brainstorm" => "Brainstorm",
+    "df" => "Demo Framework",
+    "drupal" => "Drupal (core)",
+    "druppio" => "Druppio",
+    "lightning" => "Lightning",
+    "multipurposecorporate" => "Multipurpose Corporate Profile",
+    "opendoor" => "Open door",
+    "openchurch" => "OpenChurch",
+    "openrestaurant" => "Open Restaurant",
+    "panopoly" => "Panopoly",
+    "presto" => "Presto",
+    "seeds" => "Seeds",
+    "social" => "Open Social",
+    "thunder" => "Thunder",
+    "varbase" => "Varbase",
+    "vardoc" => "Vardoc"
+];
 
-$images7 = ["cod" => "Conference Organizing Distribution", "commercekickstart" => "Commerce Kickstart", "commons" => "Drupal Commons", "govcms" => "govCMS", "openatrium" => "Open Atrium", "openoutreach" => "Open Outreach"];
+$images7 = [
+    "cod" => "Conference Organizing Distribution",
+    "commercekickstart" => "Commerce Kickstart",
+    "commons" => "Drupal Commons",
+    "govcms" => "govCMS",
+    "openatrium" => "Open Atrium",
+    "openoutreach" => "Open Outreach"
+];
 
 ?>
 
@@ -23,19 +55,14 @@ $images7 = ["cod" => "Conference Organizing Distribution", "commercekickstart" =
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_code; ?>"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', '<?php echo $google_analytics_code; ?>');
+        window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date()); gtag('config', '<?php echo $google_analytics_code; ?>');
     </script>
 
     <script type='text/javascript'
             src='//platform-api.sharethis.com/js/sharethis.js#property=<?php echo $sharethis ?>&product=sticky-share-buttons'
-            async='async'></script>
+            async='async'>
+    </script>
 
 </head>
 
@@ -89,9 +116,9 @@ $images7 = ["cod" => "Conference Organizing Distribution", "commercekickstart" =
     <p>
         <a href="https://www.drupal.org">Drupal</a> is a
         <a href="http://drupal.com/trademark">registered trademark</a> of
-        <a href="http://buytaert.net">Dries Buytaert</a>.</p>
+        <a href="http://buytaert.net">Dries Buytaert</a>.
+    </p>
 </footer>
 
 </body>
-
 </html>

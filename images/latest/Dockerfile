@@ -14,6 +14,7 @@ RUN apt-get update && \
     curl \
     wget \
     git \
+    cron \
     vim-tiny \
     unzip \
     mysql-server \
@@ -85,6 +86,9 @@ COPY my.cnf /root/.my.cnf
 
 # Copy several scrips
 COPY install.sh prepare-install.sh /var/www/
+
+# Setup cron job
+#RUN crontab -l | { cat; echo "0 0 0 0 0 exit"; } | crontab -
 
 WORKDIR /var/www/html
 
