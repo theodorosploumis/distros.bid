@@ -3,7 +3,7 @@
 if (file_exists(__DIR__ . '/settings.php')) {
     require_once __DIR__ . '/settings.php';
 } else {
-    print "Setting file does not exist. Please copy default.settings.php to settings.php.";
+    print "Settings.php file does not exist. Please copy default.settings.php to settings.php.";
     exit();
 }
 
