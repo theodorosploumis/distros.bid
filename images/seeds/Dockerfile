@@ -5,7 +5,7 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 ENV NEWDISTRO="seeds" \
     PROFILE="seeds" \
     DOCROOT="/var/www/html/public_html" \
-    PACKAGE="sprintive/seeds-project:^8.4.0"
+    PACKAGE="sprintive/seeds-project:^8.4.1"
 
 RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
     --quiet --no-ansi --no-dev --no-interaction --no-progress
