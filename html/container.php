@@ -32,6 +32,15 @@ if (isset($_GET['name'])) {
 if (!isset($_GET['g-recaptcha-response']) || $_GET['g-recaptcha-response'] == "") {
     header("HTTP/1.0 404 Not Found");
     die('Error: Direct url submission are not allowed.');
+} else {
+    $g_captcha_response = $_GET['g-recaptcha-response'];
+    $recaptcha = new \ReCaptcha\ReCaptcha($recaptcha_secret);
+    $recaptcha_resp = $recaptcha->verify($g_captcha_response, $_SERVER['REMOTE_ADDR']);
+
+    if (!$recaptcha_resp->isSuccess()) {
+        header("HTTP/1.0 404 Not Found");
+        die('Error: Direct url submission are not allowed.');
+    }
 }
 
 if (isset($_GET['distro'])) {

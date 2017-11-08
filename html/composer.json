@@ -3,7 +3,8 @@
     "description": "A UI for Docker with php",
     "type": "project",
     "require": {
-        "docker-php/docker-php": "^1.24"
+        "docker-php/docker-php": "^1.24",
+        "google/recaptcha": "~1.1"
     },
     "license": "MIT",
     "authors": [

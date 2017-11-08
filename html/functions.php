@@ -123,8 +123,9 @@ function drupalMessage() {
 }
 
 /**
- * @param string $secret
+ * @param string $recaptcha_secret
  */
-function reCaptcha($secret) {
-    print '<div class="g-recaptcha" data-sitekey="'.$secret.'"></div>';
+function reCaptcha($recaptcha_secret) {
+    print '<script src="https://www.google.com/recaptcha/api.js"></script>';
+    print '<div class="g-recaptcha" data-sitekey="'.$recaptcha_secret.'"></div>';
 }

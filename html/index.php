@@ -27,8 +27,6 @@ require_once __DIR__ . '/distributions.php';
     <?php print googleAnalytics($google_analytics_code); ?>
     <?php print shareThis($sharethis); ?>
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-
 </head>
 
 <body>
@@ -53,7 +51,7 @@ require_once __DIR__ . '/distributions.php';
 
     <div class="starters">
 
-        <form id="submit-form" class="form" action="container.php" method="get">
+        <form id="submit-form" class="form" action="container.php" method="post">
 
             <label class="hidden">Distribution:</label>
             <?php listDistros($distros, "distro"); ?>
@@ -65,8 +63,9 @@ require_once __DIR__ . '/distributions.php';
             <input type="hidden" name="id" required="required"
                    value="<?php echo randomGenerator(10); ?>" readonly="readonly">
 
+            <?php reCaptcha($recaptcha_secret); ?>
+
             <input id="submit-button" type="submit" value="Create site">
-            <?php reCaptcha($recaptcha); ?>
         </form>
     </div>
 
