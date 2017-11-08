@@ -36,4 +36,5 @@ $sharethis = "";
 
 $adsense = "";
 
+$recaptcha_key = "";
 $recaptcha_secret = "";

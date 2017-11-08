@@ -63,7 +63,7 @@ require_once __DIR__ . '/distributions.php';
             <input type="hidden" name="id" required="required"
                    value="<?php echo randomGenerator(10); ?>" readonly="readonly">
 
-            <?php reCaptcha($recaptcha_secret); ?>
+            <?php reCaptcha($recaptcha_key); ?>
 
             <input id="submit-button" type="submit" value="Create site">
         </form>
