@@ -36,7 +36,7 @@ if (!isset($_GET['g-recaptcha-response']) || $_GET['g-recaptcha-response'] == ""
 } else {
     $g_captcha_response = $_GET['g-recaptcha-response'];
     $recaptcha = new ReCaptcha($recaptcha_secret);
-    $recaptcha_resp = $recaptcha->verify($g_captcha_response, $_SERVER['REMOTE_ADDR']);
+    $recaptcha_resp = $recaptcha->verify($g_captcha_response);
 
     if (!$recaptcha_resp->isSuccess()) {
         header("HTTP/1.0 404 Not Found");
