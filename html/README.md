@@ -12,4 +12,4 @@ This will install the Web UI on a server with main domain "distros.bid" and cont
 
  - Tested with Debian 9.2 x64.
  - Needs at least 8GB of RAM
- - Docker images need at least 40GB space
+ - Docker images need at least 50GB space

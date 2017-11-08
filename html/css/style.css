@@ -65,7 +65,7 @@ ul {
   list-style-position: inside;
 }
 
-.starters {20px 80px
+.starters {
   padding: 20px 0;
   margin: 0;
   clear: left;
@@ -109,6 +109,13 @@ ul {
   display: block;
 }
 
+.forkme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
 .hidden {
   position: absolute;
   visibility: hidden;
@@ -134,10 +141,6 @@ input {
 
 .form {
   padding-bottom: 20px;
-}
-
-.error {
-  text-align: left;
 }
 
 #submit-button {
