@@ -51,7 +51,7 @@ require_once __DIR__ . '/distributions.php';
 
     <div class="starters">
 
-        <form id="submit-form" class="form" action="container.php" method="post">
+        <form id="submit-form" class="form" action="container.php" method="get">
 
             <label class="hidden">Distribution:</label>
             <?php listDistros($distros, "distro"); ?>
