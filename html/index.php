@@ -74,10 +74,10 @@ require_once __DIR__ . '/distributions.php';
         <?php plainDistros($distros); ?>
     </div>
 
-    <p>
+    <p class="center">
         <?php print footerMessage(); ?>
     </p>
-    <p>
+    <p class="center">
         <?php print drupalMessage(); ?>
     </p>
 

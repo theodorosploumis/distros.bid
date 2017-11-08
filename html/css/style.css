@@ -116,6 +116,10 @@ ul {
   border: 0;
 }
 
+.center {
+  text-align: center;
+}
+
 .hidden {
   position: absolute;
   visibility: hidden;
