@@ -146,7 +146,10 @@ bash /var/www/distros/scripts/pull-images.sh
 
 # Link extra aliases
 touch ~/.bashrc
-echo -e "if [ -f /var/www/distros/scripts/.docker-aliases ]; then . /var/www/distros/scripts/.docker-aliases fi" >> ~/.bashrc
+echo "if [ -f /var/www/distros/scripts/.docker-aliases ]; " >> ~/.bashrc
+echo "then " >> ~/.bashrc
+echo ". /var/www/distros/scripts/.docker-aliases" >> ~/.bashrc
+echo "fi" >> ~/.bashrc
 source ~/.bashrc
 
 # Remove unused packages
