@@ -160,3 +160,7 @@ footer {
   font-size: 14px;
   box-shadow: -1px 0 4px 4px #ccc;
 }
+
+footer p {
+  margin: 10px;
+}
