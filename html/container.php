@@ -6,6 +6,7 @@ require_once __DIR__ . '/settings.php';
 use Docker\Docker;
 use Docker\API\Model\ContainerConfig;
 use Docker\API\Model\HostConfig;
+use ReCaptcha\ReCaptcha;
 //use Docker\API\Model\RestartPolicy;
 
 // Initialize Docker()
@@ -34,7 +35,7 @@ if (!isset($_GET['g-recaptcha-response']) || $_GET['g-recaptcha-response'] == ""
     die('Error: Direct url submission are not allowed.');
 } else {
     $g_captcha_response = $_GET['g-recaptcha-response'];
-    $recaptcha = new \ReCaptcha\ReCaptcha($recaptcha_secret);
+    $recaptcha = new ReCaptcha($recaptcha_secret);
     $recaptcha_resp = $recaptcha->verify($g_captcha_response, $_SERVER['REMOTE_ADDR']);
 
     if (!$recaptcha_resp->isSuccess()) {
