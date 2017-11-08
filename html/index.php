@@ -21,7 +21,7 @@ require_once __DIR__ . '/distributions.php';
     <title>Try Drupal Distributions</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:300,400" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="20x20" href="favicon.png">
 
     <?php print googleAnalytics($google_analytics_code); ?>
@@ -40,15 +40,15 @@ require_once __DIR__ . '/distributions.php';
         <b>Drupal Admin</b><br>
         <br>
         <br>
-        <b>username:</b>admin<br>
-        <b>password:</b>admin<br>
+        <b>username:</b> admin<br>
+        <b>password:</b> admin<br>
     </p>
     <p class="info">
         <b>Adminer</b> (/adminer.php)<br>
         <br>
-        <b>DB name:</b>drupal<br>
-        <b>DB password:</b>drupal<br>
-        <b>DB username:</b>drupal<br>
+        <b>DB name:</b> drupal<br>
+        <b>DB password:</b> drupal<br>
+        <b>DB username:</b> drupal<br>
     </p>
 
     <div class="starters">
@@ -58,8 +58,8 @@ require_once __DIR__ . '/distributions.php';
             <label class="hidden">Distribution:</label>
             <?php listDistros($distros, "distro"); ?>
 
-            <label>Site name*:</label>
-            <input name="name" placeholder="eg My Drupal site" value="" required="required">
+            <label class="hidden">Site name*:</label>
+            <input name="name" placeholder="Site name, eg 'My Drupal site'" value="" required="required">
 
             <label class="hidden">ID*:</label>
             <input type="hidden" name="id" required="required"
