@@ -121,3 +121,10 @@ function drupalMessage() {
 
     return $text;
 }
+
+/**
+ * @param string $secret
+ */
+function reCaptcha($secret) {
+    print '<div class="g-recaptcha" data-sitekey="'.$secret.'"></div>';
+}

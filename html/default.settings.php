@@ -35,3 +35,5 @@ $google_analytics_code = "";
 $sharethis = "";
 
 $adsense = "";
+
+$recaptcha = "";

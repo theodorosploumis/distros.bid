@@ -26,7 +26,8 @@ require_once __DIR__ . '/distributions.php';
 
     <?php print googleAnalytics($google_analytics_code); ?>
     <?php print shareThis($sharethis); ?>
-    <?php print googleAdsense($adsense); ?>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 
@@ -65,6 +66,8 @@ require_once __DIR__ . '/distributions.php';
                    value="<?php echo randomGenerator(6); ?>" readonly="readonly">
 
             <input id="submit-button" type="submit" value="Create site">
+            <?php reCaptcha($recaptcha); ?>
+        </form>
     </div>
 
     <div>
