@@ -13,12 +13,22 @@ $docker = new Docker();
 $containerManager = $docker->getContainerManager();
 
 // Create nginx-proxy if not enabled
-if (!$containerManager->find("proxy")) {
-    echo "Nginx proxy is not running. Please try later.";
-    die;
-}
+//if (!$containerManager->find("proxy")) {
+//    echo "Nginx proxy is not running. Please try later.";
+//    die;
+//}
 
 // Get variables from url
+if (isset($_GET['name'])) {
+    $name = $_GET['name'];
+    $name = strtolower($name);
+    $name = str_replace(' ', '', $name);
+    $name = preg_replace('/[^a-z0-9\-\']/', '', $name);
+} else {
+    header("HTTP/1.0 404 Not Found");
+    die('Error: Site name is not defined.');
+}
+
 if (isset($_GET['distro'])) {
     $distro = $_GET['distro'];
     $distro = preg_replace('/[^a-z]/', '', $distro);
@@ -32,7 +42,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $id = preg_replace('/[^a-z]/', '', $id);
     // Set subdomain
-    $subdomain = $id . "-" . $distro . "." . $domain;
+    $subdomain = $id . "-" . $distro . "-" . $name . "." . $domain;
     $redirect = "http://" . $subdomain . ":" . $port;
 
     if (exec("docker inspect -f '{{.State.Running}}' " . $subdomain) == true) {

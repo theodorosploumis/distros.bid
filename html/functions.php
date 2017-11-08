@@ -17,17 +17,42 @@ function randomGenerator($length = '20', $keyspace = 'abcdefghijklmnopqrstuvwxyz
 }
 
 /**
- * @param array $array
+ * @param $distros_array
  * @param integer $subdomainLength
  *
- * Example: $array =  = [agov" => ["name" =>"aGov", "path" => "https://www.drupal.org/project/agov"]];
+ * Example: $array =  = [agov" => ["name" =>"aGov", "path" => "https://www.drupal.org/project/agov", "version" => "8.x"]];
  */
-function showDistros($array, $subdomainLength = 10) {
-    foreach ($array as $key => $value) {
+function showDistros($distros_array, $subdomainLength = 10) {
+    foreach ($distros_array as $key => $value) {
         print '<li><a target="_blank" class="link-' . $key . ' .
-        link" href="/container.php?distro=' . $key . '&id=' . randomGenerator($subdomainLength) . '">' . $value['name'] . '</a>
+        link" href="/container.php?distro=' . $key . '&id=' . randomGenerator($subdomainLength) . '">' .
+            $value['name'] . "<br>" . $value['version'] . '</a>
         <div class="project-url"><a target="_blank" href="' . $value["path"] . '">Project source</a></div></li>';
     }
+}
+
+/**
+ * @param $distros_array
+ * @param $select_name
+ */
+function listDistros($distros_array, $select_name) {
+    print "<select id='distros' name='".$select_name."' required='required'>";
+    print "<option value='' selected='selected'>-- Select Distribution --</option>";
+    foreach ($distros_array as $key => $value) {
+        print '<option value="'.$key.'">' . $value['name'] . ' - ' . $value['version'] . '</option>';
+    }
+    print "</select>";
+}
+
+/**
+ * @param array $distros_array
+ */
+function plainDistros($distros_array) {
+    print "<ul class='plain-distros'>";
+    foreach ($distros_array as $key => $value) {
+        print '<li><a href="'.$value["path"].'">' . $value['name'] . ' - ' . $value['version'] . '</a></li> ';
+    }
+    print "</ul>";
 }
 
 /**

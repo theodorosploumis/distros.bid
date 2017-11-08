@@ -50,15 +50,27 @@ require_once __DIR__ . '/distributions.php';
         <b>DB username:</b>drupal<br>
     </p>
 
-    <h2>8.x version</h2>
-    <ul class="starters">
-        <?php showDistros($images8, $subdomainLength); ?>
-    </ul>
+    <div class="starters">
 
-    <h2>7.x version</h2>
-    <ul class="starters">
-        <?php showDistros($images7, $subdomainLength); ?>
-    </ul>
+        <form id="submit-form" class="form" action="container.php" method="get">
+
+            <label class="hidden">Distribution:</label>
+            <?php listDistros($distros, "distros"); ?>
+
+            <label>Site name*:</label>
+            <input name="name" placeholder="eg My Drupal site" value="" required="required">
+
+            <label class="hidden">ID*:</label>
+            <input type="hidden" name="id" required="required"
+                   value="<?php echo randomGenerator(20); ?>" readonly="readonly">
+
+            <input id="submit-button" type="submit" value="Create site">
+    </div>
+
+    <div>
+        <h2>Available Drupal Distributions</h2>
+        <?php plainDistros($distros); ?>
+    </div>
 
 </section>
 

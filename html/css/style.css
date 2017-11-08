@@ -1,13 +1,15 @@
 body {
   background: #eaeaea;
   font-family: "Cutive Mono" ,"Courier New", Courier, monospace;
+  padding-bottom: 80px;
+  font-size: 18px;
 }
 
 .wrapper {
   overflow: hidden;
   padding: 20px 80px;
-  margin: 0 auto;
-  max-width: 1260px;
+  margin: 0 auto 20px auto;
+  max-width: 880px;
 }
 
 h1 {
@@ -20,8 +22,15 @@ h1 {
 h2 {
   clear: left;
   margin: 10px 0;
-  padding: 20px 0;
-  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 sup {
@@ -35,7 +44,6 @@ sup {
   border-radius: 4px;
 }
 
-
 .info {
   margin: 5px;
   float: left;
@@ -44,16 +52,14 @@ sup {
   background: #fff;
 }
 
-footer {
-  clear: both;
-  overflow: hidden;
-  padding-top: 10px;
-  border-top: 1px solid #fff;
-  text-align: center;
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
 }
 
 .starters {
-  padding: 0;
+  padding: 40px 0;
   margin: 0;
   clear: left;
 }
@@ -94,4 +100,53 @@ footer {
   text-decoration: none;
   color: #fff;
   display: block;
+}
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+label {
+  display: block;
+  margin: 15px 0 0;
+  font-weight: bold;
+}
+
+select,
+input {
+  width: 100%;
+  margin: 10px 0;
+  clear: both;
+  display: block;
+  text-align: center;
+  border: none;
+  padding: 14px;
+  font-size: 20px;
+}
+
+.form {
+  padding-bottom: 20px;
+}
+
+.error {
+  text-align: left;
+}
+
+#submit-button {
+  background: #ff4500;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  background: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: -1px 0 4px 4px #ccc;
 }
