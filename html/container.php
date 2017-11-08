@@ -63,7 +63,8 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $id = preg_replace('/[^a-z]/', '', $id);
     // Set subdomain
-    $subdomain = $name . "-" . $distro . "-" . $id . "." . $domain;
+    //$subdomain = $name . "-" . $distro . "-" . $id . "." . $domain;
+    $subdomain = $name . "-" . $id . "." . $domain;
     $redirect = "http://" . $subdomain . ":" . $port;
 
     if (exec("docker inspect -f '{{.State.Running}}' " . $subdomain) == true) {
