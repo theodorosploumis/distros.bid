@@ -108,7 +108,7 @@ function footerMessage() {
     $text .= ' | ';
     $text .= "<a href='https://github.com/theodorosploumis/drupal-docker-distros'>Github</a>";
     $text .= ' | ';
-    $text .= 'Hosted on <a href="https://m.do.co/c/1123d0854c8f">DigitalOcean</a>';
+    $text .= '<a href="https://www.vultr.com/?ref=7258956"><img src="https://www.vultr.com/media/banner_1.png" width="728" height="90"></a>';
 
     return $text;
 }
