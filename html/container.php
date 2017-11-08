@@ -29,6 +29,11 @@ if (isset($_GET['name'])) {
     die('Error: Site name is not defined.');
 }
 
+if (!isset($_GET['g-recaptcha-response']) || $_GET['g-recaptcha-response'] == "") {
+    header("HTTP/1.0 404 Not Found");
+    die('Error: Direct url submission are not allowed.');
+}
+
 if (isset($_GET['distro'])) {
     $distro = $_GET['distro'];
     $distro = preg_replace('/[^a-z]/', '', $distro);
@@ -42,7 +47,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $id = preg_replace('/[^a-z]/', '', $id);
     // Set subdomain
-    $subdomain = $id . "-" . $distro . "-" . $name . "." . $domain;
+    $subdomain = $name . "-" . $distro . "-" . $id . "." . $domain;
     $redirect = "http://" . $subdomain . ":" . $port;
 
     if (exec("docker inspect -f '{{.State.Running}}' " . $subdomain) == true) {
