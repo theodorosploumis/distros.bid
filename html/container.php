@@ -40,7 +40,7 @@ if (!isset($_GET['g-recaptcha-response']) || $_GET['g-recaptcha-response'] == ""
 
     if (!$recaptcha_resp->isSuccess()) {
         header("HTTP/1.0 404 Not Found");
-        die('Error: Direct url submission are not allowed.');
+        die('Error: reCaptcha could not be verified.');
     }
 }
 
