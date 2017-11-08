@@ -3,8 +3,8 @@
 On a fresh Ubuntu/Debian x64 machine login as 'root' and run this:
 
 ```bash
-curl -sS -o /tmp/server-install.sh https://raw.githubusercontent.com/theodorosploumis/drupal-docker-distros/master/scripts/server-install.sh \
-sh /tmp/server-install.sh
+curl -sS -o /tmp/server-install.sh https://raw.githubusercontent.com/theodorosploumis/drupal-docker-distros/master/scripts/server-install.sh
+/bin/sh /tmp/server-install.sh
 
 ```
 
