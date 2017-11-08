@@ -41,7 +41,7 @@ if (!isset($_GET['g-recaptcha-response']) || $_GET['g-recaptcha-response'] == ""
     if (!$recaptcha_resp->isSuccess()) {
         if ($debug) {
             $errors = $recaptcha_resp->getErrorCodes();
-            print $errors;
+            var_dump($errors);
         }
 
         header("HTTP/1.0 404 Not Found");
