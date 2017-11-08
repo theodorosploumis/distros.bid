@@ -104,10 +104,15 @@ function shareThis($id) {
  */
 function footerMessage() {
     $text = "";
-    $text .= '<a href="https://www.vultr.com/?ref=7258956"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>';
-    $text .= '<br>&copy; 2017 <a href="https://www.theodorosploumis.com/en">TheodorosPloumis</a>';
+    $text .= '&copy; 2017 <a href="https://www.theodorosploumis.com/en">TheodorosPloumis</a>';
     $text .= ' | ';
     $text .= "<a href='https://github.com/theodorosploumis/drupal-docker-distros'>Github</a>";
+
+    return $text;
+}
+
+function footerSponsor() {
+    $text = '<a href="https://www.vultr.com/?ref=7258956"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>';
 
     return $text;
 }
