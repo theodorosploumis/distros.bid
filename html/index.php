@@ -85,5 +85,9 @@ require_once __DIR__ . '/distributions.php';
     </p>
 </footer>
 
+<a href="https://github.com/theodorosploumis/drupal-docker-distros?utm_source=website&utm_campaign=website">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="forkme.png" alt="Fork me on GitHub">
+</a>
+
 </body>
 </html>
