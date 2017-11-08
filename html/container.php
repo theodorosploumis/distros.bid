@@ -39,6 +39,10 @@ if (!isset($_GET['g-recaptcha-response']) || $_GET['g-recaptcha-response'] == ""
     $recaptcha_resp = $recaptcha->verify($g_captcha_response);
 
     if (!$recaptcha_resp->isSuccess()) {
+        $errors = $recaptcha_resp->getErrorCodes();
+
+        print $errors;
+        
         header("HTTP/1.0 404 Not Found");
         die('Error: reCaptcha could not be verified.');
     }
