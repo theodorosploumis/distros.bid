@@ -55,14 +55,14 @@ require_once __DIR__ . '/distributions.php';
         <form id="submit-form" class="form" action="container.php" method="get">
 
             <label class="hidden">Distribution:</label>
-            <?php listDistros($distros, "distros"); ?>
+            <?php listDistros($distros, "distro"); ?>
 
             <label>Site name*:</label>
             <input name="name" placeholder="eg My Drupal site" value="" required="required">
 
             <label class="hidden">ID*:</label>
             <input type="hidden" name="id" required="required"
-                   value="<?php echo randomGenerator(20); ?>" readonly="readonly">
+                   value="<?php echo randomGenerator(6); ?>" readonly="readonly">
 
             <input id="submit-button" type="submit" value="Create site">
     </div>
