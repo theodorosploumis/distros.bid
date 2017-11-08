@@ -130,9 +130,8 @@ label {
   margin: 15px 0 0;
   font-weight: bold;
 }
-
-select,
-input {
+input,
+select {
   width: 100%;
   margin: 10px 0;
   clear: both;
@@ -141,6 +140,10 @@ input {
   border: none;
   padding: 14px;
   font-size: 20px;
+}
+
+select {
+  text-align: left;
 }
 
 .form {

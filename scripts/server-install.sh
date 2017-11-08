@@ -32,7 +32,7 @@ apt-get install -y git wget vim zip apache2 php7.0 php7.0-mbstring \
 
 # Install Let's Encrypt
 if [ "${INSTALL_LETSENCYPT}" -eq "1" ]; then
-  certbot -y --apache -d ${DOMAIN} -c me@theodorosploumis.com
+  certbot --apache -d ${DOMAIN} -m me@theodorosploumis.com
   certbot renew --dry-run
 fi
 
