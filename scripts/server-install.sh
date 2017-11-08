@@ -72,7 +72,7 @@ usermod -aG docker www-data
 
 # Start Portainer dashboard
 if [ "${INSTALL_PORTAINER}" -eq "1" ]; then
-  docker volume create portainer_data
+  docker volume create portainer_data;
   docker run -d \
          --restart=always \
          -p ${PORTAINERPORT:-9988}:9000 \
@@ -139,7 +139,7 @@ yes | cp -f /var/www/distros/scripts/"${SUBDOMAIN}".conf /etc/apache2/sites-avai
 service apache2 reload
 
 # Install DogitalOcean monitoring
-curl -sSL https://agent.digitalocean.com/install.sh | sh
+#curl -sSL https://agent.digitalocean.com/install.sh | sh
 
 # Pull all docker images
 bash /var/www/distros/scripts/pull-images.sh
