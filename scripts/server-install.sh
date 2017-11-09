@@ -64,6 +64,7 @@ docker run -d \
        -p ${NGINXPORT:-8055}:80 \
        --name=proxy \
        --restart=always \
+       --label name=proxy \
        -v /var/run/docker.sock:/tmp/docker.sock:ro \
        jwilder/nginx-proxy
 
@@ -72,9 +73,10 @@ usermod -aG docker www-data
 
 # Start Portainer dashboard
 if [ "${INSTALL_PORTAINER}" -eq "1" ]; then
-  docker volume create portainer_data;
+  docker volume create --name portainer_data
   docker run -d \
          --restart=always \
+         --label name=portainer \
          -p ${PORTAINERPORT:-9988}:9000 \
          -v /var/run/docker.sock:/var/run/docker.sock \
          -v portainer_data:/data \
