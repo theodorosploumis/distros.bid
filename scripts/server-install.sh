@@ -156,3 +156,7 @@ source ~/.bashrc
 
 # Remove unused packages
 apt-get autoremove
+
+# Crontab task
+# */5 * * * * docker kill $(docker ps --format "{{.ID}} {{.Status}} {{.Image}}" | grep "drupal8" |  awk '{ minutes=$3; max=30; if (minutes >= max) print $1; }')
+#

@@ -66,6 +66,8 @@ require_once __DIR__ . '/distributions.php';
             <?php reCaptcha($recaptcha_key); ?>
 
             <input id="submit-button" type="submit" value="Create site">
+
+            <span>*Notice: Sites are available for 30 minutes.</span>
         </form>
     </div>
 
