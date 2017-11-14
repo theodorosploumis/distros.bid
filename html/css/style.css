@@ -183,8 +183,19 @@ footer {
   width: 100%;
   font-size: 14px;
   box-shadow: -1px 0 4px 4px #ccc;
+  z-index: 99999;
 }
 
 footer p {
   margin: 10px;
+}
+
+@media all and (max-width:40.625em) {
+  input[name="name"] {
+    width: 100%;
+  }
+
+  .g-recaptcha {
+    clear: both;
+  }
 }
