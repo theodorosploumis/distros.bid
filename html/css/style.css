@@ -142,6 +142,19 @@ select {
   font-size: 20px;
 }
 
+input[type="name"] {
+  float: left;
+  width: calc(100% - 310px);
+  padding: 22px;
+  margin-top: 1px;
+  border: none;
+  margin-right: 6px;
+  border-radius: 3px;
+  background: #f9f9f9;
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
+  height: 74px;
+}
+
 select {
   text-align: left;
 }
@@ -151,7 +164,7 @@ select {
 }
 
 #submit-button {
-  background: #ff4500;
+  background: #1566b5;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
