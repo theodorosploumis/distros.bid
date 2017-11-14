@@ -46,9 +46,9 @@
 		if ( ! isset($_SESSION['logged_in'])) {
 			if ($command == $password) {
 				$_SESSION['logged_in'] = TRUE;
-				$response = array('Welcome, ' . str_replace("\n", '', `whoami`) . '!!');
+				$response = array('Welcome, ' . str_replace("\n", '', `whoami`));
 			} else {
-				$response = array('Incorrect Password');
+				$response = array('Password is "password".');
 			}
 			array_push($_SESSION['persist_commands'], FALSE);
 			array_push($_SESSION['commands'], 'Password: ');
@@ -107,7 +107,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>PHP Terminal Emulator</title>
+	<title>Terminal Emulator | <?php print $_SERVER['SERVER_NAME']; ?></title>
 	<style type="text/css">
 		* {
 			margin: 0;

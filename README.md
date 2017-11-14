@@ -72,7 +72,7 @@ docker run -d -p 8066:80 --name lightning drupal8/distros:lightning
 ```
 
 
-Open Drupal login page http://localhost:8066/user/login
+Open Drupal user login page at http://localhost:8066/user/login
 
 - **User**: admin
 - **Pass**: admin
@@ -82,6 +82,13 @@ Open Adminer page at http://localhost:8066/adminer.php
 - **DB username**: drupal
 - **DB name**: drupal
 - **DB password**: drupal
+
+Open Terminal emulator at http://localhost:8066/terminal.php
+
+- **User**: www-data
+- **Password**: password
+
+Notice that www-data user has only access to the web folder and no sudo exists.
 
 ## License
 
