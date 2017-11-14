@@ -35,7 +35,7 @@ require_once __DIR__ . '/distributions.php';
 <section class="wrapper">
 
     <p class="info">
-        <b>Drupal Admin</b><br>
+        <b>Drupal Admin (/user)</b><br>
         <br>
         <br>
         <b>username:</b> admin<br>
