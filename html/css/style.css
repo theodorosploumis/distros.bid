@@ -155,6 +155,10 @@ input[name="name"] {
   height: 74px;
 }
 
+.g-recaptcha {
+  float: left;
+}
+
 select {
   text-align: left;
 }
