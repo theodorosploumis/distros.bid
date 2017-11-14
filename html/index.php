@@ -30,6 +30,7 @@ require_once __DIR__ . '/distributions.php';
 </head>
 
 <body>
+<div class="logo"><img src="logo.png"></div>
 <h1>Try Drupal Distributions<sup>beta</sup></h1>
 
 <section class="wrapper">

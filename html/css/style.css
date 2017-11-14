@@ -39,6 +39,11 @@ a:focus {
   text-decoration: underline;
 }
 
+.logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 sup {
   font-weight: normal;
   letter-spacing: -1px;
