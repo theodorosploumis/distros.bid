@@ -158,5 +158,5 @@ source ~/.bashrc
 apt-get autoremove
 
 # Crontab task
-# */5 * * * * docker kill $(docker ps --format "{{.ID}} {{.Status}} {{.Image}}" | grep "drupal8" |  awk '{ minutes=$3; max=30; if (minutes >= max) print $1; }')
+# */5 * * * * docker kill $(docker ps --format "{{.ID}} {{.Status}} {{.Image}}" | grep "drupal8" |  awk '{ minutes=$3; metrics=$4; max=3; if (minutes >= max && metrics == "minutes") print $3; }')
 #

@@ -48,6 +48,13 @@ require_once __DIR__ . '/distributions.php';
         <b>DB password:</b> drupal<br>
         <b>DB username:</b> drupal<br>
     </p>
+    <p class="info">
+        <b>Terminal</b> (/terminal.php)<br>
+        <br>
+        <br>
+        <b>User:</b> www-data<br>
+        <b>Password:</b> password<br>
+    </p>
 
     <div class="starters">
 

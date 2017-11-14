@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 # Install a Drupal site with Drush
 
+if [ -z ${DOCROOT} ]
+  then
+    DOCROOT="/var/www/html";
+fi
+
 # Install site
 service mysql start && \
 service apache2 start && \
@@ -19,3 +24,6 @@ drush variable-set site_name "Drupal version: $(drush pmi --fields=Version syste
 
 # Assign all site files to www-data
 chown -R www-data:www-data /var/www/html
+
+# Move terminal.php to docroot
+cp /var/www/terminal.php ${DOCROOT}/terminal.php
