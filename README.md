@@ -44,24 +44,24 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 
 ## Software per docker image
 
-| Software | Version |
-| :---  |:--- |
-| adminer | 4.3.1 |
+| Software    | Version|
+| :---        | :---   |
+| adminer     | 4.3.1  |
 | **apache2** | 2.4.18 |
-| composer | 1.4.2 |
-| curl | 7.47.0 |
-| **drush** | 8.1.12 |
-| git | 2.7.4 |
-| **mysql** | 5.7.20 |
-| **php** | 7.0 |
-| vi | 7.4 |
-| wget | 1.17.1 |
+| composer    | 1.5.2  |
+| curl        | 7.47.0 |
+| **drush**   | 8.1.15 |
+| git         | 2.7.4  |
+| **mysql**   | 5.7.20 |
+| **php**     | 7.0    |
+| vi          | 7.4    |
+| wget        | 1.17.1 |
 
 ## Usage
 
 Each Drupal distribution refers to a specific docker image tag.
 Currently only 1 version is supported for each distribution and there no
-version specific tags (eg there is "drupal" but not "drupal-8.4.0" tag). Notice that most images are of 1-1.5GB size so be patient while pulling.
+version specific tags (eg there is "drupal" but not "drupal-8.4.2" tag). Notice that most images are of 1 - 2GB size so be patient while pulling.
 
 
 ```
