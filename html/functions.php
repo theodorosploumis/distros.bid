@@ -85,7 +85,12 @@ function googleAnalytics($code) {
     return $script;
 }
 
-function googleOptimize($google_analytics_id, $google_optimize_id) {
+/**
+ * @param string $google_analytics_id
+ * @param string $google_optimize_id
+ * @return string
+ */
+function googleAnalyticsOptimize($google_analytics_id, $google_optimize_id) {
     $script = "";
 
     $script .= "<script>";
@@ -100,12 +105,25 @@ function googleOptimize($google_analytics_id, $google_optimize_id) {
     return $script;
 }
 
+function googleOptimize($google_optimize_id) {
+    $script = "";
+
+    $script .= "<style>.async-hide {opacity:0 !important}</style>";
+    $script .= "<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date; h.end=i=function(){";
+    $script .= "s.className=s.className.replace(RegExp(' ?'+y),'')};(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);";
+    $script .= "h.timeout=c;})(window,document.documentElement,'async-hide','dataLayer',4000,{'" . $google_optimize_id . "':true});";
+    $script .= "</script>";
+
+    return $script;
+}
+
 /**
  * @param string $id
  * @return string
  */
 function shareThis($id) {
     $script = "";
+
     $script .= "<script type='text/javascript' ";
     $script .= "src='//platform-api.sharethis.com/js/sharethis.js#property=" . $id . "&product=sticky-share-buttons' ";
     $script .= "async='async'>";
