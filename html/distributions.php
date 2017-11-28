@@ -92,6 +92,11 @@ $distros = [
         "path" => "https://www.drupal.org/project/vardoc",
         "version" => "8.x"
     ],
+    "wxt" => [
+        "name" =>"Web Experience Toolkit",
+        "path" => "https://www.drupal.org/project/wxt",
+        "version" => "8.x"
+    ],
     // 7.x versions
     "cod" => [
         "name" =>"Conference Organizing Distribution",
