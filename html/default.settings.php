@@ -30,6 +30,7 @@ if ($debug) {
 
 // Google Analytics code
 $google_analytics_code = "";
+$google_optimize_code = "";
 
 // Sharethis property
 $sharethis = "";
