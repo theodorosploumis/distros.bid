@@ -23,9 +23,9 @@ require_once __DIR__ . '/distributions.php';
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:300,400" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="20x20" href="favicon.png">
-
-    <?php print googleAnalyticsOptimize($google_analytics_code, $google_optimize_code); ?>
+    
     <?php print googleOptimize($google_optimize_code); ?>
+    <?php print googleAnalyticsOptimize($google_analytics_code, $google_optimize_code); ?>
     <?php print shareThis($sharethis); ?>
 
 </head>
