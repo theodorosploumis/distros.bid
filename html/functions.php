@@ -105,6 +105,10 @@ function googleAnalyticsOptimize($google_analytics_id, $google_optimize_id) {
     return $script;
 }
 
+/**
+ * @param string $google_optimize_id
+ * @return string
+ */
 function googleOptimize($google_optimize_id) {
     $script = "";
 
