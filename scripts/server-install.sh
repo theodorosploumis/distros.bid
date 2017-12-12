@@ -171,5 +171,4 @@ sysctl vm.swappiness=10 && \
 sysctl vm.vfs_cache_pressure=50
 
 # Crontab task
-# */5 * * * * docker kill $(docker ps --format "{{.ID}} {{.Status}} {{.Image}}" | grep "drupal8" |  awk '{ minutes=$3; metrics=$4; max=3; if (minutes >= max && metrics == "minutes") print $3; }')
-#
+# */5 * * * * docker kill $(docker ps --format "{{.ID}} {{.Status}} {{.Image}}" | grep "drupal8" |  awk '{ minutes=$3; metrics=$4; max=59; if (minutes >= max && metrics == "minutes") print $3; }')

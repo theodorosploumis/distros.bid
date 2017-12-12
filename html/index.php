@@ -76,10 +76,12 @@ require_once __DIR__ . '/distributions.php';
 
             <input id="submit-button" type="submit" value="Create site">
 
-            <span>*Notice: Sites are available for 30 minutes.</span>
+            <span><sup>*</sup>Notice: Sites are available for <b>59 minutes</b>.</span>
+            <div><sup>**</sup>Currently running sites: <b><?php print exec("docker ps -q --format '{{.ID}} {{.Image}}' | grep 'drupal8' | wc -l"); ?> </b>.</div>
         </form>
     </div>
 
+    docker ps -q $1 | wc -l
     <div>
         <h2>Available Drupal Distributions</h2>
         <?php plainDistros($distros); ?>

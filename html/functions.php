@@ -67,7 +67,6 @@ function googleAdsense($adsense = "") {
     return $text;
 }
 
-
 /**
  * @param string $code
  * @return string
