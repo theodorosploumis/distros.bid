@@ -45,7 +45,7 @@ a:focus {
   margin-bottom: 10px;
 }
 
-sup {
+h1 sup {
   font-weight: normal;
   letter-spacing: -1px;
   font-size: 14px;

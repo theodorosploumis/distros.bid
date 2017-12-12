@@ -81,7 +81,6 @@ require_once __DIR__ . '/distributions.php';
         </form>
     </div>
 
-    docker ps -q $1 | wc -l
     <div>
         <h2>Available Drupal Distributions</h2>
         <?php plainDistros($distros); ?>
