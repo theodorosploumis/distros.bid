@@ -39,9 +39,9 @@ require_once __DIR__ . '/distributions.php';
     <p class="info">
         <b>Drupal Admin</b> (/user)<br>
         <br>
-        <br>
         <b>username:</b> admin<br>
         <b>password:</b> admin<br>
+        <b>email:</b> admin@example.com<br>
     </p>
     <p class="info">
         <b>Adminer</b> (/adminer.php)<br>
