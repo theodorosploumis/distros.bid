@@ -12,6 +12,11 @@ $distros = [
         "path" => "https://www.drupal.org/project/bear",
         "version" => "8.x"
     ],
+    "bene" => [
+      "name" =>"Bene",
+      "path" => "https://github.com/thinkshout/bene",
+      "version" => "8.x"
+    ],
     "brainstorm" => [
         "name" =>"Brainstorm",
         "path" => "https://www.drupal.org/project/brainstorm_profile",

@@ -19,6 +19,7 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | Latest | [images/latest](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/latest/Dockerfile/) | latest | - |
 | [aGov](https://www.drupal.org/project/agov) | [images/agov](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/agov/Dockerfile/) | agov | 8.x-1.3 |
 | [Bear](https://www.drupal.org/project/bear) | [images/bear](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/bear/Dockerfile/) | bear | 8.x-2.0-alpha3 |
+| [Bene](https://www.drupal.org/project/bene) | [images/bene](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/bene/Dockerfile/) | bene | 8.x |
 | [Brainstorm](https://www.drupal.org/project/brainstorm_profile) | [images/brainstorm_profile](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/brainstorm_profile/Dockerfile/) | brainstorm | 8.x-1.0-beta2 |
 | [Conference Organizing](https://www.drupal.org/project/cod) | [images/cod](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/cod/Dockerfile/) | cod | 7.x-2.0-rc3 |
 | [Commerce Kickstart](https://www.drupal.org/project/commerce_kickstart) | [images/commerce_kickstart](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commerce_kickstart/Dockerfile/) | commercekickstart | 7.x-2.50 |
