@@ -52,7 +52,7 @@ if (!isset($_GET['g-recaptcha-response']) || $_GET['g-recaptcha-response'] == ""
 
 if (isset($_GET['distro'])) {
     $distro = $_GET['distro'];
-    $distro = preg_replace('/[^a-z]/', '', $distro);
+    //$distro = preg_replace('/[^a-z]/', '', $distro);
     $selected_image = $docker_image . ":" . $distro;
 } else {
     header("HTTP/1.0 404 Not Found");
