@@ -27,13 +27,13 @@ $distros = [
         "path" => "https://www.drupal.org/project/df",
         "version" => "8.x"
     ],
-    "drupal" => [
-        "name" =>"Drupal (core) stable",
+    "drupal-8.4.4" => [
+        "name" =>"Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.x"
+        "version" => "8.4.4"
     ],
     "drupal-8.5.0-alpha1" => [
-        "name" =>"Drupal (core) 8.5.0-alpha1",
+        "name" =>"Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
         "version" => "8.5.0-alpha1"
     ],
