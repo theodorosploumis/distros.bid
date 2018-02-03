@@ -123,6 +123,11 @@ $distros = [
         "path" => "https://www.drupal.org/project/commons",
         "version" => "7.x"
     ],
+    "drupal-7.56" => [
+      "name" =>"Drupal (core)",
+      "path" => "https://www.drupal.org/project/drupal",
+      "version" => "7.56"
+    ],
     "govcms" => [
         "name" =>"govCMS",
         "path" => "https://www.drupal.org/project/govcms",
