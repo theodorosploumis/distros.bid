@@ -121,7 +121,7 @@ try {
 
 $text = "";
 $text .= "<html><head><title>Preparing your site...</title>";
-$text .= "<style>.load {width:400px;height:300px;margin:0 auto;}</style>";
+$text .= "<style>.load {width:400px;height:300px;margin:0 auto;text-align:center;}</style>";
 $text .= "</head><body><div class='load'><img src='loading.gif'><br><img src='logo.png'></div></body></html>";
 
 print $text;
