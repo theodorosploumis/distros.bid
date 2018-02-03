@@ -141,7 +141,7 @@ function shareThis($id) {
 function footerMessage() {
     $text = "";
     $text .= '&copy; 2017 - ';
-    $text .= <?php echo date("Y"); ?>;
+    $text .= date('Y');
     $text .= ' <a href="https://www.theodorosploumis.com/en">TheodorosPloumis</a>';
     $text .= ' | ';
     $text .= "<a href='https://github.com/theodorosploumis/drupal-docker-distros'>Github</a>";
