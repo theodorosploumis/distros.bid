@@ -5,7 +5,7 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 ENV NEWDISTRO="vardoc" \
     PROFILE="vardoc" \
     DOCROOT="/var/www/html/docroot" \
-    PACKAGE="vardot/vardoc-project:^8.1.0-beta2"
+    PACKAGE="vardot/vardoc-project:^8.1.0-rc2"
 
 RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
     --quiet --no-ansi --no-dev --no-interaction --no-progress
