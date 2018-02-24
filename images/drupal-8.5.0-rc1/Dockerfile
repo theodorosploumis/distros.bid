@@ -3,7 +3,7 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="drupal-8.5.0-alpha1" \
+ENV NEWDISTRO="drupal-8.5.0-rc1" \
     PROFILE="standard"
 
 # Download distro (8.x) on html folder

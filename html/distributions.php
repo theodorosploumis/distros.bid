@@ -27,15 +27,20 @@ $distros = [
         "path" => "https://www.drupal.org/project/df",
         "version" => "8.x"
     ],
-    "drupal-8.4.4" => [
+    "drupal-8.4.5" => [
         "name" =>"Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.4.4"
+        "version" => "8.4.5"
     ],
-    "drupal-8.5.0-alpha1" => [
+    "drupal-8.5.0-rc1" => [
         "name" =>"Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.5.0-alpha1"
+        "version" => "8.5.0-rc1"
+    ],
+    "drupal-8.5.0-rc1-umami" => [
+      "name" =>"Drupal (core)",
+      "path" => "https://www.drupal.org/project/drupal",
+      "version" => "8.5.0-rc1-umami"
     ],
     "druppio" => [
         "name" =>"Druppio",
@@ -123,10 +128,10 @@ $distros = [
         "path" => "https://www.drupal.org/project/commons",
         "version" => "7.x"
     ],
-    "drupal-7.56" => [
+    "drupal-7.57" => [
       "name" =>"Drupal (core)",
       "path" => "https://www.drupal.org/project/drupal",
-      "version" => "7.56"
+      "version" => "7.57"
     ],
     "govcms" => [
         "name" =>"govCMS",
