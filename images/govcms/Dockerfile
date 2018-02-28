@@ -2,7 +2,7 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="govcms-7.x-2.14" \
+ENV NEWDISTRO="govcms-7" \
     PROFILE="govcms"
 
 # Download distro on html folder
