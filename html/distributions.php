@@ -32,15 +32,15 @@ $distros = [
         "path" => "https://www.drupal.org/project/drupal",
         "version" => "8.4.5"
     ],
-    "drupal-8.5.0-rc1" => [
+    "drupal-8.5.0" => [
         "name" =>"Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.5.0-rc1"
+        "version" => "8.5.0"
     ],
-    "drupal-8.5.0-rc1-umami" => [
+    "drupal-8.5.0-umami" => [
       "name" =>"Drupal (core)",
       "path" => "https://www.drupal.org/project/drupal",
-      "version" => "8.5.0-rc1-umami"
+      "version" => "8.5.0-umami"
     ],
     "druppio" => [
         "name" =>"Druppio",

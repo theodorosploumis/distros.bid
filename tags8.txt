@@ -19,5 +19,5 @@
 18 seeds
 19 wxt
 20 bene
-21 drupal-8.5.0-rc1
-22 drupal-8.5.0-rc1-umami
+21 drupal-8.5.0
+22 drupal-8.5.0-umami
