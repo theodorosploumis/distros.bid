@@ -3,7 +3,7 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="easy_booking" \
+ENV NEWDISTRO="easy_booking-7.x-2.x-dev" \
     PROFILE="easy_booking"
 
 # Download distro (8.x) on html folder
