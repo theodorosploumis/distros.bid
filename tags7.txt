@@ -5,3 +5,4 @@
 05 govcms
 06 openatrium
 07 openoutreach
+08 easy_booking

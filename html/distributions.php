@@ -128,6 +128,11 @@ $distros = [
       "path" => "https://www.drupal.org/project/drupal",
       "version" => "7.57"
     ],
+    "easy_booking" => [
+      "name" =>"Easy Booking",
+      "path" => "https://www.drupal.org/project/easy_booking",
+      "version" => "7.x"
+    ],
     "govcms" => [
         "name" =>"govCMS",
         "path" => "https://www.drupal.org/project/govcms",
