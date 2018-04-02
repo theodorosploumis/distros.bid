@@ -8,4 +8,6 @@ chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && service mysql start
 
 /usr/sbin/apache2ctl start
 
+[[ $(service mysql status) =~ running ]] || service mysql restart
+
 tail -f /var/log/apache2/access.log
