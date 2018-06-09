@@ -18,19 +18,19 @@ RUN apt-get update && \
     vim-tiny \
     unzip \
     mysql-server \
-    php7.0 \
-    php7.0-cli \
-    php7.0-curl \
-    php7.0-common \
-    php7.0-mbstring \
-    php7.0-gd \
-    php7.0-intl \
-    php7.0-xml \
-    php7.0-json \
-    php7.0-mysql \
-    php7.0-mcrypt \
-    php7.0-zip \
-    libapache2-mod-php7.0 && \
+    php7.1 \
+    php7.1-cli \
+    php7.1-curl \
+    php7.1-common \
+    php7.1-mbstring \
+    php7.1-gd \
+    php7.1-intl \
+    php7.1-xml \
+    php7.1-json \
+    php7.1-mysql \
+    php7.1-mcrypt \
+    php7.1-zip \
+    libapache2-mod-php7.1 && \
     apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/archive.*
