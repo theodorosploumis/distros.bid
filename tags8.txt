@@ -20,3 +20,4 @@
 19 wxt
 20 drupal-8.5.0
 21 drupal-8.5.0-umami
+22 droopler

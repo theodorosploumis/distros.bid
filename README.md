@@ -23,6 +23,7 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | [Conference Organizing](https://www.drupal.org/project/cod) | [images/cod](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/cod/Dockerfile/) | cod | 7.x-2.0-rc3 |
 | [Commerce Kickstart](https://www.drupal.org/project/commerce_kickstart) | [images/commerce_kickstart](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commerce_kickstart/Dockerfile/) | commercekickstart | 7.x-2.52 |
 | [Demo Framework](https://www.drupal.org/project/df) | [images/df](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/df/Dockerfile/) | df | 8.x-2.0-rc9 |
+| [Droopler 8.x-1.1](https://www.drupal.org/project/droopler) | [images/droopler](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/droopler/Dockerfile/) | droopler | 8.x-1.1 |
 | [Drupal 7.57](https://www.drupal.org/project/drupal) | [images/drupal-7.57](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-7.57/Dockerfile/) | drupal-7.57 | 7.57 |
 | [Drupal 8.4.5](https://www.drupal.org/project/drupal) | [images/drupal-8.4.5](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-8.4.5/Dockerfile/) | drupal-8.4.5 | 8.4.5 |
 | [Drupal 8.5.0](https://www.drupal.org/project/drupal) | [images/drupal-8.5.0](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-8.5.0/Dockerfile/) | drupal-8.5.0 | 8.5.0 |
