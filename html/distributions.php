@@ -22,11 +22,11 @@ $distros = [
         "path" => "https://www.drupal.org/project/df",
         "version" => "8.x"
     ],
-    "droopler" => [
-      "name" =>"Droopler",
-      "path" => "https://www.drupal.org/project/droopler",
-      "version" => "8.x"
-    ],
+//    "droopler" => [
+//      "name" =>"Droopler",
+//      "path" => "https://www.drupal.org/project/droopler",
+//      "version" => "8.x"
+//    ],
     "drupal-8.4.5" => [
         "name" =>"Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
