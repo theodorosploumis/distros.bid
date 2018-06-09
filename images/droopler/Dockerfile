@@ -10,7 +10,7 @@ ENV NEWDISTRO="droopler-8.x-1.1" \
 RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
 
 # Install missing packages
-RUN COMPOSER=composer.json composer install
+RUN COMPOSER=composer.json composer install --ignore-platform-reqs
 
 RUN composer clear-cache
 
