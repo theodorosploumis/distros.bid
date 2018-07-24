@@ -83,10 +83,11 @@ COPY terminal.php install.sh prepare-install.sh /var/www/
 #COPY my.cnf /root/.my.cnf
 
 # Create database, user and password, all as "drupal"
-RUN /etc/init.d/mysql start && \
-    cat /var/log/mysql/error.log && \
-    mysql -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
-    mysql -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
+RUN service mysql status
+
+#RUN cat /var/log/mysql/error.log && \
+#    mysql -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
+#    mysql -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
 
 WORKDIR /var/www/html
 
@@ -99,5 +100,10 @@ RUN mkdir -p /var/log/supervisor && \
 COPY config/supervisor.conf /etc/supervisor.conf
 COPY config/apache2.conf /etc/supervisor/conf.d/
 COPY config/mysql.conf /etc/supervisor/conf.d/
+
+RUN supervisord -c /etc/supervisor.conf && \
+    cat /var/log/mysql/error.log && \
+    mysql -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
+    mysql -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
 
 CMD ["supervisord", "-c", "/etc/supervisor.conf"]
