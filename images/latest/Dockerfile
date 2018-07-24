@@ -18,6 +18,7 @@ RUN apt-get update && \
     vim-tiny \
     unzip \
     mysql-server \
+    supervisor \
     php7.1 \
     php7.1-cli \
     php7.1-curl \
@@ -77,10 +78,6 @@ RUN mkdir -p /var/www/config/sync && \
 # Clear html folder
 RUN rm -r /var/www/html/*
 
-# Enrtypoint script
-COPY entrypoint.sh /
-RUN chmod +x /entrypoint.sh
-
 # MySQL settings/root/.my.cnf
 #COPY my.cnf /root/.my.cnf
 
@@ -94,4 +91,12 @@ WORKDIR /var/www/html
 
 EXPOSE 80
 
-ENTRYPOINT ["/entrypoint.sh"]
+# Supervisor base configuration
+RUN mkdir -p /var/log/supervisor && \
+    mkdir -p /etc/supervisor/conf.d
+
+COPY config/supervisor.conf /etc/supervisor.conf
+COPY config/apache2.conf /etc/supervisor/conf.d/
+COPY config/mysql.conf /etc/supervisor/conf.d/
+
+CMD ["supervisord", "-c", "/etc/supervisor.conf"]
