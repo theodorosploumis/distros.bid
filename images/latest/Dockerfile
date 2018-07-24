@@ -15,7 +15,7 @@ RUN apt-get update && \
     wget \
     git \
     cron \
-    vim-tiny \
+    vim \
     unzip \
     mysql-server \
     supervisor \
@@ -31,8 +31,9 @@ RUN apt-get update && \
     php7-mysql \
     php7-mcrypt \
     php7-zip \
-    libapache2-mod-php7 && \
-    apt-get clean && \
+    libapache2-mod-php7
+
+RUN apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/archive.*
 
