@@ -27,20 +27,20 @@ $distros = [
      "path" => "https://www.drupal.org/project/droopler",
      "version" => "8.x"
    ],
-    "drupal-8.4.5" => [
+    "drupal-8.5.5" => [
         "name" =>"Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.4.5"
+        "version" => "8.5.5"
     ],
-    "drupal-8.5.0" => [
-        "name" =>"Drupal (core)",
-        "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.5.0"
-    ],
-    "drupal-8.5.0-umami" => [
+    "drupal-8.5.5-umami" => [
       "name" =>"Drupal (core)",
       "path" => "https://www.drupal.org/project/drupal",
-      "version" => "8.5.0-umami"
+      "version" => "8.5.5-umami"
+    ],
+    "drupal-8.6.0-alpha1" => [
+      "name" =>"Drupal (core)",
+      "path" => "https://www.drupal.org/project/drupal",
+      "version" => "8.6.0-alpha1"
     ],
     "druppio" => [
         "name" =>"Druppio",
@@ -128,10 +128,10 @@ $distros = [
         "path" => "https://www.drupal.org/project/commons",
         "version" => "7.x"
     ],
-    "drupal-7.57" => [
+    "drupal-7.59" => [
       "name" =>"Drupal (core)",
       "path" => "https://www.drupal.org/project/drupal",
-      "version" => "7.57"
+      "version" => "7.59"
     ],
     "easy_booking" => [
       "name" =>"Easy Booking",

@@ -2,7 +2,7 @@
 01 agov
 02 bear
 03 brainstorm
-04 drupal-8.4.5
+04 drupal-8.6.0-alpha1
 05 druppio
 06 lightning
 07 multipurposecorporate
@@ -18,6 +18,6 @@
 17 df
 18 seeds
 19 wxt
-20 drupal-8.5.0
-21 drupal-8.5.0-umami
+20 drupal-8.5.5
+21 drupal-8.5.5-umami
 22 droopler
