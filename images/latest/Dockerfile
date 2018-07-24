@@ -19,19 +19,19 @@ RUN apt-get update && \
     unzip \
     mysql-server \
     supervisor \
-    php7.1 \
-    php7.1-cli \
-    php7.1-curl \
-    php7.1-common \
-    php7.1-mbstring \
-    php7.1-gd \
-    php7.1-intl \
-    php7.1-xml \
-    php7.1-json \
-    php7.1-mysql \
-    php7.1-mcrypt \
-    php7.1-zip \
-    libapache2-mod-php7.1 && \
+    php7 \
+    php7-cli \
+    php7-curl \
+    php7-common \
+    php7-mbstring \
+    php7-gd \
+    php7-intl \
+    php7-xml \
+    php7-json \
+    php7-mysql \
+    php7-mcrypt \
+    php7-zip \
+    libapache2-mod-php7 && \
     apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/archive.*
