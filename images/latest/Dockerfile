@@ -4,8 +4,8 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
 ENV DEBIAN_FRONTEND=noninteractive \
-    DRUSH="8.1.15" \
-    COMPOSER="1.5.2"
+    DRUSH="8.1.17" \
+    COMPOSER="1.6.5"
 
 # Install software
 RUN apt-get update && \
@@ -84,6 +84,7 @@ COPY terminal.php install.sh prepare-install.sh /var/www/
 
 # Create database, user and password, all as "drupal"
 RUN /etc/init.d/mysql start && \
+    cat /var/log/mysql.log && \
     mysql -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
     mysql -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
 
