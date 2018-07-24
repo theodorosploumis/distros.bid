@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
@@ -19,19 +19,18 @@ RUN apt-get update && \
     unzip \
     mysql-server \
     supervisor \
-    php7 \
-    php7-cli \
-    php7-curl \
-    php7-common \
-    php7-mbstring \
-    php7-gd \
-    php7-intl \
-    php7-xml \
-    php7-json \
-    php7-mysql \
-    php7-mcrypt \
-    php7-zip \
-    libapache2-mod-php7
+    php \
+    php-cli \
+    php-curl \
+    php-common \
+    php-mbstring \
+    php-gd \
+    php-intl \
+    php-xml \
+    php-json \
+    php-mysql \
+    php-zip \
+    libapache2-mod-php
 
 RUN apt-get clean && \
     apt-get autoremove && \
