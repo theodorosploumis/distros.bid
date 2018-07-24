@@ -47,11 +47,6 @@ RUN mkdir /usr/share/adminer && \
     echo "Alias /adminer.php /usr/share/adminer/adminer.php" | tee /etc/apache2/conf-available/adminer.conf && \
     a2enconf adminer.conf
 
-# Create database, user and password, all as "drupal"
-RUN service mysql start && \
-    mysql -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
-    mysql -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
-
 # Apache2 settings
 RUN echo '<Directory "/var/www/html">' >> /etc/apache2/apache2.conf && \
     echo 'AllowOverride All' >> /etc/apache2/apache2.conf && \
@@ -78,14 +73,19 @@ RUN mkdir -p /var/www/config/sync && \
 # Clear html folder
 RUN rm -r /var/www/html/*
 
-# MySQL settings/root/.my.cnf
-#COPY my.cnf /root/.my.cnf
-
 # Copy several scrips
 COPY terminal.php install.sh prepare-install.sh /var/www/
 
 # Setup cron job
 #RUN crontab -l | { cat; echo "0 0 0 0 0 exit"; } | crontab -
+
+# MySQL settings/root/.my.cnf
+#COPY my.cnf /root/.my.cnf
+
+# Create database, user and password, all as "drupal"
+RUN /usr/bin/mysqld_safe && \
+    mysql -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
+    mysql -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
 
 WORKDIR /var/www/html
 
