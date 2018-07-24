@@ -84,7 +84,7 @@ COPY terminal.php install.sh prepare-install.sh /var/www/
 
 # Create database, user and password, all as "drupal"
 RUN /etc/init.d/mysql start && \
-#    cat /var/log/mysql/error.log && \
+    cat /var/log/mysql/error.log && \
     mysql -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
     mysql -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
 
