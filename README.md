@@ -54,12 +54,12 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | :---        | :---   |
 | adminer     | 4.3.1  |
 | **apache2** | 2.4.18 |
-| composer    | 1.5.2  |
+| composer    | 1.6.5  |
 | curl        | 7.47.0 |
-| **drush**   | 8.1.15 |
+| **drush**   | 8.1.17 |
 | git         | 2.7.4  |
 | **mysql**   | 5.7.20 |
-| **php**     | 7.0    |
+| **php**     | 7.2    |
 | vi          | 7.4    |
 | wget        | 1.17.1 |
 
