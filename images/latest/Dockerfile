@@ -84,8 +84,8 @@ COPY terminal.php install.sh prepare-install.sh /var/www/
 #COPY my.cnf /root/.my.cnf
 
 # Create database, user and password, all as "drupal"
-RUN mysql -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
-    mysql -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
+RUN /usr/bin/mysql -h localhost -P 3306 --protocol=tcp -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
+    /usr/bin/mysql -h localhost -P 3306 --protocol=tcp -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
 
 WORKDIR /var/www/html
 
