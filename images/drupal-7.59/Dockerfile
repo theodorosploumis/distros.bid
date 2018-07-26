@@ -9,6 +9,9 @@ ENV NEWDISTRO="drupal-7.59" \
 # Download distro on html folder
 RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
 
+# Create database
+RUN bash /var/www/database-install.sh
+
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
 
