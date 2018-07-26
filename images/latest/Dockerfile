@@ -30,7 +30,7 @@ RUN apt-get update && \
     php-json \
     php-mysql \
     php-zip \
-    php-sqlite \
+    php-sqlite3 \
     libapache2-mod-php
 
 RUN apt-get clean && \
