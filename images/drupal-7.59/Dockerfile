@@ -6,7 +6,7 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 ENV NEWDISTRO="drupal-7.59" \
     PROFILE="standard"
 
-# Download distro (8.x) on html folder
+# Download distro on html folder
 RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
 
 # Prepare installation

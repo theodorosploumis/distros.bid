@@ -6,11 +6,6 @@ if [ -z ${DOCROOT} ]
     DOCROOT="/var/www/html";
 fi
 
-if [ z ${DOCROOT}/vendor/bin/drush ]
-  then
-    alias drush="${DOCROOT}/vendor/bin/drush";
-fi
-
 # Install site
 service mysql start && \
 service apache2 start && \
