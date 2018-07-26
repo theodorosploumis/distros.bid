@@ -10,7 +10,7 @@ ENV NEWDISTRO="drupal-8.5.5" \
 RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
 
 # Create database
-RUN bash /var/www/database-install.sh
+RUN bash /var/www/create-database.sh
 
 # Prepare installation
 RUN bash /var/www/prepare-install.sh
