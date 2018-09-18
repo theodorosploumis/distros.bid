@@ -1,6 +1,6 @@
 #!/bin/sh
 # Custom script to install software on the server. Run with 'sudo'.
-# Change variables according to your neeeds
+# Change variables according to your needs
 
 DOMAIN="distros.bid"
 SUBDOMAIN="drupal.distros.bid"
