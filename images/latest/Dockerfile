@@ -42,7 +42,7 @@ RUN phpenmod pdo_mysql && \
     a2enmod rewrite actions proxy_fcgi setenvif
 
 # Copy several scrips
-COPY terminal.php install.sh prepare-install.sh create-database.sh /var/www/
+COPY terminal.php install.sh install-sqlite.sh prepare-install.sh create-database.sh /var/www/
 
 # MySQL settings/root/.my.cnf
 #COPY my.cnf /root/.my.cnf
