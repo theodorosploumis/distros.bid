@@ -16,4 +16,4 @@ RUN bash /var/www/create-database.sh
 RUN bash /var/www/prepare-install.sh
 
 # Install Drupal
-RUN bash /var/www/install.sh
+RUN bash /var/www/install-sqlite.sh

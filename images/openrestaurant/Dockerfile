@@ -24,4 +24,4 @@ RUN sed -i 's/2000000/'"0"'/g' /var/www/html/web/sites/default/default.services.
 
 # Install Drupal
 WORKDIR ${DOCROOT}
-RUN bash /var/www/install.sh
+RUN bash /var/www/install-sqlite.sh
