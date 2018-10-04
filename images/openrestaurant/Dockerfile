@@ -5,7 +5,7 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 ENV NEWDISTRO="openrestaurant" \
     PROFILE="openrestaurant" \
     DOCROOT="/var/www/html/web" \
-    PACKAGE="openrestaurant/openrestaurant-project:2.2.0"
+    PACKAGE="openrestaurant/openrestaurant-project"
 
 RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
     --quiet --no-ansi --no-dev --no-interaction --no-progress
