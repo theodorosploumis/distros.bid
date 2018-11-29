@@ -38,7 +38,8 @@ $distros = [
       "version" => "8.5.5-umami"
     ],
     "drupal-8.6.1" => [
-      "name" =>"Drupal (core)",
+      "name" =>"Drupal (
+      core)",
       "path" => "https://www.drupal.org/project/drupal",
       "version" => "8.6.1"
     ],

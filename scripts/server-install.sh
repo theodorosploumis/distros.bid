@@ -22,13 +22,10 @@ ELKPORT1="9200"
 ELKPORT2="9201"
 ELKPORT3="9202"
 
-# Change timezone manually
-#dpkg-reconfigure tzdata
-
 # Generic software
 apt-get -qqy update
-apt-get install -y git wget vim zip apache2 php7.0 php7.0-mbstring \
-        python-certbot-apache
+apt-get install -y git wget vim zip apache2 php7 php7-mbstring \
+        python-certbot-apache -t stretch-backports
 
 # Install Let's Encrypt
 if [ "${INSTALL_LETSENCYPT}" -eq "1" ]; then
@@ -138,10 +135,10 @@ COMPOSER=composer.json composer install --quiet --no-dev --no-interaction --no-p
 mkdir -p /var/www/${SUBDOMAIN}
 yes | cp -f /var/www/distros/scripts/000-default.conf /etc/apache2/sites-available/000-default.conf
 yes | cp -f /var/www/distros/scripts/"${SUBDOMAIN}".conf /etc/apache2/sites-available/"${SUBDOMAIN}".conf
+a2enmod rewrite
+a2ensite "${DOMAIN}"
+a2ensite "${SUBDOMAIN}"
 service apache2 reload
-
-# Install DogitalOcean monitoring
-#curl -sSL https://agent.digitalocean.com/install.sh | sh
 
 # Pull all docker images
 bash /var/www/distros/scripts/pull-images.sh
@@ -172,3 +169,7 @@ sysctl vm.vfs_cache_pressure=50
 
 # Crontab task
 # */5 * * * * docker kill $(docker ps --format "{{.ID}} {{.Status}} {{.Image}}" | grep "drupal8" |  awk '{ minutes=$3; metrics=$4; max=40; if (minutes >= max && metrics == "minutes") print $3; }')
+
+# Manually actions
+# Set timezone
+echo -n "Run: dpkg-reconfigure tzdata"
