@@ -49,10 +49,10 @@ chmod 444 /var/www/distros/html/settings.php
 # Docker. Notice that we do not install latest Docker to support Rancher
 # as also as Docker-php sdk.
 # curl https://get.docker.com | sh
-curl https://releases.rancher.com/install-docker/1.12.sh | sh
+curl https://releases.rancher.com/install-docker/18.09.sh | sh
 
 # Docker-compose
-curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` \
+curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` \
 -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
