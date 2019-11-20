@@ -4,8 +4,8 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
 ENV DEBIAN_FRONTEND=noninteractive \
-    DRUSH="8.1.17" \
-    COMPOSER="1.6.5"
+    DRUSH="8.3.1" \
+    COMPOSER="1.9.1"
 
 # Install software
 RUN apt-get update && \
