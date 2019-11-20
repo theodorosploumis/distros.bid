@@ -3,154 +3,153 @@
 // Array of available distros grouped by drupal version
 $distros = [
     "agov" => [
-        "name" =>"aGov",
+        "name" => "aGov",
         "path" => "https://www.drupal.org/project/agov",
         "version" => "8.x"
     ],
     "bear" => [
-        "name" =>"Bear",
+        "name" => "Bear",
         "path" => "https://www.drupal.org/project/bear",
         "version" => "8.x"
     ],
     "brainstorm" => [
-        "name" =>"Brainstorm",
+        "name" => "Brainstorm",
         "path" => "https://www.drupal.org/project/brainstorm_profile",
         "version" => "8.x"
     ],
     "df" => [
-        "name" =>"Demo Framework",
+        "name" => "Demo Framework",
         "path" => "https://www.drupal.org/project/df",
         "version" => "8.x"
     ],
    "droopler" => [
-     "name" =>"Droopler",
+     "name" => "Droopler",
      "path" => "https://www.drupal.org/project/droopler",
      "version" => "8.x"
    ],
-    "drupal-8.5.5" => [
-        "name" =>"Drupal (core)",
+    "drupal-8.7.10" => [
+      "name" => "Drupal (core)",
+      "path" => "https://www.drupal.org/project/drupal",
+      "version" => "8.7.10"
+    ],
+    "drupal-8.7.10-umami" => [
+        "name" => "Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.5.5"
+        "version" => "8.7.10-umami"
     ],
-    "drupal-8.5.5-umami" => [
-      "name" =>"Drupal (core)",
-      "path" => "https://www.drupal.org/project/drupal",
-      "version" => "8.5.5-umami"
-    ],
-    "drupal-8.6.1" => [
-      "name" =>"Drupal (
-      core)",
-      "path" => "https://www.drupal.org/project/drupal",
-      "version" => "8.6.1"
+    "drupal-8.8.0-beta1" => [
+        "name" => "Drupal (core)",
+        "path" => "https://www.drupal.org/project/drupal",
+        "version" => "8.8.0-beta1"
     ],
     "druppio" => [
-        "name" =>"Druppio",
+        "name" => "Druppio",
         "path" => "https://www.drupal.org/project/druppio_small_business_distribution",
         "version" => "8.x"
     ],
     "lightning" => [
-        "name" =>"Lightning",
+        "name" => "Lightning",
         "path" => "https://www.drupal.org/project/lightning",
         "version" => "8.x"
     ],
     "multipurposecorporate" => [
-        "name" =>"Multipurpose Corporate Profile",
+        "name" => "Multipurpose Corporate Profile",
         "path" => "https://www.drupal.org/project/multipurpose_corporate_profile",
         "version" => "8.x"
     ],
     "opendoor" => [
-        "name" =>"Open door",
+        "name" => "Open door",
         "path" => "https://www.drupal.org/project/open_door",
         "version" => "8.x"
     ],
     "openchurch" => [
-        "name" =>"OpenChurch",
+        "name" => "OpenChurch",
         "path" => "https://www.drupal.org/project/openchurch",
         "version" => "8.x"
     ],
     "openrestaurant" => [
-        "name" =>"Open Restaurant",
+        "name" => "Open Restaurant",
         "path" => "https://www.drupal.org/project/openrestaurant",
         "version" => "8.x"
     ],
     "panopoly" => [
-        "name" =>"Panopoly",
+        "name" => "Panopoly",
         "path" => "https://www.drupal.org/project/panopoly",
         "version" => "8.x"
     ],
     "presto" => [
-        "name" =>"Presto",
+        "name" => "Presto",
         "path" => "https://www.drupal.org/project/presto",
         "version" => "8.x"
     ],
     "seeds" => [
-        "name" =>"Seeds",
+        "name" => "Seeds",
         "path" => "https://www.drupal.org/project/seeds",
         "version" => "8.x"
     ],
     "social" => [
-        "name" =>"Open Social",
+        "name" => "Open Social",
         "path" => "https://www.drupal.org/project/social",
         "version" => "8.x"
     ],
     "thunder" => [
-        "name" =>"Thunder",
+        "name" => "Thunder",
         "path" => "https://www.drupal.org/project/thunder",
         "version" => "8.x"
     ],
     "varbase" => [
-        "name" =>"Varbase",
+        "name" => "Varbase",
         "path" => "https://www.drupal.org/project/varbase",
         "version" => "8.x"
     ],
     "vardoc" => [
-        "name" =>"Vardoc",
+        "name" => "Vardoc",
         "path" => "https://www.drupal.org/project/vardoc",
         "version" => "8.x"
     ],
     "wxt" => [
-        "name" =>"Web Experience Toolkit",
+        "name" => "Web Experience Toolkit",
         "path" => "https://www.drupal.org/project/wxt",
         "version" => "8.x"
     ],
     // 7.x versions
     "cod" => [
-        "name" =>"Conference Organizing Distribution",
+        "name" => "Conference Organizing Distribution",
         "path" => "https://www.drupal.org/project/cod",
         "version" => "7.x"
     ],
     "commercekickstart" => [
-        "name" =>"Commerce Kickstart",
+        "name" => "Commerce Kickstart",
         "path" => "https://www.drupal.org/project/commerce_kickstart",
         "version" => "7.x"
     ],
     "commons" => [
-        "name" =>"Drupal Commons",
+        "name" => "Drupal Commons",
         "path" => "https://www.drupal.org/project/commons",
         "version" => "7.x"
     ],
-    "drupal-7.59" => [
+    "drupal-7.67" => [
       "name" =>"Drupal (core)",
       "path" => "https://www.drupal.org/project/drupal",
-      "version" => "7.59"
+      "version" => "7.67"
     ],
     "easy_booking" => [
-      "name" =>"Easy Booking",
+      "name" => "Easy Booking",
       "path" => "https://www.drupal.org/project/easy_booking",
       "version" => "7.x"
     ],
     "govcms" => [
-        "name" =>"govCMS",
+        "name" => "govCMS",
         "path" => "https://www.drupal.org/project/govcms",
         "version" => "7.x"
     ],
     "openatrium" => [
-        "name" =>"Open Atrium",
+        "name" => "Open Atrium",
         "path" => "https://www.drupal.org/project/openatrium",
         "version" => "7.x"
     ],
     "openoutreach" => [
-        "name" =>"Open Outreach",
+        "name" => "Open Outreach",
         "path" => "https://www.drupal.org/project/openoutreach",
         "version" => "7.x"
     ]

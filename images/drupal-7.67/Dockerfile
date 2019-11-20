@@ -3,7 +3,7 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="drupal-7.59" \
+ENV NEWDISTRO="drupal-7.67" \
     PROFILE="standard"
 
 # Download distro on html folder

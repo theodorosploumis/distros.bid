@@ -3,7 +3,7 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="drupal-8.5.5" \
+ENV NEWDISTRO="drupal-8.8.0-beta1" \
     PROFILE="standard"
 
 # Download distro on html folder
@@ -16,4 +16,4 @@ RUN bash /var/www/create-database.sh
 RUN bash /var/www/prepare-install.sh
 
 # Install Drupal
-RUN bash /var/www/install.sh
+RUN bash /var/www/install-sqlite.sh

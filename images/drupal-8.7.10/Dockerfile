@@ -3,8 +3,8 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="drupal-8.5.5" \
-    PROFILE="demo_umami"
+ENV NEWDISTRO="drupal-8.7.10" \
+    PROFILE="standard"
 
 # Download distro on html folder
 RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
