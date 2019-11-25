@@ -5,7 +5,7 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 ENV NEWDISTRO="seeds" \
     PROFILE="seeds" \
     DOCROOT="/var/www/html/public_html" \
-    PACKAGE="sprintive/seeds-project:^8.4.1"
+    PACKAGE="sprintive/seeds-project:^8.7.3"
 
 RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
     --quiet --no-ansi --no-dev --no-interaction --no-progress
@@ -22,4 +22,4 @@ RUN bash /var/www/prepare-install.sh
 
 # Install Drupal
 WORKDIR ${DOCROOT}
-RUN bash /var/www/install.sh
+RUN bash /var/www/install-sqlite.sh
