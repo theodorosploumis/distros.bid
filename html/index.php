@@ -28,6 +28,8 @@ require_once __DIR__ . '/distributions.php';
     <?php print googleAnalyticsOptimize($google_analytics_code, $google_optimize_code); ?>
     <?php print shareThis($sharethis); ?>
 
+<meta name="hilltopads-site-verification" content="1b724019e1ddb51adee90854b87e91de172afec5" />	
+
 </head>
 
 <body>

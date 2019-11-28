@@ -150,8 +150,7 @@ function footerMessage() {
 }
 
 function footerSponsor() {
-    $text = '<a href="https://www.vultr.com/?ref=7258956"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>';
-
+    $text = "";
     return $text;
 }
 
