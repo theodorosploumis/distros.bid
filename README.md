@@ -4,7 +4,7 @@
 
 ## About
 
-A list of Docker containers running several popular [Drupal 8.x and 7.x distributions](https://www.drupal.org/project/project_distribution) within LAMP stack.
+A list of Docker containers running several popular [Drupal 8.x and 7.x distributions](http://dgo.to/project_distribution) within LAMP stack.
 
 ## Try online
 
@@ -17,36 +17,37 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 | Name | Dockerfile | Tag | Drupal version |
 |:---  |:---------- |:--- | :--------------|
 | Latest | [images/latest](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/latest/Dockerfile/) | latest | - |
-| [aGov](https://www.drupal.org/project/agov) | [images/agov](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/agov/Dockerfile/) | agov | 8.x-1.4 |
-| [Bear](https://www.drupal.org/project/bear) | [images/bear](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/bear/Dockerfile/) | bear | 8.x-2.0-alpha3 |
-| [Brainstorm](https://www.drupal.org/project/brainstorm_profile) | [images/brainstorm_profile](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/brainstorm_profile/Dockerfile/) | brainstorm | 8.x-1.0-beta5 |
-| [Conference Organizing](https://www.drupal.org/project/cod) | [images/cod](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/cod/Dockerfile/) | cod | 7.x-2.0-rc3 |
-| [Commerce Kickstart](https://www.drupal.org/project/commerce_kickstart) | [images/commerce_kickstart](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commerce_kickstart/Dockerfile/) | commercekickstart | 7.x-2.52 |
-| [Demo Framework](https://www.drupal.org/project/df) | [images/df](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/df/Dockerfile/) | df | 8.x-2.0-rc9 |
-| [Droopler 8.x-1.1](https://www.drupal.org/project/droopler) | [images/droopler](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/droopler/Dockerfile/) | droopler | 8.x-1.1 |
-| [Drupal 7.67](https://www.drupal.org/project/drupal) | [images/drupal-7.67](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-7.59/Dockerfile/) | drupal-7.67 | 7.67 |
-| [Drupal 8.8.0-beta1](https://www.drupal.org/project/drupal) | [images/drupal-8.8.0-beta1](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-8.8.0-beta1/Dockerfile/) | drupal-8.8.0-beta1 | 8.8.0-beta1 |
-| [Drupal 8.7.10](https://www.drupal.org/project/drupal) | [images/drupal-8.7.10](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-8.7.10/Dockerfile/) | drupal-8.7.10 | 8.7.10 |
-| [Drupal Umami 8.7.10](https://www.drupal.org/project/drupal) | [images/drupal-8.7.10-umami](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-8.7.10-umami/Dockerfile/) | drupal-8.7.10-umami | 8.7.10 |
-| [Drupal Commons](https://www.drupal.org/project/commons) | [images/commons](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commons/Dockerfile/) | commons | 7.x-3.47 |
-| [Druppio](https://www.drupal.org/project/druppio_small_business_distribution) | [images/druppio_...](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/druppio_small_business_distribution/Dockerfile/) | druppio | 8.x-1.14 |
-| [Easy Booking](https://www.drupal.org/project/easy_booking) | [images/easy_booking](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/easy_booking/Dockerfile/) | easy_booking | 7.x-2.9 |
-| [govCMS](https://www.drupal.org/project/govcms) | [images/govcms](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/govcms/Dockerfile/) | govcms | 7.x-2.16 |
-| [Lightning](https://www.drupal.org/project/lightning) | [images/lightning](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/lightning/Dockerfile/) | lightning | 8.x-3.100 |
-| [Multipurpose Corporate](https://www.drupal.org/project/multipurpose_corporate_profile) | [images/multipurpose_...](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/multipurpose_corporate_profile/Dockerfile/) | multipurposecorporate | 8.x-1.0-beta4 |
-| [OpenAtrium](https://www.drupal.org/project/openatrium) | [images/openatrium](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openatrium/Dockerfile/) | openatrium | 7.x-2.626 |
-| [OpenChurch](https://www.drupal.org/project/openchurch) | [images/openchurch](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openchurch/Dockerfile/) | openchurch | 8.x-2.1 |
-| [Open Door](https://www.drupal.org/project/open_door) | [images/open_door](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/open_door/Dockerfile/) | opendoor | 8.x-1.0 |
-| [Open Outreach](https://www.drupal.org/project/openoutreach) | [images/openoutreach](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openoutreach/Dockerfile/) | openoutreach | 7.x-1.45 |
-| [OpenRestaurant](https://www.drupal.org/project/openrestaurant) | [images/openrestaurant](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openrestaurant/Dockerfile/) | openrestaurant | 8.x-2.20 |
-| [Open Social](https://www.drupal.org/project/social) | [images/social](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/social/Dockerfile/) | social | 8.x-1.11 |
-| [Panopoly](https://www.drupal.org/project/panopoly) | [images/panopoly](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/panopoly/Dockerfile/) | panopoly | 8.x-2.0-alpha7 |
-| [Presto](https://www.drupal.org/project/presto) | [images/presto](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/presto/Dockerfile/) | presto | 8.x-2.0 |
-| [Seeds](https://www.drupal.org/project/seeds) | [images/seeds](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/seeds/Dockerfile/) | seeds | 8.x-4.10 |
-| [Thunder](https://www.drupal.org/project/thunder) | [images/thunder](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/thunder/Dockerfile/) | thunder | 8.x-2.15 |
-| [Varbase](https://www.drupal.org/project/varbase) | [images/varbase](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/varbase/Dockerfile/) | varbase | 8.x-4.16 |
-| [Vardoc](https://www.drupal.org/project/vardoc) | [images/vardoc](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/vardoc/Dockerfile/) | vardoc | 8.x-1.0-rc2 |
-| [Web Experience Toolkit](https://www.drupal.org/project/wxt) | [images/wxt](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/wxt/Dockerfile/) | wxt | 8.x-2.100 |
+| [aGov](http://dgo.to/agov) | [images/agov](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/agov/Dockerfile/) | agov | 8.x-1.4 |
+| [Bear](http://dgo.to/bear) | [images/bear](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/bear/Dockerfile/) | bear | 8.x-2.0-alpha3 |
+| [Brainstorm](http://dgo.to/brainstorm_profile) | [images/brainstorm_profile](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/brainstorm_profile/Dockerfile/) | brainstorm | 8.x-1.0-beta5 |
+| [Conference Organizing](http://dgo.to/cod) | [images/cod](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/cod/Dockerfile/) | cod | 7.x-2.0-rc3 |
+| [Commerce Kickstart](http://dgo.to/commerce_kickstart) | [images/commerce_kickstart](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commerce_kickstart/Dockerfile/) | commercekickstart | 7.x-2.52 |
+| [Demo Framework](http://dgo.to/df) | [images/df](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/df/Dockerfile/) | df | 8.x-2.0-rc9 |
+| [Droopler 8.x-1.1](http://dgo.to/droopler) | [images/droopler](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/droopler/Dockerfile/) | droopler | 8.x-1.1 |
+| [Drupal 7.69](http://dgo.to/drupal) | [images/drupal-7.69](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-7.69/Dockerfile/) | drupal-7.69 | 7.69 |
+| [Drupal 8.8.5](http://dgo.to/drupal) | [images/drupal-8.8.5](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-8.8.0-beta1/Dockerfile/) | drupal-8.8.0-beta1 | 8.8.0-beta1 |
+| [Drupal Umami 8.8.5](http://dgo.to/drupal) | [images/drupal-8.8.5-umami](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-8.8.8-umami/Dockerfile/) | drupal-8.8.8-umami | 8.8.5 |
+| [Drupal 9.0.0-beta2](http://dgo.to/drupal) | [images/drupal-9.0.0-beta2](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/drupal-9.0.0-beta2/Dockerfile/) | drupal-9.0.0-beta2 | 9.0.0-beta2 |
+| [Drupal Commons](http://dgo.to/commons) | [images/commons](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/commons/Dockerfile/) | commons | 7.x-3.47 |
+| [Druppio](http://dgo.to/druppio_small_business_distribution) | [images/druppio_...](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/druppio_small_business_distribution/Dockerfile/) | druppio | 8.x-1.14 |
+| [Easy Booking](http://dgo.to/easy_booking) | [images/easy_booking](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/easy_booking/Dockerfile/) | easy_booking | 7.x-2.9 |
+| [govCMS](http://dgo.to/govcms) | [images/govcms](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/govcms/Dockerfile/) | govcms | 7.x-2.16 |
+| [Lightning](http://dgo.to/lightning) | [images/lightning](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/lightning/Dockerfile/) | lightning | 8.x-3.100 |
+| [Multipurpose Corporate](http://dgo.to/multipurpose_corporate_profile) | [images/multipurpose_...](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/multipurpose_corporate_profile/Dockerfile/) | multipurposecorporate | 8.x-1.0-beta4 |
+| [OpenAtrium](http://dgo.to/openatrium) | [images/openatrium](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openatrium/Dockerfile/) | openatrium | 7.x-2.626 |
+| [OpenChurch](http://dgo.to/openchurch) | [images/openchurch](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openchurch/Dockerfile/) | openchurch | 8.x-2.1 |
+| [Open Door](http://dgo.to/open_door) | [images/open_door](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/open_door/Dockerfile/) | opendoor | 8.x-1.0 |
+| [Open Outreach](http://dgo.to/openoutreach) | [images/openoutreach](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openoutreach/Dockerfile/) | openoutreach | 7.x-1.45 |
+| [OpenRestaurant](http://dgo.to/openrestaurant) | [images/openrestaurant](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/openrestaurant/Dockerfile/) | openrestaurant | 8.x-2.20 |
+| [Open Social](http://dgo.to/social) | [images/social](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/social/Dockerfile/) | social | 8.x-1.11 |
+| [Panopoly](http://dgo.to/panopoly) | [images/panopoly](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/panopoly/Dockerfile/) | panopoly | 8.x-2.0-alpha7 |
+| [Presto](http://dgo.to/presto) | [images/presto](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/presto/Dockerfile/) | presto | 8.x-2.0 |
+| [Rain](http://dgo.to/rain) | [images/rain](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/rain/Dockerfile/) | rain | 8.x-3.0 |
+| [Seeds](http://dgo.to/seeds) | [images/seeds](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/seeds/Dockerfile/) | seeds | 8.x-4.10 |
+| [Thunder](http://dgo.to/thunder) | [images/thunder](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/thunder/Dockerfile/) | thunder | 8.x-2.15 |
+| [Varbase](http://dgo.to/varbase) | [images/varbase](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/varbase/Dockerfile/) | varbase | 8.x-4.16 |
+| [Vardoc](http://dgo.to/vardoc) | [images/vardoc](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/vardoc/Dockerfile/) | vardoc | 8.x-1.0-rc2 |
+| [Web Experience Toolkit](http://dgo.to/wxt) | [images/wxt](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/wxt/Dockerfile/) | wxt | 8.x-2.100 |
 
 ## Software per docker image
 
@@ -94,7 +95,7 @@ Open Terminal emulator at http://localhost:8066/terminal.php
 - **User**: www-data
 - **Password**: password
 
-Notice that www-data user has only access to the web folder and no sudo exists.
+Notice that www-data user has only sufficient permissions under the /web folder and no sudo exists.
 
 ## License
 

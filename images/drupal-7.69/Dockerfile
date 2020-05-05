@@ -3,7 +3,7 @@ FROM drupal8/distros:latest-sqlite
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="drupal-8.7.10" \
+ENV NEWDISTRO="drupal-7.69" \
     PROFILE="standard"
 
 # Download distro on html folder

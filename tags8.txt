@@ -19,6 +19,7 @@
 17 df
 18 seeds
 19 wxt
-20 drupal-8.7.10
-21 drupal-8.7.10-umami
-22 drupal-8.8.0-beta1
+20 rain
+21 drupal-8.8.5
+22 drupal-8.8.5-umami
+23 drupal-9.0.0-beta2
