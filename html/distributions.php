@@ -27,20 +27,20 @@ $distros = [
      "path" => "https://www.drupal.org/project/droopler",
      "version" => "8.x"
    ],
-    "drupal-8.7.10" => [
+    "drupal-8.8.5" => [
       "name" => "Drupal (core)",
       "path" => "https://www.drupal.org/project/drupal",
-      "version" => "8.7.10"
+      "version" => "8.8.5"
     ],
-    "drupal-8.7.10-umami" => [
+    "drupal-8.8.5-umami" => [
         "name" => "Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.7.10-umami"
+        "version" => "8.8.5-umami"
     ],
-    "drupal-8.8.0-beta1" => [
+    "drupal-9.0.0-beta2" => [
         "name" => "Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.8.0-beta1"
+        "version" => "9.0.0-beta2"
     ],
     "druppio" => [
         "name" => "Druppio",
@@ -80,6 +80,11 @@ $distros = [
     "presto" => [
         "name" => "Presto",
         "path" => "https://www.drupal.org/project/presto",
+        "version" => "8.x"
+    ],
+    "rain" => [
+        "name" => "Rain",
+        "path" => "https://www.drupal.org/project/rain",
         "version" => "8.x"
     ],
     "seeds" => [
