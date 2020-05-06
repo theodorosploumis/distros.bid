@@ -34,6 +34,11 @@ function docker-pull-all() {
   bash /var/www/distros/scripts/pull-images.sh
 }
 
+# Build all docker images
+function docker-build-all() {
+  bash /var/www/distros/scripts/build-images.sh
+}
+
 # Update git repo
 alias git-update="cd /var/www/distros && git pull && chown www-data /var/www/distros/html"
 
