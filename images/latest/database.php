@@ -2,41 +2,10 @@
 //	
 //	Project: phpLiteAdmin (https://www.phpliteadmin.org/)
 //	Version: 1.9.8.2
-//	Summary: PHP-based admin tool to manage SQLite2 and SQLite3 databases on the web
-//	Last updated: 2019-09-05
-//	Developers:
-//	   Dane Iracleous (daneiracleous@gmail.com)
-//	   Ian Aldrighetti (ian.aldrighetti@gmail.com)
-//	   George Flanagin & Digital Gaslight, Inc (george@digitalgaslight.com)
-//	   Christopher Kramer (crazy4chrissi@gmail.com, http://en.christosoft.de)
-//	   Ayman Teryaki (http://havalite.com)
-//	   Dreadnaut (dreadnaut@gmail.com, http://dreadnaut.altervista.org)
-//	
-//	
-//	Copyright (C) 2019, phpLiteAdmin
-//	
-//	This program is free software: you can redistribute it and/or modify
-//	it under the terms of the GNU General Public License as published by
-//	the Free Software Foundation, either version 3 of the License, or
-//	(at your option) any later version.
-//	
-//	This program is distributed in the hope that it will be useful,
-//	but WITHOUT ANY WARRANTY; without even the implied warranty of
-//	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//	GNU General Public License for more details.
-//	
-//	You should have received a copy of the GNU General Public License
-//	along with this program.  If not, see <https://www.gnu.org/licenses/>.
-//	
-//	////////////////////////////////////////////////////////////////////////
-//	
-//	Please report any bugs you may encounter to our issue tracker here:
-//		https://bitbucket.org/phpliteadmin/public/issues?status=new&status=open
-
 // Please see https://bitbucket.org/phpliteadmin/public/wiki/Configuration for more details
 
 //password to gain access
-$password = 'admin';
+$password = '';
 
 //directory relative to this file to search for databases (if false, manually list databases in the $databases variable)
 $directory = false;
@@ -49,7 +18,7 @@ $subdirectories = false;
 $databases = array(
     array(
         'path'=> 'sites/default/files/.ht.sqlite',
-        'name'=> 'Database 1'
+        'name'=> 'Database'
     ),
 );
 

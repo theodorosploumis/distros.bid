@@ -37,25 +37,22 @@ require_once __DIR__ . '/distributions.php';
 <section class="wrapper">
 
     <p class="info">
-        <b>Drupal Admin</b> (/user)<br>
-        <br>
+        <b>Drupal Admin</b><br><br>
+        <b>access:</b> /user<br>
         <b>username:</b> admin<br>
         <b>password:</b> admin<br>
-        <b>email:</b> admin@example.com<br>
     </p>
     <p class="info">
-        <b>Adminer</b> (/adminer.php)<br>
-        <br>
-        <b>DB name:</b> drupal<br>
-        <b>DB password:</b> drupal<br>
-        <b>DB username:</b> drupal<br>
+        <b>Database</b><br><br>
+        <b>path:</b> /database.php<br>
+        <b>username:</b> <br>
+        <b>password:</b> <br>
     </p>
     <p class="info">
-        <b>Terminal</b> (/terminal.php)<br>
-        <br>
-        <br>
-        <b>User:</b> www-data<br>
-        <b>Password:</b> password<br>
+        <b>Terminal</b><br><br>
+        <b>access:</b> /terminal.php<br>
+        <b>username:</b> www-data<br>
+        <b>password:</b> password<br>
     </p>
 
     <div class="starters">
