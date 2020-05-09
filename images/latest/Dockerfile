@@ -1,4 +1,4 @@
-FROM ubuntu:19.04
+FROM ubuntu:20s.04
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
@@ -7,8 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     COMPOSER="1.9.2"
 
 # Install software
-RUN apt-get update && \
-    apt-get -y install \
+RUN apt-get -y install \
     apache2 \
     curl \
     wget \
@@ -36,7 +35,7 @@ RUN apt-get clean && \
 RUN a2enmod rewrite actions proxy_fcgi setenvif
 
 # Copy several scrips
-COPY terminal.php phpliteadmin.php install.sh install-sqlite.sh prepare-install.sh /var/www/
+COPY terminal.php database.php install.sh /var/www/
 
 # Apache2 settings
 RUN echo '<Directory "/var/www/html">' >> /etc/apache2/apache2.conf && \
