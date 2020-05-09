@@ -15,7 +15,7 @@ RUN apt-get update && \
     unzip
 
 # Copy several scrips
-COPY terminal.php database.php install.sh /var/www/
+COPY terminal.php database.php install.sh install-drush.sh /var/www/
 
 # Apache2 settings
 RUN echo '<Directory "/var/www/html">' >> /etc/apache2/apache2.conf && \
