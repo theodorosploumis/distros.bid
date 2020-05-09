@@ -44,7 +44,7 @@ echo -e ">> Drupal is ready for installation."
 
 # 2. Install a Drupal site with Drush
 service apache2 start && \
-drush site-install -y ${PROFILE} \
+vendor/bin/drush site-install -y ${PROFILE} \
       --site-name="${NEWDISTRO} by Distros.bid" \
       --db-url=sqlite://sites/default/files/.ht.sqlite \
       --site-mail=admin@example.com \
@@ -53,8 +53,8 @@ drush site-install -y ${PROFILE} \
       --account-mail=admin@example.com
 
 # Change site name
-drush config-set system.site name "Drupal: $(drush pmi --fields=Version system | sed 's/\ Version   :  //g') - Profile: ${NEWDISTRO}" -y
-drush variable-set site_name "Drupal: $(drush pmi --fields=Version system | sed 's/\ Version   :  //g') - Profile: ${NEWDISTRO}" -y
+vendor/bin/drush config-set system.site name "Drupal: $(vendor/bin/drush pmi --fields=Version system | sed 's/\ Version   :  //g') - Profile: ${NEWDISTRO}" -y
+vendor/bin/drush variable-set site_name "Drupal: $(vendor/bin/drush pmi --fields=Version system | sed 's/\ Version   :  //g') - Profile: ${NEWDISTRO}" -y
 
 # Assign all site files to www-data
 chown -R www-data:www-data /var/www/html
