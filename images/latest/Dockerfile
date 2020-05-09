@@ -1,31 +1,29 @@
-FROM ubuntu:20.04
+FROM php:7.3-apache
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
-ENV DEBIAN_FRONTEND=noninteractive \
-    COMPOSER="1.9.2"
+ENV COMPOSER="1.9.2"
 
 # Install software
-RUN apt-get -y install \
-    apache2 \
+RUN apt-get update && \
+    apt-get -y install \
     curl \
     wget \
     git \
     vim \
-    unzip \
-    php \
-    php-cli \
-    php-curl \
-    php-common \
-    php-mbstring \
-    php-gd \
-    php-intl \
-    php-xml \
-    php-json \
-    php-zip \
-    php-sqlite3 \
-    libapache2-mod-php
+    unzip
+
+RUN docker-php-ext-install cli \
+                           curl \
+                           common \
+                           mbstring \
+                           gd \
+                           intl \
+                           xml \
+                           json \
+                           zip \
+                           sqlite3
 
 RUN apt-get clean && \
     apt-get autoremove && \
