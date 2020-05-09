@@ -1,4 +1,4 @@
-FROM php:7.3-apache
+FROM drupal:apache
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
@@ -13,24 +13,6 @@ RUN apt-get update && \
     git \
     vim \
     unzip
-
-RUN docker-php-ext-install cli \
-                           curl \
-                           common \
-                           mbstring \
-                           gd \
-                           intl \
-                           xml \
-                           json \
-                           zip \
-                           sqlite3
-
-RUN apt-get clean && \
-    apt-get autoremove && \
-    rm -rf /var/lib/apt/lists/archive.*
-
-# Enable php mods
-RUN a2enmod rewrite actions proxy_fcgi setenvif
 
 # Copy several scrips
 COPY terminal.php database.php install.sh /var/www/
