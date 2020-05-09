@@ -1,4 +1,4 @@
-00 base-8
+00 latest
 01 agov
 02 bear
 03 brainstorm
@@ -19,6 +19,5 @@
 18 seeds
 19 wxt
 20 rain
-21 drupal-8.8.5
-22 drupal-8.8.5-umami
-23 drupal-9.0.0-beta2
+21 drupal
+22 drupal-umami
