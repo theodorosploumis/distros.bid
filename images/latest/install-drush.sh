@@ -7,4 +7,4 @@ if [ -z ${DOCROOT} ]
 fi
 
 # Install drush
-RUN COMPOSER=composer.json composer require drush/drush:10.2.2 --quiet --no-ansi --no-interaction --no-progress
+COMPOSER=composer.json composer require drush/drush:10.2.2 --quiet --no-ansi --no-interaction --no-progress
