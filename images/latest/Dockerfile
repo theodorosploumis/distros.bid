@@ -16,7 +16,7 @@ RUN apt-get update && \
     unzip
 
 # Copy several scrips
-COPY terminal.php database.php install.sh /var/www/
+COPY terminal.php database.php install.sh composer.json /var/www/
 
 # Apache2 settings
 RUN echo '<Directory "/var/www/html">' >> /etc/apache2/apache2.conf && \
@@ -34,17 +34,13 @@ RUN usermod -u 1000 www-data
 
 # Create sync folder
 RUN mkdir -p /var/www/config/sync && \
-    chown -R www-data:www-data /var/www/config
+    chown -R www-data:www-data /var/www
 
-RUN rm -rf /var/www/html/*
-
-COPY composer.json /var/www/html
-
-WORKDIR /var/www/html
+RUN rm -rf /var/www/html
 
 # Create Drupal project
-RUN COMPOSER=composer.json composer install --no-dev --quiet --no-ansi --no-interaction --no-progress
+RUN cd /var/www && COMPOSER=composer.json composer install --no-dev --quiet --no-ansi --no-interaction --no-progress
 
-RUN ls -l
+WORKDIR /var/www
 
 EXPOSE 80
