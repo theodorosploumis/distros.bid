@@ -26,8 +26,5 @@ RUN sed -i 's/2000000/'"0"'/g' /var/www/html/docroot/sites/default/default.servi
 
 WORKDIR ${DOCROOT}
 
-# Create database
-RUN bash /var/www/create-database.sh
-
 # Install Drupal
-RUN bash /var/www/install-sqlite.sh
+RUN bash /var/www/install.sh
