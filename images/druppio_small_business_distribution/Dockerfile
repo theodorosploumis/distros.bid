@@ -2,23 +2,13 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="druppio_small_business_distribution" \
+ENV DISTRO="druppio_small_business_distribution" \
+    VERSION="1.57" \
     PROFILE="druppio_small_business_distribution"
 
-# Download distro (8.x) on html folder
-RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
+RUN COMPOSER=composer.json composer require drupal/${DISTRO}:${VERSION} --quiet --no-ansi --no-interaction --no-progress
 
-# Prepare installation
-RUN bash /var/www/prepare-install.sh
-
-# # Install extra libraries
-# RUN wget -q https://github.com/sachinchoolur/lightGallery/archive/1.6.3.tar.gz && \
-#     tar -xzf 1.6.3.tar.gz -C libraries/ && \
-#     rm -f 1.6.3.tar.gz && \
-#     mv libraries/lightGallery-1.6.3 libraries/lightgallery
-
-# Install distro
+# Install Drupal
 RUN bash /var/www/install.sh
 
-# Update mismatched entities
-# RUN drush entup -y
+WORKDIR /var/www/html

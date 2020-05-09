@@ -7,19 +7,9 @@ $distros = [
         "path" => "https://www.drupal.org/project/agov",
         "version" => "8.x"
     ],
-    "bear" => [
-        "name" => "Bear",
-        "path" => "https://www.drupal.org/project/bear",
-        "version" => "8.x"
-    ],
     "brainstorm" => [
         "name" => "Brainstorm",
         "path" => "https://www.drupal.org/project/brainstorm_profile",
-        "version" => "8.x"
-    ],
-    "df" => [
-        "name" => "Demo Framework",
-        "path" => "https://www.drupal.org/project/df",
         "version" => "8.x"
     ],
    "droopler" => [
@@ -37,12 +27,7 @@ $distros = [
         "path" => "https://www.drupal.org/project/drupal",
         "version" => "8.8.5-umami"
     ],
-    "drupal-9.0.0-beta2" => [
-        "name" => "Drupal (core)",
-        "path" => "https://www.drupal.org/project/drupal",
-        "version" => "9.0.0-beta2"
-    ],
-    "druppio" => [
+    "druppio_small_business_distribution" => [
         "name" => "Druppio",
         "path" => "https://www.drupal.org/project/druppio_small_business_distribution",
         "version" => "8.x"
@@ -52,14 +37,9 @@ $distros = [
         "path" => "https://www.drupal.org/project/lightning",
         "version" => "8.x"
     ],
-    "multipurposecorporate" => [
+    "multipurpose_corporate_profile" => [
         "name" => "Multipurpose Corporate Profile",
         "path" => "https://www.drupal.org/project/multipurpose_corporate_profile",
-        "version" => "8.x"
-    ],
-    "opendoor" => [
-        "name" => "Open door",
-        "path" => "https://www.drupal.org/project/open_door",
         "version" => "8.x"
     ],
     "openchurch" => [
@@ -82,19 +62,9 @@ $distros = [
         "path" => "https://www.drupal.org/project/presto",
         "version" => "8.x"
     ],
-    "rain" => [
-        "name" => "Rain",
-        "path" => "https://www.drupal.org/project/rain",
-        "version" => "8.x"
-    ],
     "seeds" => [
         "name" => "Seeds",
         "path" => "https://www.drupal.org/project/seeds",
-        "version" => "8.x"
-    ],
-    "social" => [
-        "name" => "Open Social",
-        "path" => "https://www.drupal.org/project/social",
         "version" => "8.x"
     ],
     "thunder" => [
