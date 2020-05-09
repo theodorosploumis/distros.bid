@@ -12,7 +12,8 @@ RUN apt-get update && \
     wget \
     git \
     vim \
-    unzip
+    unzip \
+    sqlite3
 
 # Copy several scrips
 COPY terminal.php database.php install.sh composer.json /var/www/
