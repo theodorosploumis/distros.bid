@@ -1,38 +1,18 @@
-FROM ubuntu:20.04
+FROM drupal:apache
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
-ENV DEBIAN_FRONTEND=noninteractive \
-    COMPOSER="1.9.2"
+ENV COMPOSER="1.9.2"
 
 # Install software
-RUN apt-get -y install \
-    apache2 \
+RUN apt-get update && \
+    apt-get -y install \
     curl \
     wget \
     git \
     vim \
-    unzip \
-    php \
-    php-cli \
-    php-curl \
-    php-common \
-    php-mbstring \
-    php-gd \
-    php-intl \
-    php-xml \
-    php-json \
-    php-zip \
-    php-sqlite3 \
-    libapache2-mod-php
-
-RUN apt-get clean && \
-    apt-get autoremove && \
-    rm -rf /var/lib/apt/lists/archive.*
-
-# Enable php mods
-RUN a2enmod rewrite actions proxy_fcgi setenvif
+    unzip
 
 # Copy several scrips
 COPY terminal.php database.php install.sh /var/www/
