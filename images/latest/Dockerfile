@@ -3,7 +3,8 @@ FROM drupal:apache
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
-ENV COMPOSER="1.9.2"
+ENV COMPOSER="1.9.2" \
+    DRUSH="10.2.2
 
 # Install software
 RUN apt-get update && \
@@ -15,7 +16,7 @@ RUN apt-get update && \
     unzip
 
 # Copy several scrips
-COPY terminal.php database.php install.sh install-drush.sh /var/www/
+COPY terminal.php database.php install.sh /var/www/
 
 # Apache2 settings
 RUN echo '<Directory "/var/www/html">' >> /etc/apache2/apache2.conf && \
@@ -35,9 +36,14 @@ RUN usermod -u 1000 www-data
 RUN mkdir -p /var/www/config/sync && \
     chown -R www-data:www-data /var/www/config
 
-# Clear html folder
-RUN rm -r /var/www/html/*
-
 WORKDIR /var/www/html
+
+RUN rm -rf /var/www/html/*
+
+# Create Drupal project
+RUN COMPOSER=composer.json composer create-project drupal/recommended-project /var/www/html --quiet --no-ansi --no-interaction --no-progress
+
+# Install drush
+RUN COMPOSER=composer.json composer require drush/drush:${DRUSH} --quiet --no-ansi --no-interaction --no-progress
 
 EXPOSE 80
