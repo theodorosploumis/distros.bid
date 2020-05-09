@@ -44,8 +44,6 @@ chmod 644 ${DOCROOT}/sites/default/default.services.yml
 echo -e ">> Drupal is ready for installation."
 
 # 2. Install a Drupal site with Drush
-composer require drush/drush:10.2.2
-
 vendor/bin/drush site:install -y ${PROFILE} \
       --root=${DOCROOT} \
       --site-name="${DISTRO} by Distros.bid" \

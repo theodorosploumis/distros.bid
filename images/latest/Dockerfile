@@ -38,9 +38,6 @@ RUN mkdir -p /var/www/config/sync && \
 
 RUN rm -rf /var/www/html
 
-# Create Drupal project
-RUN cd /var/www && COMPOSER=composer.json composer install --no-dev --quiet --no-ansi --no-interaction --no-progress
-
 WORKDIR /var/www
 
 EXPOSE 80
