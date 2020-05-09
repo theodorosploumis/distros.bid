@@ -7,8 +7,9 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
+        "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "drush/drush": "10.2.2",
+        "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.0",
         "zaporylie/composer-drupal-optimizations": "^1.1"
@@ -23,31 +24,40 @@
     },
     "extra": {
         "composer-exit-on-patch-failure": true,
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "/var/www/html"
+            },
+            "file-mapping": {
+                "[web-root]/sites/default/default.services.yml": false,
+                "[web-root]/sites/default/default.settings.php": false
+            }
+        },
         "installer-paths": {
-            "core": [
+            "/var/www/html/core": [
                 "type:drupal-core"
             ],
-            "libraries/{$name}": [
+            "/var/www/html/libraries/{$name}": [
                 "type:drupal-library",
                 "type:npm-asset",
                 "type:bower-asset"
             ],
-            "modules/contrib/{$name}": [
+            "/var/www/html/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "profiles/contrib/{$name}": [
+            "/var/www/html/profiles/contrib/{$name}": [
                 "type:drupal-profile"
             ],
-            "themes/contrib/{$name}": [
+            "/var/www/html/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
-            "drush/Commands/contrib/{$name}": [
+            "/var/www/html/drush/Commands/contrib/{$name}": [
                 "type:drupal-drush"
             ],
-            "modules/custom/{$name}": [
+            "/var/www/html/modules/custom/{$name}": [
                 "type:drupal-custom-module"
             ],
-            "themes/custom/{$name}": [
+            "/var/www/html/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
         },
@@ -71,8 +81,12 @@
     "prefer-stable": true,
     "scripts": {
         "post-install-cmd": [
-            "rm -f .gitignore example.gitignore",
+            "rm -f web/.gitignore web/example.gitignore",
             "find . -mindepth 2 -type d -name .git | xargs rm -rf"
         ]
+    },
+    "support": {
+        "chat": "https://www.drupal.org/node/314178",
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html"
     }
 }
