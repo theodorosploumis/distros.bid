@@ -26,5 +26,5 @@ chown -R www-data:www-data /var/www/html
 # Move terminal.php to docroot
 cp /var/www/terminal.php ${DOCROOT}/terminal.php
 
-# Move phpliteadmin.php to docroot
-cp /var/www/phpliteadmin.php ${DOCROOT}/phpliteadmin.php
+# Move SQLite database manager to docroot
+cp /var/www/database.php ${DOCROOT}/database.php
