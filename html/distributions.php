@@ -27,12 +27,12 @@ $distros = [
      "path" => "https://www.drupal.org/project/droopler",
      "version" => "8.x"
    ],
-    "drupal-8.8.5" => [
+    "drupal" => [
       "name" => "Drupal (core)",
       "path" => "https://www.drupal.org/project/drupal",
       "version" => "8.8.5"
     ],
-    "drupal-8.8.5-umami" => [
+    "drupal-umami" => [
         "name" => "Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
         "version" => "8.8.5-umami"

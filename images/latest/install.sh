@@ -8,7 +8,7 @@ fi
 
 # Create settings.php file
 echo -e ">> Create settings.php file"
-mkdir -r ${DOCROOT}/sites/default/files
+mkdir -p ${DOCROOT}/sites/default/files
 cp ${DOCROOT}/sites/default/default.settings.php ${DOCROOT}/sites/default/settings.php
 chmod 777 ${DOCROOT}/sites/default/settings.php
 
@@ -53,10 +53,13 @@ vendor/bin/drush site:install -y ${PROFILE} \
       --site-mail=admin@example.com \
       --account-name=admin \
       --account-pass=admin \
-      --account-mail=admin@example.com
+      --account-mail=admin@example.com \
+      --quiet --no-ansi --no-interaction
+
+vendor/bin/drush status
 
 # Assign all site files to www-data
-chown -R www-data:www-data /var/www/html
+chown -R www-data:www-data /var/www/html/sites/default/files
 
 # Move terminal.php to docroot
 cp /var/www/terminal.php ${DOCROOT}/terminal.php

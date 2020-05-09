@@ -69,7 +69,7 @@ require_once __DIR__ . '/distributions.php';
 
             <label class="hidden">ID*:</label>
             <input type="hidden" name="id" required="required"
-                   value="<?php echo randomGenerator(10); ?>" readonly="readonly">
+                   value="<?php echo randomGenerator(5); ?>" readonly="readonly">
 
             <?php reCaptcha($recaptcha_key); ?>
 
