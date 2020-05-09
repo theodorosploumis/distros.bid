@@ -7,9 +7,10 @@ if [ -z ${DOCROOT} ]
 fi
 
 # Create settings.php file
-echo -e ">> Create settings.php file"
-cp ${DOCROOT}/sites/default/default.settings.php ${DOCROOT}/sites/default/settings.php
-chmod 777 ${DOCROOT}/sites/default/settings.php
+#echo -e ">> Create settings.php file"
+#mkdir -r ${DOCROOT}/sites/default/files
+#cp ${DOCROOT}/sites/default/default.settings.php ${DOCROOT}/sites/default/settings.php
+#chmod 777 ${DOCROOT}/sites/default/settings.php
 
 # Alter settings.php
 echo "\$settings['trusted_host_patterns'] = array('.',);" >> ${DOCROOT}/sites/default/settings.php && \
