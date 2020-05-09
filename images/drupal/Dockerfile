@@ -2,7 +2,7 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV DISTRO="core" \
+ENV DISTRO="core-recommended" \
     VERSION="8.8.5" \
     PROFILE="standard"
 
@@ -10,3 +10,5 @@ RUN COMPOSER=composer.json composer require drupal/${DISTRO}:${VERSION} --quiet 
 
 # Install Drupal
 RUN bash /var/www/install.sh
+
+WORKDIR /var/www/html

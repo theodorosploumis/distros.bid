@@ -2,7 +2,7 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV DISTRO="core" \
+ENV DISTRO="core-recommended" \
     VERSION="9.0.0-beta2" \
     PROFILE="standard"
 

@@ -45,9 +45,10 @@ echo -e ">> Drupal is ready for installation."
 
 # 2. Install a Drupal site with Drush
 service apache2 start && \
-vendor/bin/drush site-install -y ${PROFILE} \
+vendor/bin/drush site:install -y ${PROFILE} \
+      --root=${DOCROOT} \
       --site-name="${DISTRO} by Distros.bid" \
-      --db-url=sqlite://sites/default/files/.ht.sqlite \
+      --db-url="sqlite://sites/default/files/.ht.sqlite" \
       --site-mail=admin@example.com \
       --account-name=admin \
       --account-pass=admin \

@@ -26,34 +26,34 @@
         "composer-exit-on-patch-failure": true,
         "drupal-scaffold": {
             "locations": {
-                "web-root": "/var/www/html"
+                "web-root": "html"
             }
         },
         "installer-paths": {
-            "/var/www/html/core": [
+            "html/core": [
                 "type:drupal-core"
             ],
-            "/var/www/html/libraries/{$name}": [
+            "html/libraries/{$name}": [
                 "type:drupal-library",
                 "type:npm-asset",
                 "type:bower-asset"
             ],
-            "/var/www/html/modules/contrib/{$name}": [
+            "html/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "/var/www/html/profiles/contrib/{$name}": [
+            "html/profiles/contrib/{$name}": [
                 "type:drupal-profile"
             ],
-            "/var/www/html/themes/contrib/{$name}": [
+            "html/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
-            "/var/www/html/drush/Commands/contrib/{$name}": [
+            "html/drush/Commands/contrib/{$name}": [
                 "type:drupal-drush"
             ],
-            "/var/www/html/modules/custom/{$name}": [
+            "html/modules/custom/{$name}": [
                 "type:drupal-custom-module"
             ],
-            "/var/www/html/themes/custom/{$name}": [
+            "html/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
         },
