@@ -2,7 +2,7 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV DISTRO="recommended-project" \
+ENV DISTRO="core" \
     VERSION="8.8.5" \
     PROFILE="standard"
 
