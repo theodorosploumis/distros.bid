@@ -9,7 +9,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "drush/drush": "9.7.3"
+        "drush/drush": "9.7.2"
     },
     "conflict": {
         "drupal/drupal": "*"
