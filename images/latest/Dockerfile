@@ -3,8 +3,7 @@ FROM drupal:apache
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
-ENV COMPOSER="1.9.2" \
-    DRUSH="10.2.2"
+ENV COMPOSER="1.9.2"
 
 # Install software
 RUN apt-get update && \
@@ -13,7 +12,8 @@ RUN apt-get update && \
     wget \
     git \
     vim \
-    unzip
+    unzip \
+    sqlite3
 
 # Copy several scrips
 COPY terminal.php database.php install.sh composer.json /var/www/
@@ -34,7 +34,7 @@ RUN usermod -u 1000 www-data
 
 # Create sync folder
 RUN mkdir -p /var/www/config/sync && \
-    chown -R www-data:www-data /var/www
+    chown -R www-data:www-data /var/www/config
 
 RUN rm -rf /var/www/html
 
