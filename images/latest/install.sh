@@ -13,7 +13,7 @@ chmod 777 ${DOCROOT}/sites/default/settings.php
 
 # Alter settings.php
 echo "\$settings['trusted_host_patterns'] = array('.',);" >> ${DOCROOT}/sites/default/settings.php && \
-echo "\$config_directories = array(CONFIG_SYNC_DIRECTORY => '/var/www/config/sync',);" >> ${DOCROOT}/sites/default/settings.php && \
+echo "\$settings['config_sync_directory'] = '/var/www/config/sync',);" >> ${DOCROOT}/sites/default/settings.php && \
 echo "ini_set('memory_limit', '256M');" >> ${DOCROOT}/sites/default/settings.php && \
 echo "ini_set('max_execution_time', '1200');" >> ${DOCROOT}/sites/default/settings.php && \
 echo "\$settings['file_private_path'] = '${DOCROOT}/sites/default/private-files';" >> ${DOCROOT}/sites/default/settings.php
