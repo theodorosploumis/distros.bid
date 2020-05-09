@@ -117,45 +117,4 @@ $distros = [
         "path" => "https://www.drupal.org/project/wxt",
         "version" => "8.x"
     ],
-    // 7.x versions
-    "cod" => [
-        "name" => "Conference Organizing Distribution",
-        "path" => "https://www.drupal.org/project/cod",
-        "version" => "7.x"
-    ],
-    "commercekickstart" => [
-        "name" => "Commerce Kickstart",
-        "path" => "https://www.drupal.org/project/commerce_kickstart",
-        "version" => "7.x"
-    ],
-    "commons" => [
-        "name" => "Drupal Commons",
-        "path" => "https://www.drupal.org/project/commons",
-        "version" => "7.x"
-    ],
-    "drupal-7.67" => [
-      "name" =>"Drupal (core)",
-      "path" => "https://www.drupal.org/project/drupal",
-      "version" => "7.67"
-    ],
-    "easy_booking" => [
-      "name" => "Easy Booking",
-      "path" => "https://www.drupal.org/project/easy_booking",
-      "version" => "7.x"
-    ],
-    "govcms" => [
-        "name" => "govCMS",
-        "path" => "https://www.drupal.org/project/govcms",
-        "version" => "7.x"
-    ],
-    "openatrium" => [
-        "name" => "Open Atrium",
-        "path" => "https://www.drupal.org/project/openatrium",
-        "version" => "7.x"
-    ],
-    "openoutreach" => [
-        "name" => "Open Outreach",
-        "path" => "https://www.drupal.org/project/openoutreach",
-        "version" => "7.x"
-    ]
 ];

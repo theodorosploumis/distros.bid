@@ -1,11 +1,10 @@
-FROM ubuntu:18.04
+FROM ubuntu:19.04
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
 ENV DEBIAN_FRONTEND=noninteractive \
-    DRUSH="8.3.1" \
-    COMPOSER="1.9.1"
+    COMPOSER="1.9.2"
 
 # Install software
 RUN apt-get update && \
@@ -14,11 +13,8 @@ RUN apt-get update && \
     curl \
     wget \
     git \
-    cron \
     vim \
     unzip \
-    mysql-server \
-    supervisor \
     php \
     php-cli \
     php-curl \
@@ -28,7 +24,6 @@ RUN apt-get update && \
     php-intl \
     php-xml \
     php-json \
-    php-mysql \
     php-zip \
     php-sqlite3 \
     libapache2-mod-php
@@ -38,25 +33,10 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/archive.*
 
 # Enable php mods
-RUN phpenmod pdo_mysql && \
-    a2enmod rewrite actions proxy_fcgi setenvif
+RUN a2enmod rewrite actions proxy_fcgi setenvif
 
 # Copy several scrips
-COPY terminal.php install.sh install-sqlite.sh prepare-install.sh create-database.sh /var/www/
-
-# MySQL settings/root/.my.cnf
-#COPY my.cnf /root/.my.cnf
-
-# Create database, user and password, all as "drupal"
-# RUN /usr/bin/mysql -P 3306 --protocol=tcp -u root -e "CREATE DATABASE drupal CHARACTER SET utf8 COLLATE utf8_general_ci" && \
-#     /usr/bin/mysql -P 3306 --protocol=tcp -u root -e "GRANT ALL ON drupal.* to 'drupal' identified by 'drupal';"
-
-# Install Adminer
-RUN mkdir /usr/share/adminer && \
-    wget -q "http://www.adminer.org/latest.php" -O /usr/share/adminer/latest.php && \
-    ln -s /usr/share/adminer/latest.php /usr/share/adminer/adminer.php && \
-    echo "Alias /adminer.php /usr/share/adminer/adminer.php" | tee /etc/apache2/conf-available/adminer.conf && \
-    a2enconf adminer.conf
+COPY terminal.php phpliteadmin.php install.sh install-sqlite.sh prepare-install.sh /var/www/
 
 # Apache2 settings
 RUN echo '<Directory "/var/www/html">' >> /etc/apache2/apache2.conf && \
@@ -69,11 +49,6 @@ RUN wget -q https://github.com/composer/composer/releases/download/${COMPOSER}/c
     chmod +x composer.phar && \
     mv composer.phar /usr/local/bin/composer
 
-# Install Drush
-RUN wget -q https://github.com/drush-ops/drush/releases/download/${DRUSH}/drush.phar && \
-    chmod +x drush.phar && \
-    mv drush.phar /usr/local/bin/drush
-
 # Create user www-data and assign UID
 RUN usermod -u 1000 www-data
 
@@ -84,19 +59,6 @@ RUN mkdir -p /var/www/config/sync && \
 # Clear html folder
 RUN rm -r /var/www/html/*
 
-# Setup cron job
-#RUN crontab -l | { cat; echo "0 0 0 0 0 exit"; } | crontab -
-
 WORKDIR /var/www/html
 
 EXPOSE 80
-
-# Supervisor base configuration
-RUN mkdir -p /var/log/supervisor && \
-    mkdir -p /etc/supervisor/conf.d
-
-COPY config/supervisor.conf /etc/supervisor.conf
-COPY config/apache2.conf /etc/supervisor/conf.d/
-COPY config/mysql.conf /etc/supervisor/conf.d/
-
-CMD ["supervisord", "-c", "/etc/supervisor.conf"]
