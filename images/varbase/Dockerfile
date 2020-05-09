@@ -2,24 +2,13 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="varbase" \
-    PROFILE="varbase" \
-    DOCROOT="/var/www/html/docroot" \
-    PACKAGE="vardot/varbase-project:^8.4.10"
+ENV DISTRO="varbase" \
+    VERSION="8.4" \
+    PROFILE="varbase"
 
-RUN COMPOSER=composer.json composer create-project ${PACKAGE} /var/www/${NEWDISTRO} \
-    --no-dev --no-interaction --quiet --no-ansi --no-progress
-
-RUN composer clear-cache
-
-RUN rm -rf /var/www/html && \
-    mv /var/www/${NEWDISTRO} /var/www/html
-
-RUN sed -i 's/\/var\/www\/html/'"\/var\/www\/html\/docroot"'/g' /etc/apache2/sites-available/000-default.conf
-
-# Prepare installation
-RUN bash /var/www/prepare-install.sh
+RUN COMPOSER=composer.json composer require drupal/${DISTRO}:${VERSION} --quiet --no-ansi --no-interaction --no-progress
 
 # Install Drupal
-WORKDIR ${DOCROOT}
 RUN bash /var/www/install.sh
+
+WORKDIR /var/www/html

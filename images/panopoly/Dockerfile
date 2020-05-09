@@ -2,12 +2,13 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV NEWDISTRO="panopoly" \
+ENV DISTRO="panopoly" \
+    VERSION="2.0-alpha15" \
     PROFILE="panopoly"
 
-# Download distro (8.x) on html folder
-RUN drush dl ${NEWDISTRO} -y --destination=/var/www --drupal-project-rename=html
+RUN COMPOSER=composer.json composer require drupal/${DISTRO}:${VERSION} --quiet --no-ansi --no-interaction --no-progress
 
-# Prepare installation and install
-RUN bash /var/www/prepare-install.sh
+# Install Drupal
 RUN bash /var/www/install.sh
+
+WORKDIR /var/www/html
