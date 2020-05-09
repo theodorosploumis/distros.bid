@@ -2,12 +2,11 @@ FROM drupal8/distros
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
-ENV DISTRO="core" \
+ENV DISTRO="recommended-project" \
     VERSION="8.8.5" \
     PROFILE="standard"
 
-# Install drush
-RUN bash /var/www/install-drush.sh
+RUN COMPOSER=composer.json composer require drupal/${DISTRO}:${VERSION} --quiet --no-ansi --no-interaction --no-progress
 
 # Install Drupal
 RUN bash /var/www/install.sh
