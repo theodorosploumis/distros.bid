@@ -4,7 +4,7 @@ MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
 ENV COMPOSER="1.9.2" \
-    DRUSH="10.2.2
+    DRUSH="10.2.2"
 
 # Install software
 RUN apt-get update && \
