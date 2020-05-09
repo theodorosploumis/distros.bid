@@ -36,7 +36,7 @@ RUN usermod -u 1000 www-data
 RUN mkdir -p /var/www/config/sync && \
     chown -R www-data:www-data /var/www/config
 
-RUN rm -rf /var/www/html
+RUN rm -rf /var/www/html/*
 
 COPY composer.json /var/www/html
 
