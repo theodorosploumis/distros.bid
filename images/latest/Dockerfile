@@ -40,7 +40,7 @@ RUN rm -rf /var/www/html
 
 # Create Drupal project
 RUN COMPOSER=composer.json composer init
-RUN COMPOSER=composer.json require drupal/recommended-project --quiet --no-ansi --no-interaction --no-progress
+RUN COMPOSER=composer.json composer require drupal/recommended-project:^8.8 --quiet --no-ansi --no-interaction --no-progress
 
 RUN cat /var/www/html/composer.json
 
