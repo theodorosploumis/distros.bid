@@ -49,7 +49,7 @@ composer require drush/drush:10.2.2
 vendor/bin/drush site:install -y ${PROFILE} \
       --root=${DOCROOT} \
       --site-name="${DISTRO} by Distros.bid" \
-      --db-url="sqlite://sites/default/files/.ht.sqlite" \
+      --db-url="sqlite://sites/default/files/.sqlite" \
       --site-mail=admin@example.com \
       --account-name=admin \
       --account-pass=admin \

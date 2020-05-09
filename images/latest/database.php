@@ -17,7 +17,7 @@ $subdirectories = false;
 //if any of the databases do not exist as they are referenced by their path, they will be created automatically
 $databases = array(
     array(
-        'path'=> 'sites/default/files/.ht.sqlite',
+        'path'=> '/var/www/html/sites/default/files/.sqlite',
         'name'=> 'Database'
     ),
 );
