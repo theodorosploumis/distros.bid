@@ -1,9 +1,9 @@
-FROM drupal:apache
+FROM drupal:8.9-apache
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
-ENV COMPOSER="1.9.2"
+ENV COMPOSER="1.10.17"
 
 # Install software
 RUN apt-get update && \

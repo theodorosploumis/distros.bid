@@ -5,18 +5,18 @@
     "homepage": "https://www.drupal.org/project/drupal",
     "license": "GPL-2.0-or-later",
     "require": {
-        "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "^8.8"
+        "drupal/core-composer-scaffold": "^8.9",
+        "drupal/core-recommended": "^8.9",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "drush/drush": "^10.3"
     },
     "conflict": {
         "drupal/drupal": "*"
     },
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true
+        "sort-packages": true
     },
     "extra": {
         "composer-exit-on-patch-failure": true,
@@ -70,11 +70,5 @@
         }
     ],
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "post-install-cmd": [
-            "rm -f web/.gitignore web/example.gitignore",
-            "find . -mindepth 2 -type d -name .git | xargs rm -rf"
-        ]
-    }
+    "prefer-stable": true
 }
