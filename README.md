@@ -1,6 +1,6 @@
 # Drupal docker distributions
 
-[![Docker Stars](https://img.shields.io/docker/stars/drupal8/distros.svg)]() [![Docker Build Status](https://img.shields.io/docker/build/drupal8/distros.svg)](https://hub.docker.com/r/drupal8/distros/builds/) [![Drupal](https://img.shields.io/badge/Drupal-project-green.svg)](https://www.drupal.org/)
+[![Docker pulls](https://img.shields.io/docker/pulls/drupal8/distros.svg)](https://hub.docker.com/r/drupal8/distros) 
 
 ## About
 
