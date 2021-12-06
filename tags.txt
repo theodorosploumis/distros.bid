@@ -12,7 +12,6 @@ presto
 thunder
 varbase
 vardoc
-df
 seeds
 wxt
 drupal
