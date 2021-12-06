@@ -1,9 +1,9 @@
-FROM drupal:apache
+FROM drupal:8.9-apache
 
 MAINTAINER Theodoros Ploumis - www.theodorosploumis.com
 
 # Setup environment
-ENV COMPOSER="1.9.2"
+ENV COMPOSER="1.10.17"
 
 # Install software
 RUN apt-get update && \
@@ -37,9 +37,6 @@ RUN mkdir -p /var/www/config/sync && \
     chown -R www-data:www-data /var/www/config
 
 RUN rm -rf /var/www/html
-
-# Create Drupal project
-RUN cd /var/www && COMPOSER=composer.json composer install --no-dev --quiet --no-ansi --no-interaction --no-progress
 
 WORKDIR /var/www
 

@@ -41,12 +41,14 @@ chmod -R 777 ${DOCROOT}/libraries
 chmod 644 ${DOCROOT}/sites/default/default.settings.php
 chmod 644 ${DOCROOT}/sites/default/default.services.yml
 
+# Install Drush
+echo -e ">> Install drush"
+COMPOSER=composer.json COMPOSER_MEMORY_LIMIT=-1 composer require drush/drush --quiet --no-interaction
+
 echo -e ">> Drupal is ready for installation."
 
 # 2. Install a Drupal site with Drush
-composer require drush/drush:10.2.2
-
-vendor/bin/drush site:install -y ${PROFILE} \
+/var/www/vendor/bin/drush site:install -y ${PROFILE} \
       --root=${DOCROOT} \
       --site-name="${DISTRO} by Distros.bid" \
       --db-url="sqlite://sites/default/files/.sqlite" \
