@@ -18,7 +18,7 @@ require_once __DIR__ . '/distributions.php';
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Try Drupal Distributions</title>
+    <title>Try Drupal 8.x+ Distributions</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:300,400" rel="stylesheet">
