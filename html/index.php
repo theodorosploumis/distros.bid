@@ -75,8 +75,10 @@ require_once __DIR__ . '/distributions.php';
 
             <input id="submit-button" type="submit" value="Create site">
 
-            <span><sup>*</sup>Notice: Sites are available for <b>40 minutes</b>.</span>
-            <div><sup>**</sup>Currently running sites: <b><?php print exec("docker ps -q --format '{{.ID}} {{.Image}}' | grep 'drupal8' | wc -l"); ?> </b>.</div>
+            <span><sup>1</sup>Important: Sometimes, a 502 error page may appear. Please refresh the error page so you get your instance running. 
+            This is usually fixed in less than a minute.</span>
+            <span><sup>2</sup>Notice: Sites are available for <b>40 minutes</b>.</span>
+            <div><sup>3</sup>Currently running sites: <b><?php print exec("docker ps -q --format '{{.ID}} {{.Image}}' | grep 'drupal8' | wc -l"); ?> </b>.</div>
         </form>
     </div>
 
