@@ -25,6 +25,7 @@ ELKPORT3="9202"
 # Generic software
 apt-get -qqy update
 apt-get install -y git wget vim zip apache2 php7 php7-mbstring \
+        ca-certificates curl gnupg lsb-release \
         python-certbot-apache -t stretch-backports
 
 # Install Let's Encrypt
@@ -46,14 +47,17 @@ git clone https://github.com/theodorosploumis/drupal-docker-distros.git /var/www
 cp /var/www/distros/html/default.settings.php /var/www/distros/html/settings.php
 chmod 444 /var/www/distros/html/settings.php
 
-# Docker. Notice that we do not install latest Docker to support Rancher
-# as also as Docker-php sdk.
-# curl https://get.docker.com | sh
-curl https://releases.rancher.com/install-docker/18.09.sh | sh
+# Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo \
+     "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+     $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+apt-get install docker-ce docker-ce-cli containerd.io
 
 # Docker-compose
-curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` \
--o /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
 # Start nginx-proxy on port $NGINXPORT

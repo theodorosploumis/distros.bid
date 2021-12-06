@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Remove all stopped containers
 function docker-rm-stopped() {
   echo -n "Removing stopped containers...\n"
