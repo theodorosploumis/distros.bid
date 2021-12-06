@@ -25,9 +25,9 @@ $distros = [
     "drupal-umami" => [
         "name" => "Drupal (core)",
         "path" => "https://www.drupal.org/project/drupal",
-        "version" => "8.8.5-umami"
+        "version" => "8.7.10-umami"
     ],
-    "druppio_small_business_distribution" => [
+    "druppio" => [
         "name" => "Druppio",
         "path" => "https://www.drupal.org/project/druppio_small_business_distribution",
         "version" => "8.x"
@@ -37,7 +37,7 @@ $distros = [
         "path" => "https://www.drupal.org/project/lightning",
         "version" => "8.x"
     ],
-    "multipurpose_corporate_profile" => [
+    "multipurposecorporate" => [
         "name" => "Multipurpose Corporate Profile",
         "path" => "https://www.drupal.org/project/multipurpose_corporate_profile",
         "version" => "8.x"

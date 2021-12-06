@@ -1,10 +1,10 @@
 latest
 agov
-brainstorm_profile
+brainstorm
 droopler
-druppio_small_business_distribution
+druppio
 lightning
-multipurpose_corporate_profile
+multipurposecorporate
 openchurch
 openrestaurant
 panopoly
