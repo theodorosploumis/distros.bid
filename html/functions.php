@@ -6,7 +6,7 @@
  * @param string $keyspace
  * @return string
  */
-function randomGenerator($length = '20', $keyspace = 'abcdefghijklmnopqrstuvwxyz') {
+function randomGenerator($length = '20', $keyspace = 'abcdefghijklmnopqrstuvwxyz'): string {
     $str = '';
     $max = mb_strlen($keyspace, '8bit') - 1;
 
@@ -22,7 +22,7 @@ function randomGenerator($length = '20', $keyspace = 'abcdefghijklmnopqrstuvwxyz
  *
  * Example: $array =  = [agov" => ["name" =>"aGov", "path" => "https://www.drupal.org/project/agov", "version" => "8.x"]];
  */
-function showDistros($distros_array, $subdomainLength = 10) {
+function showDistros($distros_array, int $subdomainLength = 10) {
     foreach ($distros_array as $key => $value) {
         print '<li><a target="_blank" class="link-' . $key . ' .
         link" href="/container.php?distro=' . $key . '&id=' . randomGenerator($subdomainLength) . '">' .
@@ -38,8 +38,15 @@ function showDistros($distros_array, $subdomainLength = 10) {
 function listDistros($distros_array, $select_name) {
     print "<select id='distros' name='".$select_name."' required='required'>";
     print "<option value='' selected='selected'>-- Select Distribution --</option>";
-    foreach ($distros_array as $key => $value) {
-        print '<option value="'.$key.'">' . $value['name'] . ' - ' . $value['version'] . '</option>';
+    foreach ($distros_array as $key_version => $distros_sub_array) {
+        print '<optgroup label="'.$key_version.'">';
+        foreach ($distros_sub_array as $key => $value) {
+            if ($key_version !== "8x") {
+                $key = $key . "-" . $key_version;
+            }
+            print '<option value="'.$key.'">' . $value['name'] . ' - ' . $value['version'] . '</option>';
+        }
+        print '</optgroup>';
     }
     print "</select>";
 }
@@ -48,11 +55,15 @@ function listDistros($distros_array, $select_name) {
  * @param array $distros_array
  */
 function plainDistros($distros_array) {
-    print "<ul class='plain-distros'>";
-    foreach ($distros_array as $key => $value) {
-        print '<li><a href="'.$value["path"].'">' . $value['name'] . ' - ' . $value['version'] . '</a></li> ';
+    foreach ($distros_array as $key_version => $distros_sub_array) {
+        print '<h3>'.$key_version.'</h3>';
+
+        print "<ul class='plain-distros'>";
+        foreach ($distros_sub_array as $key => $value) {
+            print '<li><a href="'.$value["path"].'">' . $value['name'] . ' - ' . $value['version'] . '</a></li> ';
+        }
+        print "</ul>";
     }
-    print "</ul>";
 }
 
 /**

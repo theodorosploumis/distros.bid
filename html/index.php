@@ -1,5 +1,7 @@
 <?php
 
+global $distros, $recaptcha_key, $google_optimize_code, $google_analytics_code, $sharethis;
+
 if (file_exists(__DIR__ . '/settings.php')) {
     require_once __DIR__ . '/settings.php';
 } else {
@@ -12,7 +14,7 @@ require_once __DIR__ . '/distributions.php';
 
 ?>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8"/>
@@ -64,7 +66,7 @@ require_once __DIR__ . '/distributions.php';
             <label class="hidden">Distribution:</label>
             <?php listDistros($distros, "distro"); ?>
 
-            <label class="hidden">Site name*:</label>
+            <label class="hidden" for="name">Site name*:</label>
             <input name="name" placeholder="Site name, eg 'My Drupal site'" value="" required="required">
 
             <label class="hidden">ID*:</label>
