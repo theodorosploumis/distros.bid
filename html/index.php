@@ -9,6 +9,7 @@ if (file_exists(__DIR__ . '/settings.php')) {
     exit();
 }
 
+require __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/distributions.php';
 
