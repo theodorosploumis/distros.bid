@@ -3,7 +3,7 @@
 
 VERSION=10x
 
-cat images/${VERSION}/tags.txt | while read line
+cat ../../images/${VERSION}/tags.txt | while read line
 #do
 #  echo "Building image" $line;
 #  docker build -t drupal8/distros:$line-$VERSION https://github.com/theodorosploumis/drupal-docker-distros.git#:images/$VERSION/$line;

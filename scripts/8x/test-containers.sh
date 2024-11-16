@@ -5,7 +5,7 @@ DOMAIN = "localhost"
 DIR="$(dirname $0)"
 VERSION=8x
 
-cat ${DIR}/../images/$VERSION/tags.txt | while read line
+cat ../../images/$VERSION/tags.txt | while read line
 do
   ID=$(echo "$line" | cut -c1-2)
   DISTRO=$(echo $line | sed -r 's/^.{3}//')

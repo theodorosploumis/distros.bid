@@ -6,7 +6,7 @@ DIR="$(dirname $0)"
 VERSION=10x
 INDEX=1
 
-cat ${DIR}/../../images/$VERSION/tags.txt | while read line
+cat ../../images/$VERSION/tags.txt | while read line
 do
   INDEX=$INDEX+1
   if [ $line == "latest" ]; then
