@@ -18,4 +18,7 @@ RUN COMPOSER=composer.json composer install \
 # Install Drupal
 RUN bash /opt/install.sh
 
+RUN drush en social_demo -y --quiet --no-ansi
+RUN drush social-demo:add file user group topic event event_enrollment comment post like --quiet --no-ansi
+
 WORKDIR /opt/drupal/

@@ -55,6 +55,10 @@
             "npm-asset"
         ],
         "patches": {
+            "drupal/core": {
+                "https://dgo.to/2638686 | Correctly handle cache data instead of throwing an Exception in EarlyRenderingControllerWrapperSubscriber()": "https://git.drupalcode.org/project/drupal/-/commit/bd2add4c456275f7dc4201212e3a6b231c282279.patch",
+                "https://dgo.to/3400858 | Views, Argument #1 ($elements) must be of type array, null given": "https://www.drupal.org/files/issues/2023-11-10/FilterPluginBase.patch"
+            },
             "goalgorilla/open_social": {
                 "https://dgo.to/3418029 | Using var in strings is deprecated": "https://git.drupalcode.org/project/social/-/merge_requests/67.patch",
                 "https://dgo.to/3068284 | Social groups requires the socialblue theme and breaks some functionalities with a cloned theme": "https://git.drupalcode.org/project/social/-/merge_requests/74.patch"
