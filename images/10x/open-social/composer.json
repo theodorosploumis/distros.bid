@@ -1,0 +1,78 @@
+{
+    "name": "drupal8/distros",
+    "type": "project",
+    "description": "A reusable template for Distros.bid",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "goalgorilla/open_social": "12.4.5",
+        "drush/drush": "^12"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "config": {
+        "allow-plugins": true,
+        "sort-packages": true
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": false,
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:npm-asset",
+                "type:bower-asset"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "web/drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "patches": {
+            "goalgorilla/open_social": {
+                "https://dgo.to/3418029 | Using var in strings is deprecated": "https://git.drupalcode.org/project/social/-/merge_requests/67.patch",
+                "https://dgo.to/3068284 | Social groups requires the socialblue theme and breaks some functionalities with a cloned theme": "https://git.drupalcode.org/project/social/-/merge_requests/74.patch"
+            },
+            "drupal/group": {
+                "https://dgo.to/3349565 | Deprecated function: Use of static in callables is deprecated - triggered when adding user to group": "https://www.drupal.org/files/issues/2023-07-25/3349565-6.patch"
+            }
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "minimum-stability": "dev"
+}

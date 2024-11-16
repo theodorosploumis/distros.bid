@@ -12,6 +12,8 @@ RUN rm -rf /opt/drupal/
 RUN COMPOSER=composer.json composer create-project lucius-digital/openlucius-project:2.0.0-beta1 /opt/drupal/ \
     --dev --quiet --no-ansi --no-interaction --no-progress
 
+RUN COMPOSER=composer.json composer require drush/drush  \
+    --dev --quiet --no-ansi --no-interaction --no-progress \
 
 # Install Drupal
 RUN bash /opt/install.sh

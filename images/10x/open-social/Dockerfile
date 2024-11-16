@@ -7,14 +7,12 @@ ENV DISTRO="social" \
     PROFILE="social"
 
 # This is an installation from a composer template
-RUN COMPOSER=composer.json composer remove drupal/core-composer-scaffold --quiet --no-ansi --no-interaction --no-progress
-RUN COMPOSER=composer.json composer remove drupal/core-recommended --quiet --no-ansi --no-interaction --no-progress
-RUN COMPOSER=composer.json composer remove drush/drush --quiet --no-ansi --no-interaction --no-progress
+RUN rm -f /opt/drupal/composer.json
+RUN rm -f /opt/drupal/composer.lock
 
-RUN COMPOSER=composer.json composer require goalgorilla/open_social:${VERSION} \
-    --quiet --no-ansi --no-interaction --no-progress
+COPY composer.json /opt/drupal/composer.json
 
-RUN COMPOSER=composer.json composer require drush/drush  \
+RUN COMPOSER=composer.json composer install \
     --quiet --no-ansi --no-interaction --no-progress
 
 # Install Drupal
