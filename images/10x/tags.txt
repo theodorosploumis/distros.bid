@@ -1,6 +1,7 @@
 latest
 drupal
 drupal-umami
-opigno
 open-social
+opigno
 drutopia
+openlucius

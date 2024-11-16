@@ -10,7 +10,8 @@ ENV DISTRO="openlucius" \
 RUN rm -rf /opt/drupal/
 
 RUN COMPOSER=composer.json composer create-project lucius-digital/openlucius-project:2.0.0-beta1 /opt/drupal/ \
-    --no-install --quiet --no-ansi --no-interaction --no-progress
+    --dev --quiet --no-ansi --no-interaction --no-progress
+
 
 # Install Drupal
 RUN bash /opt/install.sh

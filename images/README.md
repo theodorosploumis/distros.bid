@@ -1,26 +1,24 @@
 ## Build the base image
 
 ```
-docker build -t drupal8/distros:latest-10x images/10x/latest
+docker build -t drupal8/distros:latest images/10x/latest
 ```
 
 ## Build a distro (eg lightning)
 
 ```
-docker build -t drupal8/distros:lightning-10x images/10x/lightning
+docker build -t drupal8/distros:drupal-umami-10x images/10x/drupal-umami
 ```
 
 ## Test the build
 ```
-docker run -p 8066:80 --name latest-10x drupal8/distros:latest-10x
+docker run -p 8066:80 --name drupal-umami-10x drupal8/distros:drupal-umami-10x
 ```
 
-## Tag the new image and push
+## Push the new images
 
 ```
-docker tag drupal8/distros:latest drupal8/distros:latest-10x
-
-docker push drupal8/distros:latest
+docker push drupal8/distros:drupal-umami-10x
 ```
 
 ## How to add a new Distro
