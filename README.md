@@ -14,6 +14,17 @@ Go to [distros.bid](http://distros.bid/?utm_source=github&utm_medium=browser&utm
 
 See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docker.com/r/drupal8/distros/tags/).
 
+### Drupal 10.x
+
+- Drupal (core) - 10.3.8
+- Drupal Umami (core) - 10.3.8
+- Open Social - 12.4.5
+- Drutopia - 1.18
+- Opigno LMS - 3.2.7
+- OpenLucius - 2.0.0-beta1
+
+### Drupal 8.x
+
 | Name | Dockerfile | Tag                                 |
 |:---  |:---------- |:------------------------------------|
 | Latest | [images/latest](https://github.com/theodorosploumis/drupal-docker-distros/blob/master/images/latest/Dockerfile/) | latest                              |
@@ -41,11 +52,11 @@ See the docker tags at [hub.docker.com/r/drupal8/distros/tags](https://hub.docke
 |:------------|:------|
 | sqliteadmin | 4.3.1 |
 | **apache2** | 2.4.18 |
-| composer    | 1.9.2 | 2.8.2 |
+| composer    | 1.9.2 or 2.8.2 |
 | curl        | 7.47.0 |
 | **drush**   | 10.2.2 |
 | git         | 2.7.4 |
-| **php**     | 7.2 | 8.4 |
+| **php**     | 7.2 or 8.4 |
 | vi          | 7.4   |
 | wget        | 1.17.1 |
 
