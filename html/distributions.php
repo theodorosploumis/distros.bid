@@ -9,8 +9,8 @@ $distros = [
             "version" => "10.3.8"
         ],
         "drupal-umami" => [
-            "name" => "Drupal (core)",
-            "path" => "https://www.drupal.org/project/drupal",
+            "name" => "Drupal Unami (core)",
+            "path" => "https://git.drupalcode.org/project/drupal/-/tree/10.2.x/core/profiles/demo_umami",
             "version" => "10.3.8"
         ],
         "open-social" => [
