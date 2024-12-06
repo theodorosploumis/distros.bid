@@ -80,7 +80,7 @@ require_once __DIR__ . '/distributions.php';
 
             <div><b>1)</b> Important: Sometimes, a 502 error page may appear. Please refresh the error page so you get your instance running. This is usually fixed in less than a minute.</div>
             <div><b>2)</b> Notice: Sites are available for <b>40 minutes</b>.</div>
-            <div><b>3)</b> Currently running sites: <b><?php print exec("docker ps -q --format '{{.ID}} {{.Image}}' | grep 'drupal8' | wc -l"); ?> </b>.</div>
+            <div><b>3)</b> Currently running sites: <b><?php print exec("docker ps --format '{{.ID}} {{.Image}}' | grep 'drupal8' | wc -l"); ?> </b>.</div>
         </form>
     </div>
 
