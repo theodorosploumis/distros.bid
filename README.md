@@ -4,7 +4,8 @@
 
 ## About
 
-A list of Docker containers running several popular [Drupal 10.x, 8.x and 7.x distributions](http://dgo.to/project_distribution) within LAMP stack.
+An easy online service to spin Drupal Distribution instances in seconds. 
+Behind the scens this project maintains a list of Docker containers running several popular [Drupal 10.x, 8.x and 7.x distributions](http://dgo.to/project_distribution) within LAMP stack.
 
 ## Try online
 
